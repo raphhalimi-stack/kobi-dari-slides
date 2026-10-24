@@ -141,6 +141,7 @@ def main():
         except Exception as e:
             fails += 1
             st["errors"][it["key"]] = st["errors"].get(it["key"], 0) + 1
+            st.setdefault("last_error", {})[it["key"]] = str(e)[:600]
             print("  ERREUR", e)
         json.dump(st, open(STATE, "w"), indent=1)
         time.sleep(5)
