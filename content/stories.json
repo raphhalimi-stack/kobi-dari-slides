@@ -1,0 +1,32 @@
+{
+  "kobi": {
+    "Kobi": [
+      {"type": "hook", "kicker": "Meet", "title": "Kobi.", "sub": "Your K-beauty companion, in Korea and anywhere."},
+      {"type": "list", "kicker": "What it does", "title": "Scan. Decode. Build.", "items": [["01", "Scan any product's barcode"], ["02", "Every ingredient, in your language"], ["03", "A routine made for your skin"], ["04", "English, French, Korean, Mongolian"]]}
+    ],
+    "Labels": [
+      {"type": "list", "kicker": "Reading a", "title": "Korean label.", "wide": true, "items": [["진정", "Soothing"], ["보습", "Moisturising"], ["미백", "Brightening"], ["주름개선", "Anti-wrinkle"], ["자외선 차단", "Sun protection"]]}
+    ],
+    "Routine": [
+      {"type": "list", "kicker": "The order", "title": "Thinnest to thickest.", "items": [["01", "Cleanser"], ["02", "Toner"], ["03", "Serum"], ["04", "Moisturiser"], ["05", "SPF, every morning"]]}
+    ],
+    "Waitlist": [
+      {"type": "cta", "title": "Launching 25 November.", "sub": "First 100 on the waitlist get 3 months of Premium. Link in bio."}
+    ]
+  },
+  "dari": {
+    "Dari": [
+      {"type": "hook", "kicker": "Meet", "title": "Dari.", "sub": "Your bridge to Korea, whether you're here for a week or for good."},
+      {"type": "list", "kicker": "What it does", "title": "Korea, in your language.", "items": [["01", "Eat where locals book"], ["02", "Walks and day trips"], ["03", "Phone, bank, ARC, explained"], ["04", "A concierge with real addresses"]]}
+    ],
+    "Arrival": [
+      {"type": "list", "kicker": "Just landed?", "title": "Do these first.", "items": [["01", "eSIM or SIM"], ["02", "T-money card"], ["03", "Naver Map + Papago"], ["04", "AREX to Seoul Station"], ["05", "Kakao T for taxis"]]}
+    ],
+    "Korean": [
+      {"type": "list", "kicker": "5 phrases", "title": "for any day.", "wide": true, "items": [["안녕하세요", "Hello"], ["감사합니다", "Thank you"], ["이거 주세요", "This one, please"], ["얼마예요?", "How much?"], ["화장실 어디예요?", "Restroom?"]]}
+    ],
+    "Waitlist": [
+      {"type": "cta", "title": "Launching 25 November.", "sub": "First 100 on the waitlist get 3 months of Dari Plus. Link in bio."}
+    ]
+  }
+}

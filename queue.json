@@ -1,0 +1,582 @@
+[
+ {
+  "key": "kobi:s:Kobi_1",
+  "account": "kobi",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Kobi",
+  "media": [
+   "v2/stories/kobi/Kobi_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "kobi:s:Kobi_2",
+  "account": "kobi",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Kobi",
+  "media": [
+   "v2/stories/kobi/Kobi_2.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "kobi:s:Labels_1",
+  "account": "kobi",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Labels",
+  "media": [
+   "v2/stories/kobi/Labels_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "kobi:s:Routine_1",
+  "account": "kobi",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Routine",
+  "media": [
+   "v2/stories/kobi/Routine_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "kobi:s:Waitlist_1",
+  "account": "kobi",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Waitlist",
+  "media": [
+   "v2/stories/kobi/Waitlist_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "kobi:c:00_launch",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/00_launch/01.jpg",
+   "v2/carousels/kobi/00_launch/02.jpg",
+   "v2/carousels/kobi/00_launch/03.jpg",
+   "v2/carousels/kobi/00_launch/04.jpg",
+   "v2/carousels/kobi/00_launch/05.jpg",
+   "v2/carousels/kobi/00_launch/06.jpg"
+  ],
+  "caption": "Kobi launches 25 November.\nKobi launches on 25 November. Scan any K-beauty product, understand what's inside, build a routine for your skin — free to start, in four languages.\nWaitlist is open, link in bio. First 100 get three months of Premium.\n\n#kbeauty #koreanskincare #oliveyoung #newapp #comingsoon #kobiapp #skincareapp #seoul",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "kobi:r:barrier",
+  "account": "kobi",
+  "kind": "reel",
+  "media": [
+   "v2/reels/kobi_barrier.mp4"
+  ],
+  "caption": "Your skin barrier is a brick wall 🧱\nSkin cells are the bricks, lipids are the mortar. Over-exfoliate and the mortar cracks: water escapes, irritants get in. Ceramides and a break from acids fix it.\nSave this before your next exfoliation.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skinbarrier #skincarescience #kbeauty #koreanskincare #ceramides #skincaretips #kobiapp",
+  "not_before": "2026-10-24T22:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:01_meet_kobi",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/01_meet_kobi/01.jpg",
+   "v2/carousels/kobi/01_meet_kobi/02.jpg",
+   "v2/carousels/kobi/01_meet_kobi/03.jpg",
+   "v2/carousels/kobi/01_meet_kobi/04.jpg",
+   "v2/carousels/kobi/01_meet_kobi/05.jpg",
+   "v2/carousels/kobi/01_meet_kobi/06.jpg"
+  ],
+  "caption": "Meet Kobi.\nMeet Kobi. Scan a product, understand what's inside, build a routine that fits your skin. For everyone shopping K-beauty in Korea or ordering it from abroad.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#kbeauty #koreanskincare #skincareroutine #oliveyoung #kobiapp #skincaretips #seoul",
+  "not_before": "2026-10-24T22:30:00+00:00"
+ },
+ {
+  "key": "kobi:r:label",
+  "account": "kobi",
+  "kind": "reel",
+  "media": [
+   "v2/reels/kobi_label.mp4"
+  ],
+  "caption": "Read a K-beauty label in 10 seconds 🇰🇷\nFive Korean words tell you what almost any product does: soothing, moisturising, brightening, anti-wrinkle, sun protection.\nSave this for your next Olive Young run, and send it to the friend who buys everything.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #koreanskincare #oliveyoung #learnkorean #skincaretips #kobiapp #seoulshopping",
+  "not_before": "2026-10-24T23:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:06_korean_label",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/06_korean_label/01.jpg",
+   "v2/carousels/kobi/06_korean_label/02.jpg",
+   "v2/carousels/kobi/06_korean_label/03.jpg",
+   "v2/carousels/kobi/06_korean_label/04.jpg",
+   "v2/carousels/kobi/06_korean_label/05.jpg",
+   "v2/carousels/kobi/06_korean_label/06.jpg",
+   "v2/carousels/kobi/06_korean_label/07.jpg"
+  ],
+  "caption": "You can't read this label. Kobi can.\nStanding in the aisle, label all in Korean? These five words cover most of what you need. Save this one.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#kbeauty #oliveyoung #koreanskincare #learnkorean #skincaretips #kobiapp #seoulshopping",
+  "not_before": "2026-10-24T23:30:00+00:00"
+ },
+ {
+  "key": "kobi:r:uv",
+  "account": "kobi",
+  "kind": "reel",
+  "media": [
+   "v2/reels/kobi_uv.mp4"
+  ],
+  "caption": "SPF is only half the story ☀️\nSPF measures UVB, the burning rays. UVA goes deeper, ages your skin and passes through windows. In Korea the PA rating covers it: PA++++ is the top grade.\nSave this and check your sunscreen.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #koreansunscreen #spf #skincarescience #kbeauty #antiaging #kobiapp",
+  "not_before": "2026-10-25T00:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:03_routine",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/03_routine/01.jpg",
+   "v2/carousels/kobi/03_routine/02.jpg",
+   "v2/carousels/kobi/03_routine/03.jpg",
+   "v2/carousels/kobi/03_routine/04.jpg",
+   "v2/carousels/kobi/03_routine/05.jpg",
+   "v2/carousels/kobi/03_routine/06.jpg",
+   "v2/carousels/kobi/03_routine/07.jpg"
+  ],
+  "caption": "A routine in 60 seconds.\nCleanse, tone, treat, moisturise, protect. Five steps, in this order, morning and night (SPF in the morning only). Kobi builds them for your skin type.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#skincareroutine #kbeauty #koreanskincare #morningroutine #nightroutine #kobiapp #spf",
+  "not_before": "2026-10-25T00:30:00+00:00"
+ },
+ {
+  "key": "kobi:r:order",
+  "account": "kobi",
+  "kind": "reel",
+  "media": [
+   "v2/reels/kobi_order.mp4"
+  ],
+  "caption": "Your routine is probably in the wrong order 🧴\nCleanser, toner, serum, moisturiser, SPF. The rule: thinnest to thickest, sunscreen always last in the morning.\nSend this to someone who does it backwards.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skincareroutine #kbeauty #koreanskincare #skincare101 #glassskin #skincaretips #kobiapp",
+  "not_before": "2026-10-25T01:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:02_skin_types",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/02_skin_types/01.jpg",
+   "v2/carousels/kobi/02_skin_types/02.jpg",
+   "v2/carousels/kobi/02_skin_types/03.jpg",
+   "v2/carousels/kobi/02_skin_types/04.jpg",
+   "v2/carousels/kobi/02_skin_types/05.jpg",
+   "v2/carousels/kobi/02_skin_types/06.jpg"
+  ],
+  "caption": "Your skin type, decoded.\nOily, dry, combination or sensitive? Knowing yours is the first step before buying anything. Swipe for the signs and what to look for on the label.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#skintype #skincare101 #kbeauty #koreanskincare #kobiapp #sensitiveskin #oilyskin #dryskin",
+  "not_before": "2026-10-25T01:30:00+00:00"
+ },
+ {
+  "key": "kobi:r:doublecleanse",
+  "account": "kobi",
+  "kind": "reel",
+  "media": [
+   "v2/reels/kobi_doublecleanse.mp4"
+  ],
+  "caption": "Why Koreans wash their face twice 🫧\nSunscreen, makeup and sebum are oil-based, so water slides off. An oil cleanser dissolves them, then a gentle foam removes the rest. Night only.\nSave this for tonight.\nKobi launches 25 Nov. Waitlist in bio.\n\n#doublecleansing #kbeauty #koreanskincare #skincarescience #nightroutine #skincaretips #kobiapp",
+  "not_before": "2026-10-25T02:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:07_olive_young",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/07_olive_young/01.jpg",
+   "v2/carousels/kobi/07_olive_young/02.jpg",
+   "v2/carousels/kobi/07_olive_young/03.jpg",
+   "v2/carousels/kobi/07_olive_young/04.jpg",
+   "v2/carousels/kobi/07_olive_young/05.jpg",
+   "v2/carousels/kobi/07_olive_young/06.jpg",
+   "v2/carousels/kobi/07_olive_young/07.jpg"
+  ],
+  "caption": "Olive Young, done right.\nThe biggest K-beauty store, without the buyer's remorse. Five habits that save money at Olive Young. Swipe.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#oliveyoung #kbeauty #seoulshopping #koreanskincare #koreatravel #kobiapp #skincarehaul",
+  "not_before": "2026-10-25T02:30:00+00:00"
+ },
+ {
+  "key": "kobi:r:oliveyoung",
+  "account": "kobi",
+  "kind": "reel",
+  "media": [
+   "v2/reels/kobi_oliveyoung.mp4"
+  ],
+  "caption": "Going to Olive Young? Don't make these 3 mistakes 🛍️\nTest before you buy, hunt the 1+1 tags, and bring your passport for the tax refund.\nSave this before your trip to Seoul.\nKobi launches 25 Nov. Waitlist in bio.\n\n#oliveyoung #kbeauty #seoulshopping #koreatravel #koreanskincare #skincarehaul #kobiapp",
+  "not_before": "2026-10-25T03:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:08_spf",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/08_spf/01.jpg",
+   "v2/carousels/kobi/08_spf/02.jpg",
+   "v2/carousels/kobi/08_spf/03.jpg",
+   "v2/carousels/kobi/08_spf/04.jpg",
+   "v2/carousels/kobi/08_spf/05.jpg",
+   "v2/carousels/kobi/08_spf/06.jpg",
+   "v2/carousels/kobi/08_spf/07.jpg"
+  ],
+  "caption": "SPF, decoded.\nSPF50+ PA++++, light texture, no white cast. This is why Korean sunscreen has a cult following. Swipe to read the label like a pro.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#sunscreen #spf #kbeauty #koreansunscreen #skincaretips #kobiapp #antiaging",
+  "not_before": "2026-10-25T03:30:00+00:00"
+ },
+ {
+  "key": "kobi:c:04_niacinamide",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/04_niacinamide/01.jpg",
+   "v2/carousels/kobi/04_niacinamide/02.jpg",
+   "v2/carousels/kobi/04_niacinamide/03.jpg",
+   "v2/carousels/kobi/04_niacinamide/04.jpg",
+   "v2/carousels/kobi/04_niacinamide/05.jpg",
+   "v2/carousels/kobi/04_niacinamide/06.jpg"
+  ],
+  "caption": "Ingredient spotlight: Niacinamide\nNiacinamide (vitamin B3): brightens, calms, keeps oil in check, suits most skin types. You'll find it in many Korean serums and toners, usually at 2–5%.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#niacinamide #skincareingredients #kbeauty #koreanskincare #kobiapp #skinbarrier",
+  "not_before": "2026-10-26T10:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:05_centella",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/05_centella/01.jpg",
+   "v2/carousels/kobi/05_centella/02.jpg",
+   "v2/carousels/kobi/05_centella/03.jpg",
+   "v2/carousels/kobi/05_centella/04.jpg",
+   "v2/carousels/kobi/05_centella/05.jpg",
+   "v2/carousels/kobi/05_centella/06.jpg"
+  ],
+  "caption": "Ingredient spotlight: Centella\nCentella asiatica, better known as cica: Korea's go-to calming ingredient. Redness, irritation, post-exfoliation, post-sun. Swipe to spot it on the label.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#centella #cica #skincareingredients #kbeauty #koreanskincare #kobiapp #sensitiveskin",
+  "not_before": "2026-10-27T10:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:09_am_pm",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/09_am_pm/01.jpg",
+   "v2/carousels/kobi/09_am_pm/02.jpg",
+   "v2/carousels/kobi/09_am_pm/03.jpg",
+   "v2/carousels/kobi/09_am_pm/04.jpg",
+   "v2/carousels/kobi/09_am_pm/05.jpg"
+  ],
+  "caption": "Morning vs night.\nMorning protects, night repairs. Same five steps, different products. Swipe for the AM/PM split.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#skincareroutine #morningroutine #nightroutine #kbeauty #koreanskincare #kobiapp #retinol",
+  "not_before": "2026-10-28T10:00:00+00:00"
+ },
+ {
+  "key": "kobi:c:10_mistakes",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/10_mistakes/01.jpg",
+   "v2/carousels/kobi/10_mistakes/02.jpg",
+   "v2/carousels/kobi/10_mistakes/03.jpg",
+   "v2/carousels/kobi/10_mistakes/04.jpg",
+   "v2/carousels/kobi/10_mistakes/05.jpg",
+   "v2/carousels/kobi/10_mistakes/06.jpg",
+   "v2/carousels/kobi/10_mistakes/07.jpg"
+  ],
+  "caption": "5 mistakes that waste your K-beauty haul.\nFive mistakes that turn a great haul into a shelf of half-used bottles. Swipe, save, share with the friend who buys everything.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#skincaremistakes #kbeauty #koreanskincare #skincaretips #kobiapp #skinbarrier #oliveyoung",
+  "not_before": "2026-10-29T10:00:00+00:00"
+ },
+ {
+  "key": "dari:s:Dari_1",
+  "account": "dari",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Dari",
+  "media": [
+   "v2/stories/dari/Dari_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "dari:s:Dari_2",
+  "account": "dari",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Dari",
+  "media": [
+   "v2/stories/dari/Dari_2.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "dari:s:Arrival_1",
+  "account": "dari",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Arrival",
+  "media": [
+   "v2/stories/dari/Arrival_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "dari:s:Korean_1",
+  "account": "dari",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Korean",
+  "media": [
+   "v2/stories/dari/Korean_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "dari:s:Waitlist_1",
+  "account": "dari",
+  "kind": "story",
+  "batch": "highlights",
+  "highlight": "Waitlist",
+  "media": [
+   "v2/stories/dari/Waitlist_1.jpg"
+  ],
+  "caption": "",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "dari:c:00_launch",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/00_launch/01.jpg",
+   "v2/carousels/dari/00_launch/02.jpg",
+   "v2/carousels/dari/00_launch/03.jpg",
+   "v2/carousels/dari/00_launch/04.jpg",
+   "v2/carousels/dari/00_launch/05.jpg",
+   "v2/carousels/dari/00_launch/06.jpg"
+  ],
+  "caption": "Dari launches 25 November.\nDari launches on 25 November. Korea, explained in your language: where to eat, how to get around, how to settle in, and a concierge that answers with real addresses.\nWaitlist is open, link in bio. First 100 get three months of Dari Plus.\n\n#korea #seoul #koreatravel #lifeinkorea #newapp #comingsoon #dariapp #visitkorea",
+  "not_before": "2026-10-24T21:30:00+00:00"
+ },
+ {
+  "key": "dari:r:trashcans",
+  "account": "dari",
+  "kind": "reel",
+  "media": [
+   "v2/reels/dari_trashcans.mp4"
+  ],
+  "caption": "Why Seoul has almost no trash cans 🗑️\nIn 1995 Korea started charging for household trash with special bags. Some people dumped it in street bins instead, so many bins disappeared. Today you carry it and sort it.\nSend this to your travel buddy.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreaexplained #seoul #koreanculture #koreatravel #lifeinkorea #visitkorea #dariapp",
+  "not_before": "2026-10-24T22:00:00+00:00"
+ },
+ {
+  "key": "dari:c:01_meet_dari",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/01_meet_dari/01.jpg",
+   "v2/carousels/dari/01_meet_dari/02.jpg",
+   "v2/carousels/dari/01_meet_dari/03.jpg",
+   "v2/carousels/dari/01_meet_dari/04.jpg",
+   "v2/carousels/dari/01_meet_dari/05.jpg",
+   "v2/carousels/dari/01_meet_dari/06.jpg"
+  ],
+  "caption": "Meet Dari.\n다리 means bridge. That's what Dari is: a bridge between you and Korea, for a week-long trip or a new life here. Eat, explore, settle, ask — in your language.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#korea #seoul #koreatravel #visitkorea #lifeinkorea #dariapp #expatkorea #travelkorea",
+  "not_before": "2026-10-24T22:30:00+00:00"
+ },
+ {
+  "key": "dari:r:landed",
+  "account": "dari",
+  "kind": "reel",
+  "media": [
+   "v2/reels/dari_landed.mp4"
+  ],
+  "caption": "Just landed at Incheon? Do this, in this order ✈️\nData, T-money, Naver Map and Papago, the AREX to Seoul Station, Kakao T for taxis.\nSave this for the plane.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #incheonairport #seoultravel #firsttriptokorea #visitkorea #tmoney #dariapp",
+  "not_before": "2026-10-24T23:00:00+00:00"
+ },
+ {
+  "key": "dari:c:04_apps",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/04_apps/01.jpg",
+   "v2/carousels/dari/04_apps/02.jpg",
+   "v2/carousels/dari/04_apps/03.jpg",
+   "v2/carousels/dari/04_apps/04.jpg",
+   "v2/carousels/dari/04_apps/05.jpg",
+   "v2/carousels/dari/04_apps/06.jpg",
+   "v2/carousels/dari/04_apps/07.jpg",
+   "v2/carousels/dari/04_apps/08.jpg"
+  ],
+  "caption": "The 6 apps Korea runs on.\nSix apps and you're set. Maps, taxis, translation, messaging, delivery, food. Swipe for what each one does and whether it needs a Korean ID.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#koreanapps #navermap #kakaotalk #coupang #koreatravel #lifeinkorea #dariapp",
+  "not_before": "2026-10-24T23:30:00+00:00"
+ },
+ {
+  "key": "dari:r:koreanage",
+  "account": "dari",
+  "kind": "reel",
+  "media": [
+   "v2/reels/dari_koreanage.mp4"
+  ],
+  "caption": "Everyone in Korea got younger. Overnight 🎂\nKorean age started at 1 at birth and went up every New Year's Day. Since June 2023, international age is the official standard.\nSend this to a K-drama fan.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreaexplained #koreanage #koreanculture #kdrama #lifeinkorea #seoul #dariapp",
+  "not_before": "2026-10-25T00:00:00+00:00"
+ },
+ {
+  "key": "dari:c:06_taxi",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/06_taxi/01.jpg",
+   "v2/carousels/dari/06_taxi/02.jpg",
+   "v2/carousels/dari/06_taxi/03.jpg",
+   "v2/carousels/dari/06_taxi/04.jpg",
+   "v2/carousels/dari/06_taxi/05.jpg",
+   "v2/carousels/dari/06_taxi/06.jpg"
+  ],
+  "caption": "Taxis without a word of Korean.\nKakao T, or show the address on Naver Map. Either way, no Korean needed. Swipe for the night-time tip.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#kakaot #seoultaxi #koreatravel #seoultravel #lifeinkorea #dariapp #visitseoul",
+  "not_before": "2026-10-25T00:30:00+00:00"
+ },
+ {
+  "key": "dari:r:restaurant",
+  "account": "dari",
+  "kind": "reel",
+  "media": [
+   "v2/reels/dari_restaurant.mp4"
+  ],
+  "caption": "Eating out in Korea: 4 rules nobody tells you 🍜\nWater is self-service, the bell calls staff, you pay at the counter on the way out, and there's no tipping.\nSend this to whoever you're going with.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanfood #seoulfood #koreatravel #koreanculture #lifeinkorea #visitkorea #dariapp",
+  "not_before": "2026-10-25T01:00:00+00:00"
+ },
+ {
+  "key": "dari:c:08_etiquette",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/08_etiquette/01.jpg",
+   "v2/carousels/dari/08_etiquette/02.jpg",
+   "v2/carousels/dari/08_etiquette/03.jpg",
+   "v2/carousels/dari/08_etiquette/04.jpg",
+   "v2/carousels/dari/08_etiquette/05.jpg",
+   "v2/carousels/dari/08_etiquette/06.jpg",
+   "v2/carousels/dari/08_etiquette/07.jpg"
+  ],
+  "caption": "Five things nobody tells you about Korea.\nNo tipping, press the bell, two hands, shoes off, quiet metro. Five small rules that make you look local. Save for your trip.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#koreanculture #koreatravel #koreanetiquette #visitkorea #lifeinkorea #dariapp #seoul",
+  "not_before": "2026-10-25T01:30:00+00:00"
+ },
+ {
+  "key": "dari:r:phrases",
+  "account": "dari",
+  "kind": "reel",
+  "media": [
+   "v2/reels/dari_phrases.mp4"
+  ],
+  "caption": "5 Korean phrases that get you through any day 🗣️\nHello, thank you, this one please, how much, and where's the restroom.\nSave it and practise on the plane.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanlanguage #koreatravel #seoul #studyinkorea #lifeinkorea #dariapp",
+  "not_before": "2026-10-25T02:00:00+00:00"
+ },
+ {
+  "key": "dari:c:09_neighbourhoods",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/09_neighbourhoods/01.jpg",
+   "v2/carousels/dari/09_neighbourhoods/02.jpg",
+   "v2/carousels/dari/09_neighbourhoods/03.jpg",
+   "v2/carousels/dari/09_neighbourhoods/04.jpg",
+   "v2/carousels/dari/09_neighbourhoods/05.jpg",
+   "v2/carousels/dari/09_neighbourhoods/06.jpg",
+   "v2/carousels/dari/09_neighbourhoods/07.jpg"
+  ],
+  "caption": "Seoul, one neighbourhood at a time.\nSeongsu, Ikseon-dong, Yeonnam, Hannam, Euljiro. Five neighbourhoods, five moods. Swipe, then pick one per day.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#seoul #seongsu #ikseondong #yeonnam #hannam #euljiro #seoultravel #dariapp",
+  "not_before": "2026-10-25T02:30:00+00:00"
+ },
+ {
+  "key": "dari:r:tmoney",
+  "account": "dari",
+  "kind": "reel",
+  "media": [
+   "v2/reels/dari_tmoney.mp4"
+  ],
+  "caption": "T-money, explained in 15 seconds 🚇\nBuy it at a convenience store, top up with cash, tap in and out on the metro and the bus. Tapping out is what gets you the transfer discount.\nSave this for day one.\nDari launches 25 Nov. Waitlist in bio.\n\n#tmoney #seoulmetro #koreatravel #seoultravel #publictransport #visitkorea #dariapp",
+  "not_before": "2026-10-25T03:00:00+00:00"
+ },
+ {
+  "key": "dari:c:02_just_landed",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/02_just_landed/01.jpg",
+   "v2/carousels/dari/02_just_landed/02.jpg",
+   "v2/carousels/dari/02_just_landed/03.jpg",
+   "v2/carousels/dari/02_just_landed/04.jpg",
+   "v2/carousels/dari/02_just_landed/05.jpg",
+   "v2/carousels/dari/02_just_landed/06.jpg",
+   "v2/carousels/dari/02_just_landed/07.jpg"
+  ],
+  "caption": "Just landed? Do these five first.\nThe first five things to do when you land in Korea, in order. Save this for the plane.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#koreatravel #seoultravel #incheonairport #tmoney #navermap #papago #dariapp #visitkorea",
+  "not_before": "2026-10-25T03:30:00+00:00"
+ },
+ {
+  "key": "dari:c:03_no_arc",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/03_no_arc/01.jpg",
+   "v2/carousels/dari/03_no_arc/02.jpg",
+   "v2/carousels/dari/03_no_arc/03.jpg",
+   "v2/carousels/dari/03_no_arc/04.jpg",
+   "v2/carousels/dari/03_no_arc/05.jpg",
+   "v2/carousels/dari/03_no_arc/06.jpg"
+  ],
+  "caption": "No ARC yet? You can still live here.\nYour ARC can take weeks. Maps, taxis, translation and most delivery work without it. Bank and phone contracts wait. Swipe for the plan.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#lifeinkorea #arc #expatkorea #movingtokorea #studyinkorea #dariapp #seoullife",
+  "not_before": "2026-10-26T10:00:00+00:00"
+ },
+ {
+  "key": "dari:c:05_tmoney",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/05_tmoney/01.jpg",
+   "v2/carousels/dari/05_tmoney/02.jpg",
+   "v2/carousels/dari/05_tmoney/03.jpg",
+   "v2/carousels/dari/05_tmoney/04.jpg",
+   "v2/carousels/dari/05_tmoney/05.jpg",
+   "v2/carousels/dari/05_tmoney/06.jpg"
+  ],
+  "caption": "T-money, explained.\nOne card for everything on the move. Where to buy it, how to top up, and the one word to say at the counter.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#tmoney #seoulmetro #koreatravel #seoultravel #publictransport #dariapp #visitkorea",
+  "not_before": "2026-10-27T10:00:00+00:00"
+ },
+ {
+  "key": "dari:c:07_convenience",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/07_convenience/01.jpg",
+   "v2/carousels/dari/07_convenience/02.jpg",
+   "v2/carousels/dari/07_convenience/03.jpg",
+   "v2/carousels/dari/07_convenience/04.jpg",
+   "v2/carousels/dari/07_convenience/05.jpg",
+   "v2/carousels/dari/07_convenience/06.jpg"
+  ],
+  "caption": "The convenience store does more than snacks.\nThe Korean convenience store: transit card, ATM, dinner, parcels, bills. Open 24/7, on every corner. Swipe.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#cu #gs25 #koreanconveniencestore #koreatravel #lifeinkorea #dariapp #seoullife",
+  "not_before": "2026-10-28T10:00:00+00:00"
+ },
+ {
+  "key": "dari:c:10_daytrips",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/10_daytrips/01.jpg",
+   "v2/carousels/dari/10_daytrips/02.jpg",
+   "v2/carousels/dari/10_daytrips/03.jpg",
+   "v2/carousels/dari/10_daytrips/04.jpg",
+   "v2/carousels/dari/10_daytrips/05.jpg",
+   "v2/carousels/dari/10_daytrips/06.jpg",
+   "v2/carousels/dari/10_daytrips/07.jpg"
+  ],
+  "caption": "Five day trips from Seoul.\nSuwon, Nami Island, Incheon, Gapyeong, Paju. Five day trips under two hours from Seoul, back for dinner. Swipe.\nSave this post and follow for more. Launching 25 Nov, waitlist in bio.\n\n#daytrip #suwon #namiisland #incheon #gapyeong #paju #koreatravel #dariapp",
+  "not_before": "2026-10-29T10:00:00+00:00"
+ }
+]

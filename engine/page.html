@@ -1,0 +1,252 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900}
+@font-face{font-family:Serif;src:url(fonts/NewsreaderItalic.ttf);font-style:italic;font-weight:200 800}
+:root{--bg:#181415;--bg2:#2a2022;--glow:rgba(120,88,92,.55);--accent:#ebc9c6;--num:#ebc9c6;--alt:#cfe3d8;--text:#f5f1ec;--sub:#a59e9c;--desc:#d8d1cc;--chip:#2a2224}
+.dari{--bg:#0a1224;--bg2:#0d1b36;--glow:rgba(20,70,150,.55);--accent:#8fb4f0;--num:#f2cf9e;--alt:#8fb4f0;--text:#f4f6fa;--sub:#96a3ba;--desc:#cbd5e6;--chip:#13213d}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#000}
+#stage{position:relative;overflow:hidden;background:var(--bg);font-family:Inter;color:var(--text);-webkit-font-smoothing:antialiased}
+#bg{position:absolute;inset:0;background:
+  radial-gradient(1100px 900px at 92% 8%, var(--glow), transparent 70%),
+  radial-gradient(900px 700px at 0% 100%, rgba(0,0,0,.35), transparent 70%),
+  linear-gradient(170deg,var(--bg2),var(--bg) 55%)}
+#grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:overlay;background-size:256px 256px}
+.logo{position:absolute;left:96px;top:var(--logo-top,130px)}
+.el{position:absolute;left:96px;right:96px;will-change:transform,opacity}
+.kicker{font-family:Serif;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-.5px}
+.title{font-weight:700;letter-spacing:-1.6px;line-height:1.05}
+.sub{color:var(--sub);font-weight:400;line-height:1.35}
+.desc{color:var(--desc);font-weight:400;line-height:1.38}
+.tagnum{font-family:Serif;font-style:italic;font-weight:400;color:var(--num);line-height:1}
+.tagko{font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;font-weight:700;color:var(--alt);line-height:1.1}
+.rule{height:6px;width:88px;background:var(--accent);border-radius:3px}
+.foot{position:absolute;bottom:72px;font-size:34px;font-weight:500}
+.chip{display:inline-block;padding:18px 30px;border-radius:999px;background:var(--chip);color:var(--text);font-weight:600;font-size:34px;border:1px solid rgba(255,255,255,.08)}
+#cap{position:absolute;left:70px;right:150px;text-align:center;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+#cap span{display:inline-block;margin:0 .06em;padding:2px 12px;border-radius:12px}
+#cap span.on{background:var(--accent);color:var(--bg)}
+svg text{font-family:Inter}
+</style></head>
+<body><div id="stage"><div id="bg"></div><div id="grain"></div><div id="layer"></div><div id="cap"></div></div>
+<script>
+const S = document.getElementById('stage'), L = document.getElementById('layer'), CAP = document.getElementById('cap');
+let W=1080,H=1920,TH={},items=[],artFn=null,artSvg=null,scene=null;
+const ease=x=>{x=Math.max(0,Math.min(1,x));return 1-Math.pow(1-x,3)};
+const easeIO=x=>{x=Math.max(0,Math.min(1,x));return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+function logo(acc,size){
+  if(acc==='kobi') return `<svg width="${size}" height="${size}" viewBox="0 0 60 60"><rect x="0" y="0" width="60" height="60" rx="16" fill="var(--accent)"/><circle cx="43" cy="43" r="9" fill="var(--bg)"/></svg>`;
+  return `<svg width="${size*1.35}" height="${size*0.8}" viewBox="0 0 81 48"><path d="M4 44 A36.5 36.5 0 0 1 77 44 Z" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linejoin="round"/><path d="M4 44H77" stroke="var(--accent)" stroke-width="6" stroke-linecap="round"/><path d="M25 18V44M40.5 13V44M56 18V44" stroke="var(--accent)" stroke-width="5.5"/></svg>`;
+}
+function setup(opts){
+  W=opts.w;H=opts.h;S.style.width=W+'px';S.style.height=H+'px';
+  S.className=opts.acc; document.getElementById('grain').style.backgroundImage=`url(${opts.grain})`;
+  TH=opts;
+}
+function el(html,top,cls,start,style=''){
+  const d=document.createElement('div');d.className='el '+(cls||'');d.style.top=top+'px';d.innerHTML=html;d.style.cssText+=style;
+  L.appendChild(d);items.push({d,start});return d;
+}
+function isKo(s){return /[가-힣]/.test(s)}
+// ---------- SCENES ----------
+function setScene(sc,mode){
+  L.innerHTML='';items=[];artFn=null;scene=sc;CAP.innerHTML='';
+  const acc=TH.acc, reel=mode==='reel';
+  const lg=document.createElement('div');lg.className='logo';lg.innerHTML=logo(acc,reel?70:56);L.appendChild(lg);
+  if(reel){lg.style.top='170px'}
+  if(!reel){
+    const f1=document.createElement('div');f1.className='foot';f1.style.left='96px';f1.style.color='var(--sub)';f1.textContent='@'+TH.site.replace('.cc','')+'.cc';L.appendChild(f1);
+    const f2=document.createElement('div');f2.className='foot';f2.style.right='96px';f2.style.color='var(--accent)';f2.textContent=TH.site;L.appendChild(f2);
+  }
+  const top0 = reel? 560 : 0;
+  if(sc.type==='hook'||sc.type==='cover'){
+    const kick=reel?96:84, tit=reel? (sc.title.length>30?112:128) : (sc.title.length>22?108:132);
+    const k=el(`<div class="kicker" style="font-size:${kick}px">${sc.kicker}</div>`,0,'',-1);
+    const t=el(`<div class="title" style="font-size:${tit}px">${sc.title}</div>`,0,'',reel?-1:0.0);
+    let sub=null; if(sc.sub) sub=el(`<div class="sub" style="font-size:44px">${sc.sub}</div>`,0,'',0.15);
+    layoutStack([k,t,sub],reel?560:null,[18,34]);
+    if(!reel && sc.swipe){const sw=el(`<div style="text-align:right;font-size:34px;font-weight:500;color:var(--text)">Swipe &nbsp;→</div>`,H-200,'',0)}
+  } else if(sc.type==='point'||sc.type==='slide'){
+    const ko=isKo(sc.tag), big=sc.tag.length<=3&&!ko;
+    const tagh = ko? `<div class="tagko" style="font-size:${sc.tag.length>6?92:110}px">${sc.tag}</div>` : `<div class="tagnum" style="font-size:${big?170:120}px">${sc.tag}</div>`;
+    const a=el(tagh,0,'',0);
+    const ttl=sc.title.length>20?84:100;
+    const b=el(`<div class="title" style="font-size:${ttl}px;letter-spacing:-2px">${sc.title}</div>`,0,'',0.1);
+    const c=el(`<div class="rule"></div>`,0,'',0.2);
+    const d=el(`<div class="desc" style="font-size:${reel?58:46}px">${sc.desc||sc.body}</div>`,0,'',0.28);
+    layoutStack([a,b,c,d],reel?560:null,[28,40,40]);
+  } else if(sc.type==='cta'||sc.type==='end'){
+    const t=el(`<div class="title" style="font-size:${reel?104:(sc.title.length>24?92:110)}px">${sc.title}</div>`,0,'',0);
+    const s=el(`<div class="kicker" style="font-size:${reel?60:46}px">${sc.sub||(reel?'Launching 25 Nov · link in bio':'')}</div>`,0,'',0.2);
+    const h=el(reel?`<div style="font-size:54px;font-weight:600;color:var(--sub)">@${TH.site}</div>`:`<div style="display:flex;gap:18px;flex-wrap:wrap"><span class="chip">Save this post</span><span class="chip" style="background:transparent;color:var(--accent)">Free on ${TH.site}</span></div>`,0,'',0.35);
+    layoutStack([t,s,h],reel?560:null,[44,44]);
+  } else if(sc.type==='list'){
+    const k=el(`<div class="kicker" style="font-size:84px">${sc.kicker}</div>`,0,'',0);
+    const t=el(`<div class="title" style="font-size:${sc.title.length>22?92:112}px">${sc.title}</div>`,0,'',0.05);
+    const rows=sc.items.map(([tg,tx],i)=>`<div style="display:flex;align-items:baseline;gap:34px;padding:26px 0;border-top:1px solid rgba(255,255,255,.09)"><div style="min-width:${sc.wide?230:110}px;${isKo(tg)?"font-family:'Noto Sans CJK KR';font-weight:700;color:var(--alt);font-size:50px":"font-family:Serif;font-style:italic;color:var(--num);font-size:64px"}">${tg}</div><div style="font-size:50px;font-weight:600;color:var(--text);line-height:1.2">${tx}</div></div>`).join('');
+    const l=el(`<div>${rows}</div>`,0,'',0.15);
+    const parts=[k,t,l];
+    if(sc.foot){parts.push(el(`<div class="kicker" style="font-size:54px">${sc.foot}</div>`,0,'',0.25))}
+    layoutStack(parts,null,[20,60,50]);
+  } else if(sc.type==='illus'){
+    const t=el(`<div class="title" style="font-size:${sc.title.length>34?72:84}px;letter-spacing:-1.5px">${sc.title}</div>`,330,'',0);
+    const box=document.createElement('div');box.className='el';box.style.top='610px';box.style.left='60px';box.style.right='60px';
+    box.innerHTML=`<svg id="art" viewBox="0 0 960 600" width="960" height="600"></svg>`;L.appendChild(box);items.push({d:box,start:0.05});
+    artSvg=box.querySelector('svg'); artFn=ART[sc.art]; ARTINIT[sc.art](artSvg,sc.phase);
+  }
+}
+function layoutStack(list,top,gaps){
+  list=list.filter(Boolean);
+  const hs=list.map(e=>e.getBoundingClientRect().height);
+  const total=hs.reduce((a,b)=>a+b,0)+gaps.slice(0,list.length-1).reduce((a,b)=>a+b,0);
+  let y = top!==null? top : Math.round((H-total)/2-20);
+  list.forEach((e,i)=>{e.style.top=y+'px';y+=hs[i]+(gaps[i]||0)});
+}
+// ---------- FRAME ----------
+function frame(t,dur,isLast,caption){
+  const outT=0.28;
+  items.forEach(o=>{
+    let a=1,dy=0;
+    if(o.start>=0){const p=ease((t-o.start)/0.5);a=p;dy=(1-p)*46}
+    if(!isLast && t>dur-outT){const q=easeIO((t-(dur-outT))/outT);a*=1-q;dy-=q*24}
+    o.d.style.opacity=a.toFixed(4);o.d.style.transform=`translate3d(0,${dy.toFixed(2)}px,0)`;
+  });
+  if(artFn) artFn(artSvg,scene.phase,t,dur);
+  if(caption){CAP.style.top=caption.y+'px';CAP.style.fontSize=caption.size+'px';
+    CAP.innerHTML=caption.words.map((w,i)=>`<span class="${i===caption.on?'on':''}">${w}</span>`).join('');
+    let a=1; if(!isLast && t>dur-outT) a=1-easeIO((t-(dur-outT))/outT); if(t<0.12) a=ease(t/0.12); CAP.style.opacity=a;
+  } else CAP.innerHTML='';
+}
+// ---------- ILLUSTRATIONS ----------
+const NS='http://www.w3.org/2000/svg';
+function mk(svg,tag,attrs){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);svg.appendChild(e);return e}
+function rnd(i){const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x)}
+const ARTINIT={}, ART={};
+// Briques / barrière cutanée
+ARTINIT.bricks=(svg,phase)=>{
+  svg.innerHTML='';svg._b=[];svg._m=[];svg._p=[];
+  const cols=6,rows=5,bw=140,bh=72,g=14,ox=(960-(cols*bw+(cols-1)*g))/2,oy=110;
+  mk(svg,'rect',{x:ox-g,y:oy-g,width:cols*bw+(cols+1)*g-0,height:rows*bh+(rows+1)*g-0,rx:22,fill:'var(--accent)',opacity:.85,id:'mortar'});
+  for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
+    const off=(r%2)*((bw+g)/2)-((r%2)?(bw+g)/2:0);
+    let x=ox+c*(bw+g)+(r%2?(bw+g)/2:0)-(r%2?0:0); if(r%2&&c===cols-1) continue;
+    const b=mk(svg,'rect',{x:x,y:oy+r*(bh+g),width:bw,height:bh,rx:14,fill:'#f6efe9'});svg._b.push({b,r,c,x,y:oy+r*(bh+g)});
+  }
+  // fissures (trous dans le mortier)
+  for(let i=0;i<9;i++){const h=mk(svg,'rect',{x:ox+rnd(i)*(cols*bw)-10,y:oy+Math.floor(rnd(i+5)*rows)*(bh+g)-g,width:46,height:g+10,rx:6,fill:'var(--bg)',opacity:0});svg._m.push(h)}
+  for(let i=0;i<14;i++){svg._p.push(mk(svg,'circle',{cx:0,cy:0,r:12,fill:'#7fb8ff',opacity:0}))}
+  for(let i=0;i<10;i++){svg._p.push(mk(svg,'circle',{cx:0,cy:0,r:10,fill:'#ff7a7a',opacity:0}))}
+};
+ART.bricks=(svg,phase,t)=>{
+  svg._b.forEach((o,i)=>{
+    let y=0,a=1; if(phase==='build'){const p=ease((t-i*0.035)/0.5);y=(1-p)*-60;a=p}
+    o.b.setAttribute('transform',`translate(0,${y.toFixed(1)})`);o.b.setAttribute('opacity',a.toFixed(3));
+  });
+  document.getElementById('mortar').setAttribute('opacity',phase==='build'?(.85*ease((t-0.9)/0.6)).toFixed(3):.85);
+  svg._m.forEach((h,i)=>{let a=0; if(phase==='crack') a=ease((t-0.3-i*0.12)/0.3); if(phase==='leak') a=1; if(phase==='repair') a=1-ease((t-0.4-i*0.1)/0.4); h.setAttribute('opacity',a.toFixed(3))});
+  svg._p.forEach((p,i)=>{
+    if(phase!=='leak'){p.setAttribute('opacity',0);return}
+    const water=i<14, k=water?i:i-14, per=1.6, st=(k*0.23)%per, tt=((t+st)%per)/per;
+    const x=170+rnd(k+(water?1:50))*620;
+    const y=water? 470-tt*520 : -40+tt*360;
+    p.setAttribute('cx',x.toFixed(1));p.setAttribute('cy',y.toFixed(1));
+    p.setAttribute('opacity',(Math.sin(Math.PI*tt)*0.95*ease(t/0.4)).toFixed(3));
+  });
+};
+// UV
+ARTINIT.uv=(svg,phase)=>{
+  svg.innerHTML='';
+  mk(svg,'rect',{x:40,y:250,width:880,height:90,rx:18,fill:'#f2d7d0'});
+  mk(svg,'rect',{x:40,y:350,width:880,height:220,rx:18,fill:'#c98b88',opacity:.85});
+  const t1=mk(svg,'text',{x:70,y:305,'font-size':30,'font-weight':600,fill:'#5b3a3a'});t1.textContent='epidermis';
+  const t2=mk(svg,'text',{x:70,y:400,'font-size':30,'font-weight':600,fill:'#fff'});t2.textContent='dermis · collagen';
+  svg._fib=[];for(let i=0;i<7;i++){svg._fib.push(mk(svg,'path',{d:'',fill:'none',stroke:'#fff3ee','stroke-width':6,'stroke-linecap':'round',opacity:.8}))}
+  mk(svg,'circle',{cx:830,cy:70,r:46,fill:'#ffd36e'});
+  svg._rays=[];for(let i=0;i<4;i++)svg._rays.push(mk(svg,'path',{d:'',fill:'none','stroke-width':7,'stroke-linecap':'round'}));
+  svg._shield=mk(svg,'rect',{x:40,y:196,width:880,height:48,rx:24,fill:'var(--accent)',opacity:0});
+  svg._sl=mk(svg,'text',{x:480,y:231,'text-anchor':'middle','font-size':30,'font-weight':800,fill:'var(--bg)',opacity:0});svg._sl.textContent='SPF50+  PA++++';
+  svg._glow=mk(svg,'rect',{x:40,y:250,width:880,height:26,rx:13,fill:'#ff6b5a',opacity:0});
+  svg._lab=mk(svg,'text',{x:110,y:70,'font-size':40,'font-weight':800,fill:'var(--text)'});svg._lab.textContent={uvb:'UVB',uva:'UVA',block:'UVA + UVB'}[phase];
+};
+function wave(x0,y0,x1,y1,amp,wl,ph){let d='';const n=60;for(let i=0;i<=n;i++){const u=i/n,x=x0+(x1-x0)*u,y=y0+(y1-y0)*u;const nx=-(y1-y0),ny=(x1-x0),L=Math.hypot(nx,ny);const s=Math.sin((u*Math.hypot(x1-x0,y1-y0))/wl*2*Math.PI-ph)*amp;d+=(i?'L':'M')+(x+nx/L*s).toFixed(1)+' '+(y+ny/L*s).toFixed(1)}return d}
+ART.uv=(svg,phase,t)=>{
+  const broken = phase==='uva'?ease((t-1.2)/1.2):0;
+  svg._fib.forEach((f,i)=>{const y=440+i*18;let d='';for(let k=0;k<=40;k++){const x=80+k*20;const yy=y+Math.sin(k*.7+i)*8+(broken*rnd(k+i*40)*24*(k%3===0?1:0));d+=(k?'L':'M')+x+' '+yy.toFixed(1)}f.setAttribute('d',d);f.setAttribute('opacity',(0.8-broken*0.45).toFixed(2))});
+  const block=phase==='block';
+  svg._shield.setAttribute('opacity',block?ease(t/0.6).toFixed(3):0);svg._sl.setAttribute('opacity',block?ease((t-0.3)/0.6).toFixed(3):0);
+  svg._rays.forEach((r,i)=>{
+    const deep = phase==='uva' || (phase==='block' && i%2===0);
+    const x0=780-i*150, y0=110, depth = block? 188 : (deep? 520: 285);
+    const p=ease((t-i*0.15)/0.9); const y1=y0+(depth-y0)*p, x1=x0-(depth-y0)*0.55*p;
+    r.setAttribute('d',wave(x0,y0,x1,y1,deep?9:16,deep?60:28,t*14));
+    r.setAttribute('stroke',deep?'#b9a6ff':'#ffb35c');r.setAttribute('opacity',(0.95*ease((t-i*0.15)/0.3)).toFixed(3));
+  });
+  svg._glow.setAttribute('opacity',phase==='uvb'?(0.55*ease((t-0.9)/0.6)*(0.8+0.2*Math.sin(t*6))).toFixed(3):0);
+};
+// Huile / double nettoyage
+ARTINIT.oil=(svg,phase)=>{
+  svg.innerHTML='';
+  mk(svg,'path',{d:'M40 420 Q480 360 920 420 L920 590 L40 590 Z',fill:'#f2d7d0'});
+  svg._film=[];for(let i=0;i<9;i++){svg._film.push(mk(svg,'ellipse',{cx:110+i*92,cy:395-Math.sin((i/8)*Math.PI)*28,rx:44,ry:16,fill:'#f2c46b',opacity:.9}))}
+  svg._w=[];for(let i=0;i<6;i++)svg._w.push(mk(svg,'circle',{r:16,fill:'#7fb8ff',opacity:0}));
+  svg._b=[];for(let i=0;i<16;i++)svg._b.push(mk(svg,'circle',{r:10+rnd(i)*18,fill:'none',stroke:'#ffffff','stroke-width':4,opacity:0}));
+  const labels=phase==='film'?['SPF','makeup','sebum']:phase==='dissolve'?['oil cleanser']:['foam cleanser'];
+  labels.forEach((l,i)=>{const tx=mk(svg,'text',{x:phase==='film'?180+i*300:480,y:300,'text-anchor':'middle','font-size':36,'font-weight':700,fill:'var(--accent)'});tx.textContent=l});
+};
+ART.oil=(svg,phase,t)=>{
+  svg._film.forEach((f,i)=>{let a=.9,dy=0;
+    if(phase==='dissolve'){const p=ease((t-0.6-i*0.08)/0.9);dy=-p*220;a=.9*(1-p)}
+    if(phase==='foam'){a=0}
+    f.setAttribute('opacity',a.toFixed(3));f.setAttribute('transform',`translate(0,${dy.toFixed(1)})`)});
+  svg._w.forEach((w,i)=>{if(phase!=='film'){w.setAttribute('opacity',0);return}
+    const per=1.4,tt=((t+i*0.37)%per)/per;const x=150+i*130+tt*60, y=220+tt*tt*200;
+    w.setAttribute('cx',x.toFixed(1));w.setAttribute('cy',y.toFixed(1));w.setAttribute('opacity',(Math.sin(Math.PI*tt)).toFixed(3))});
+  svg._b.forEach((b,i)=>{if(phase!=='foam'){b.setAttribute('opacity',0);return}
+    const per=2.2,tt=((t+rnd(i)*per)%per)/per;b.setAttribute('cx',(90+rnd(i+3)*780).toFixed(1));b.setAttribute('cy',(400-tt*300).toFixed(1));b.setAttribute('opacity',(Math.sin(Math.PI*tt)*0.9).toFixed(3))});
+};
+// Poubelles
+ARTINIT.bins=(svg,phase)=>{
+  svg.innerHTML='';svg._bins=[];
+  const bin=(x,y,s,col)=>{const g=mk(svg,'g',{transform:`translate(${x},${y}) scale(${s})`});
+    const p=document.createElementNS(NS,'path');p.setAttribute('d','M-40 -60 H40 L32 60 H-32 Z');p.setAttribute('fill',col);g.appendChild(p);
+    const l=document.createElementNS(NS,'rect');['x','y','width','height','rx'].forEach((k,i)=>l.setAttribute(k,[-48,-78,96,16,6][i]));l.setAttribute('fill',col);g.appendChild(l);return g};
+  if(phase==='fee'){
+    const bag=mk(svg,'g',{});svg._bag=bag;
+    const bp=document.createElementNS(NS,'path');bp.setAttribute('d','M380 200 Q480 150 580 200 L600 470 Q480 510 360 470 Z');bp.setAttribute('fill','#f6efe9');bag.appendChild(bp);
+    const knot=document.createElementNS(NS,'path');knot.setAttribute('d','M450 200 Q480 120 510 200');knot.setAttribute('stroke','#f6efe9');knot.setAttribute('stroke-width',14);knot.setAttribute('fill','none');bag.appendChild(knot);
+    const tg=mk(svg,'g',{});svg._tag=tg;
+    const tr=document.createElementNS(NS,'rect');[['x',560],['y',300],['width',220],['height',110],['rx',22],['fill','var(--accent)']].forEach(([k,v])=>tr.setAttribute(k,v));tg.appendChild(tr);
+    const tt=document.createElementNS(NS,'text');[['x',670],['y',372],['text-anchor','middle'],['font-size',54],['font-weight',800],['fill','var(--bg)']].forEach(([k,v])=>tt.setAttribute(k,v));tt.textContent='₩ fee';tg.appendChild(tt);
+    const yr=mk(svg,'text',{x:160,y:360,'text-anchor':'middle','font-size':96,'font-weight':800,fill:'var(--num)'});yr.textContent='1995';svg._yr=yr;
+  } else if(phase==='dump'){
+    for(let i=0;i<5;i++)svg._bins.push(bin(140+i*170,380,1.1,'#cbd5e6'));
+  } else {
+    const cols=['#8fd19e','#f2cf9e','#8fb4f0'];const names=['plastic','paper','food'];
+    for(let i=0;i<3;i++){svg._bins.push(bin(250+i*230,400,1.25,cols[i]));const tx=mk(svg,'text',{x:250+i*230,y:540,'text-anchor':'middle','font-size':32,'font-weight':600,fill:'var(--sub)'});tx.textContent=names[i]}
+  }
+};
+ART.bins=(svg,phase,t)=>{
+  if(phase==='fee'){svg._bag.setAttribute('opacity',ease(t/0.5));svg._tag.setAttribute('transform',`translate(0,${((1-ease((t-0.5)/0.6))*-80).toFixed(1)})`);svg._tag.setAttribute('opacity',ease((t-0.5)/0.5).toFixed(3));svg._yr.setAttribute('opacity',ease((t-0.2)/0.5).toFixed(3))}
+  if(phase==='dump') svg._bins.forEach((b,i)=>{const p=ease((t-1.0-i*0.35)/0.5);b.setAttribute('opacity',(1-p).toFixed(3));const s=1.1*(1-0.3*p);const x=140+i*170;b.setAttribute('transform',`translate(${x},${380+p*30}) scale(${s})`)});
+  if(phase==='now') svg._bins.forEach((b,i)=>{const p=ease((t-i*0.2)/0.5);const x=250+i*230;b.setAttribute('transform',`translate(${x},${400+(1-p)*60}) scale(1.25)`);b.setAttribute('opacity',p.toFixed(3))});
+};
+// Âge coréen
+ARTINIT.age=(svg,phase)=>{
+  svg.innerHTML='';
+  svg._a=mk(svg,'text',{x:300,y:380,'text-anchor':'middle','font-size':260,'font-weight':800,fill:'var(--text)'});
+  svg._al=mk(svg,'text',{x:300,y:470,'text-anchor':'middle','font-size':40,'font-weight':600,fill:'var(--sub)'});
+  svg._b=mk(svg,'text',{x:700,y:380,'text-anchor':'middle','font-size':260,'font-weight':800,fill:'var(--num)'});
+  svg._bl=mk(svg,'text',{x:700,y:470,'text-anchor':'middle','font-size':40,'font-weight':600,fill:'var(--sub)'});
+  svg._x=mk(svg,'path',{d:'M200 190 L400 400',stroke:'#ff7a7a','stroke-width':14,'stroke-linecap':'round',opacity:0});
+  svg._c=mk(svg,'g',{});
+};
+ART.age=(svg,phase,t)=>{
+  if(phase==='birth'){svg._a.textContent='0';svg._al.textContent='international age';svg._b.textContent='1';svg._bl.textContent='Korean age';
+    svg._a.setAttribute('opacity',ease(t/0.5));svg._b.setAttribute('opacity',ease((t-0.6)/0.5));svg._al.setAttribute('opacity',ease(t/0.5));svg._bl.setAttribute('opacity',ease((t-0.6)/0.5));svg._x.setAttribute('opacity',0)}
+  if(phase==='newyear'){const flip=t>1.4;svg._a.textContent=flip?'Jan 1':'Dec 31';svg._a.setAttribute('font-size',110);svg._al.textContent='born Dec 31';
+    svg._b.textContent=flip?'2':'1';svg._bl.textContent='Korean age';const p=flip?ease((t-1.4)/0.4):1;svg._b.setAttribute('transform',`translate(0,${((1-p)*40).toFixed(1)})`);svg._b.setAttribute('opacity',p.toFixed(3));svg._a.setAttribute('opacity',1);svg._al.setAttribute('opacity',1);svg._bl.setAttribute('opacity',1)}
+  if(phase==='law'){svg._a.textContent='2';svg._al.textContent='Korean age';svg._b.textContent='0';svg._bl.textContent='official age';
+    svg._x.setAttribute('opacity',ease((t-0.5)/0.4).toFixed(3));svg._b.setAttribute('opacity',ease((t-0.9)/0.5).toFixed(3));svg._bl.setAttribute('opacity',ease((t-0.9)/0.5).toFixed(3))}
+};
+</script></body></html>

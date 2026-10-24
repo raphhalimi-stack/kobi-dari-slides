@@ -2,21 +2,13 @@ name: Publication Instagram
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # 10:00 UTC = 19:00 Séoul
+    - cron: "2,32 * * * *"   # toutes les 30 min ; le script publie ce qui est dû
   workflow_dispatch:
     inputs:
-      decks:
-        description: "Decks à publier maintenant (ex. 0-4). Vide = posts du jour."
+      key:
+        description: "Forcer un élément (ex. kobi:c:00_launch). Vide = file d'attente."
         required: false
         default: ""
-      account:
-        description: "kobi, dari ou vide (les deux)"
-        required: false
-        default: ""
-      dry_run:
-        description: "true = simulation sans publier"
-        required: false
-        default: "false"
 
 permissions:
   contents: write
@@ -28,6 +20,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -38,15 +31,13 @@ jobs:
           IG_TOKEN_KOBI: ${{ secrets.IG_TOKEN_KOBI }}
           IG_TOKEN_DARI: ${{ secrets.IG_TOKEN_DARI }}
         run: |
-          ARGS=""
-          if [ -n "${{ github.event.inputs.decks }}" ]; then ARGS="--decks ${{ github.event.inputs.decks }}"; else ARGS="--today"; fi
-          if [ -n "${{ github.event.inputs.account }}" ]; then ARGS="$ARGS --account ${{ github.event.inputs.account }}"; fi
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
-          python publish.py $ARGS
+          if [ -n "${{ github.event.inputs.key }}" ]; then python publish.py --key "${{ github.event.inputs.key }}"; else python publish.py; fi
       - name: Sauvegarder l'état
         if: always()
         run: |
           git config user.name "ig-publisher"
           git config user.email "ig-publisher@users.noreply.github.com"
-          git add state.json || true
-          git diff --cached --quiet || (git commit -m "state: posts publiés" && git push)
+          git add state2.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "state: publications"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
