@@ -1,0 +1,126 @@
+{
+  "voices": {"kobi": "af_heart", "dari": "am_michael"},
+  "kobi": [
+    {"id": "barrier",
+     "scenes": [
+       {"type": "hook", "kicker": "Skin science", "title": "Your skin barrier is a brick wall.", "say": "Your skin barrier is basically a brick wall."},
+       {"type": "illus", "art": "bricks", "phase": "build", "title": "Cells are the bricks. Lipids are the mortar.", "say": "The bricks are skin cells. The mortar between them is lipids, mostly ceramides."},
+       {"type": "illus", "art": "bricks", "phase": "crack", "title": "Too much scrubbing cracks the mortar.", "say": "Exfoliate too often, and the mortar starts to crack."},
+       {"type": "illus", "art": "bricks", "phase": "leak", "title": "Water escapes. Irritants get in.", "say": "Water escapes, irritants get in. That's the redness and the tight feeling."},
+       {"type": "illus", "art": "bricks", "phase": "repair", "title": "Fix it with ceramides. Pause the acids.", "say": "To fix it, use a ceramide cream and pause the acids for a week."},
+       {"type": "cta", "title": "Save this before your next exfoliation.", "say": "Save this before your next exfoliation."}
+     ],
+     "caption": "Your skin barrier is a brick wall 🧱\nSkin cells are the bricks, lipids are the mortar. Over-exfoliate and the mortar cracks: water escapes, irritants get in. Ceramides and a break from acids fix it.\nSave this before your next exfoliation.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skinbarrier #skincarescience #kbeauty #koreanskincare #ceramides #skincaretips #kobiapp"},
+    {"id": "label",
+     "scenes": [
+       {"type": "hook", "kicker": "Can't read Korean?", "title": "Read a K-beauty label in 10 seconds.", "say": "Can't read Korean? Here's how to read a K-beauty label in ten seconds."},
+       {"type": "point", "tag": "진정", "title": "Soothing", "desc": "Calms redness and irritation.", "say": "Jin-jeong means soothing."},
+       {"type": "point", "tag": "보습", "title": "Moisturising", "desc": "Hydration for dry, tight skin.", "say": "Bo-seup means moisturising."},
+       {"type": "point", "tag": "미백", "title": "Brightening", "desc": "Targets dark spots and dullness.", "say": "Mi-baek, brightening."},
+       {"type": "point", "tag": "주름개선", "title": "Anti-wrinkle", "desc": "Fine lines and firmness.", "say": "Joo-reum gae-seon, anti wrinkle."},
+       {"type": "point", "tag": "자외선 차단", "title": "UV protection", "desc": "It's a sunscreen.", "say": "And ja-way-seon cha-dan means it's a sunscreen."},
+       {"type": "cta", "title": "Save this for your next Olive Young run.", "say": "Save this for your next Olive Young run."}
+     ],
+     "caption": "Read a K-beauty label in 10 seconds 🇰🇷\nFive Korean words tell you what almost any product does: soothing, moisturising, brightening, anti-wrinkle, sun protection.\nSave this for your next Olive Young run, and send it to the friend who buys everything.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #koreanskincare #oliveyoung #learnkorean #skincaretips #kobiapp #seoulshopping"},
+    {"id": "uv",
+     "scenes": [
+       {"type": "hook", "kicker": "Skin science", "title": "SPF is only half the story.", "say": "SPF is only half the story."},
+       {"type": "illus", "art": "uv", "phase": "uvb", "title": "UVB burns the surface.", "say": "U V B rays hit the top layer of your skin. That's sunburn, and that's what SPF measures."},
+       {"type": "illus", "art": "uv", "phase": "uva", "title": "UVA goes deeper and ages skin.", "say": "U V A rays go deeper, down to the collagen. That's wrinkles and dark spots. And they pass through windows."},
+       {"type": "illus", "art": "uv", "phase": "block", "title": "PA++++ = top UVA protection.", "say": "In Korea, the P A rating measures U V A. Four plus signs is the highest."},
+       {"type": "cta", "title": "Look for SPF50+ PA++++. Save this.", "say": "So look for S P F fifty plus, P A four plus. Save this."}
+     ],
+     "caption": "SPF is only half the story ☀️\nSPF measures UVB, the burning rays. UVA goes deeper, ages your skin and passes through windows. In Korea the PA rating covers it: PA++++ is the top grade.\nSave this and check your sunscreen.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #koreansunscreen #spf #skincarescience #kbeauty #antiaging #kobiapp"},
+    {"id": "order",
+     "scenes": [
+       {"type": "hook", "kicker": "Your routine is probably", "title": "in the wrong order.", "say": "Your skincare routine is probably in the wrong order."},
+       {"type": "point", "tag": "01", "title": "Cleanser", "desc": "Start on clean skin.", "say": "Cleanser first."},
+       {"type": "point", "tag": "02", "title": "Toner", "desc": "Preps and rehydrates.", "say": "Then toner."},
+       {"type": "point", "tag": "03", "title": "Serum", "desc": "Your active ingredients.", "say": "Then your serum, where the actives are."},
+       {"type": "point", "tag": "04", "title": "Moisturiser", "desc": "Locks it all in.", "say": "Moisturiser locks it in."},
+       {"type": "point", "tag": "05", "title": "SPF", "desc": "Morning only. Always last.", "say": "And S P F, always last, every morning."},
+       {"type": "cta", "title": "Rule: thinnest to thickest.", "say": "The rule is simple. Thinnest to thickest. Send this to someone who does it backwards."}
+     ],
+     "caption": "Your routine is probably in the wrong order 🧴\nCleanser, toner, serum, moisturiser, SPF. The rule: thinnest to thickest, sunscreen always last in the morning.\nSend this to someone who does it backwards.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skincareroutine #kbeauty #koreanskincare #skincare101 #glassskin #skincaretips #kobiapp"},
+    {"id": "doublecleanse",
+     "scenes": [
+       {"type": "hook", "kicker": "Skin science", "title": "Why Koreans wash their face twice.", "say": "Why do Koreans wash their face twice?"},
+       {"type": "illus", "art": "oil", "phase": "film", "title": "Sunscreen and makeup are oil-based.", "say": "Sunscreen, makeup and sebum are oil based. Water alone just slides off them."},
+       {"type": "illus", "art": "oil", "phase": "dissolve", "title": "Oil dissolves oil.", "say": "An oil cleanser grabs them, because oil dissolves oil."},
+       {"type": "illus", "art": "oil", "phase": "foam", "title": "Then a gentle foam.", "say": "Then a gentle foam cleanser washes away what's left."},
+       {"type": "cta", "title": "Do it at night. Save this.", "say": "Do it at night, not in the morning. Save this."}
+     ],
+     "caption": "Why Koreans wash their face twice 🫧\nSunscreen, makeup and sebum are oil-based, so water slides off. An oil cleanser dissolves them, then a gentle foam removes the rest. Night only.\nSave this for tonight.\nKobi launches 25 Nov. Waitlist in bio.\n\n#doublecleansing #kbeauty #koreanskincare #skincarescience #nightroutine #skincaretips #kobiapp"},
+    {"id": "oliveyoung",
+     "scenes": [
+       {"type": "hook", "kicker": "Going to Olive Young?", "title": "Don't make these 3 mistakes.", "say": "Going to Olive Young? Don't make these three mistakes."},
+       {"type": "point", "tag": "01", "title": "Skipping the testers", "desc": "Try textures before the full size.", "say": "One. Skipping the testers. Try the texture first."},
+       {"type": "point", "tag": "02", "title": "Missing the deals", "desc": "Look for 1+1 and 2+1 tags.", "say": "Two. Missing the one plus one deals on the shelf."},
+       {"type": "point", "tag": "03", "title": "No passport", "desc": "Visitors can get the tax back.", "say": "Three. Forgetting your passport. Visitors can get the tax back at the counter."},
+       {"type": "cta", "title": "Save this before your trip to Seoul.", "say": "Save this before your trip to Seoul."}
+     ],
+     "caption": "Going to Olive Young? Don't make these 3 mistakes 🛍️\nTest before you buy, hunt the 1+1 tags, and bring your passport for the tax refund.\nSave this before your trip to Seoul.\nKobi launches 25 Nov. Waitlist in bio.\n\n#oliveyoung #kbeauty #seoulshopping #koreatravel #koreanskincare #skincarehaul #kobiapp"}
+  ],
+  "dari": [
+    {"id": "trashcans",
+     "scenes": [
+       {"type": "hook", "kicker": "Korea, explained", "title": "Why Seoul has almost no trash cans.", "say": "Ever noticed Seoul has almost no trash cans on the street?"},
+       {"type": "illus", "art": "bins", "phase": "fee", "title": "1995: you pay for your trash.", "say": "In 1995, Korea started charging for household trash. You have to buy special bags for it."},
+       {"type": "illus", "art": "bins", "phase": "dump", "title": "So people used street bins instead.", "say": "So some people dumped their home trash in public bins instead. And many cities took the bins away."},
+       {"type": "illus", "art": "bins", "phase": "now", "title": "Today: carry it, sort it.", "say": "Today, locals carry their trash and sort it. Try convenience stores and metro stations."},
+       {"type": "cta", "title": "Now you know. Send this to your travel buddy.", "say": "Now you know. Send this to your travel buddy."}
+     ],
+     "caption": "Why Seoul has almost no trash cans 🗑️\nIn 1995 Korea started charging for household trash with special bags. Some people dumped it in street bins instead, so many bins disappeared. Today you carry it and sort it.\nSend this to your travel buddy.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreaexplained #seoul #koreanculture #koreatravel #lifeinkorea #visitkorea #dariapp"},
+    {"id": "landed",
+     "scenes": [
+       {"type": "hook", "kicker": "Just landed at Incheon?", "title": "Do this, in this order.", "say": "Just landed at Incheon? Do this, in this order."},
+       {"type": "point", "tag": "01", "title": "Get data", "desc": "eSIM or SIM at arrivals.", "say": "One. Get data. An e-SIM or a SIM at arrivals."},
+       {"type": "point", "tag": "02", "title": "T-money card", "desc": "At any convenience store.", "say": "Two. A T-money card from the convenience store."},
+       {"type": "point", "tag": "03", "title": "Naver Map + Papago", "desc": "Maps and translation.", "say": "Three. Download Naver Map and Papago."},
+       {"type": "point", "tag": "04", "title": "Take the AREX", "desc": "Straight to Seoul Station.", "say": "Four. The airport railroad, straight to Seoul Station."},
+       {"type": "point", "tag": "05", "title": "Kakao T", "desc": "Taxis, no Korean needed.", "say": "Five. Kakao T for taxis. No Korean needed."},
+       {"type": "cta", "title": "Save this for the plane.", "say": "Save this for the plane."}
+     ],
+     "caption": "Just landed at Incheon? Do this, in this order ✈️\nData, T-money, Naver Map and Papago, the AREX to Seoul Station, Kakao T for taxis.\nSave this for the plane.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #incheonairport #seoultravel #firsttriptokorea #visitkorea #tmoney #dariapp"},
+    {"id": "koreanage",
+     "scenes": [
+       {"type": "hook", "kicker": "Korea, explained", "title": "Everyone in Korea got younger. Overnight.", "say": "In 2023, everyone in Korea got one or two years younger. Overnight."},
+       {"type": "illus", "art": "age", "phase": "birth", "title": "Korean age: 1 at birth.", "say": "Traditionally, you were already one year old at birth."},
+       {"type": "illus", "art": "age", "phase": "newyear", "title": "+1 every New Year's Day.", "say": "And everyone turned a year older together, on New Year's Day."},
+       {"type": "illus", "art": "age", "phase": "law", "title": "June 2023: international age.", "say": "In June 2023, a new law made international age the standard for official use."},
+       {"type": "cta", "title": "Send this to a K-drama fan.", "say": "Now you know. Send this to a K-drama fan."}
+     ],
+     "caption": "Everyone in Korea got younger. Overnight 🎂\nKorean age started at 1 at birth and went up every New Year's Day. Since June 2023, international age is the official standard.\nSend this to a K-drama fan.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreaexplained #koreanage #koreanculture #kdrama #lifeinkorea #seoul #dariapp"},
+    {"id": "restaurant",
+     "scenes": [
+       {"type": "hook", "kicker": "Eating out in Korea", "title": "4 rules nobody tells you.", "say": "Eating out in Korea? Four rules nobody tells you."},
+       {"type": "point", "tag": "01", "title": "Water is self-service", "desc": "Find the dispenser and cups.", "say": "Water is self service."},
+       {"type": "point", "tag": "02", "title": "Press the bell", "desc": "The button on the table calls staff.", "say": "Press the bell on the table to call staff."},
+       {"type": "point", "tag": "03", "title": "Pay at the counter", "desc": "On your way out.", "say": "Pay at the counter, on your way out."},
+       {"type": "point", "tag": "04", "title": "No tipping", "desc": "It isn't expected.", "say": "And no tipping. It isn't expected."},
+       {"type": "cta", "title": "Send this to whoever you're going with.", "say": "Send this to whoever you're going with."}
+     ],
+     "caption": "Eating out in Korea: 4 rules nobody tells you 🍜\nWater is self-service, the bell calls staff, you pay at the counter on the way out, and there's no tipping.\nSend this to whoever you're going with.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanfood #seoulfood #koreatravel #koreanculture #lifeinkorea #visitkorea #dariapp"},
+    {"id": "phrases",
+     "scenes": [
+       {"type": "hook", "kicker": "5 Korean phrases", "title": "that get you through any day.", "say": "Five Korean phrases that get you through any day."},
+       {"type": "point", "tag": "안녕하세요", "title": "Hello", "desc": "an-nyeong-ha-se-yo", "say": "Hello. Ahn-nyong-ha-say-yo."},
+       {"type": "point", "tag": "감사합니다", "title": "Thank you", "desc": "gam-sa-ham-ni-da", "say": "Thank you. Gahm-sah-hahm-nee-dah."},
+       {"type": "point", "tag": "이거 주세요", "title": "This one, please", "desc": "i-geo ju-se-yo", "say": "This one, please. Ee-gaw joo-say-yo."},
+       {"type": "point", "tag": "얼마예요?", "title": "How much is it?", "desc": "eol-ma-ye-yo", "say": "How much is it? Ul-mah-yeh-yo."},
+       {"type": "point", "tag": "화장실 어디예요?", "title": "Where's the restroom?", "desc": "hwa-jang-sil eo-di-ye-yo", "say": "Where's the restroom? Hwah-jahng-shil aw-dee-yeh-yo."},
+       {"type": "cta", "title": "Save it and practise on the plane.", "say": "Save it, and practise on the plane."}
+     ],
+     "caption": "5 Korean phrases that get you through any day 🗣️\nHello, thank you, this one please, how much, and where's the restroom.\nSave it and practise on the plane.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanlanguage #koreatravel #seoul #studyinkorea #lifeinkorea #dariapp"},
+    {"id": "tmoney",
+     "scenes": [
+       {"type": "hook", "kicker": "T-money", "title": "explained in 15 seconds.", "say": "T-money, explained in fifteen seconds."},
+       {"type": "point", "tag": "01", "title": "Buy it", "desc": "Convenience store or station.", "say": "Buy it at any convenience store."},
+       {"type": "point", "tag": "02", "title": "Top it up", "desc": "With cash.", "say": "Top it up with cash."},
+       {"type": "point", "tag": "03", "title": "Tap in, tap out", "desc": "On the bus too.", "say": "Tap in, and tap out. On the bus too."},
+       {"type": "point", "tag": "04", "title": "Cheaper transfers", "desc": "Only if you tapped out.", "say": "That's what makes your transfers cheaper."},
+       {"type": "cta", "title": "Save this for day one in Seoul.", "say": "Save this for day one in Seoul."}
+     ],
+     "caption": "T-money, explained in 15 seconds 🚇\nBuy it at a convenience store, top up with cash, tap in and out on the metro and the bus. Tapping out is what gets you the transfer discount.\nSave this for day one.\nDari launches 25 Nov. Waitlist in bio.\n\n#tmoney #seoulmetro #koreatravel #seoultravel #publictransport #visitkorea #dariapp"}
+  ]
+}

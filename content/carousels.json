@@ -1,0 +1,214 @@
+{
+  "kobi": [
+    {"id": "00_launch",
+     "cover": {"kicker": "Launching", "title": "25 November.", "sub": "Kobi, the K-beauty app that reads the label for you."},
+     "slides": [
+       {"tag": "01", "title": "Scan anything", "body": "Point your phone at any product in any shop. Kobi reads the barcode."},
+       {"tag": "02", "title": "Understand it", "body": "Every ingredient decoded in your language, checked against your skin type."},
+       {"tag": "03", "title": "Build your routine", "body": "Five steps made for your skin, from products you can actually find."},
+       {"tag": "04", "title": "First 100 get Premium", "body": "Join the waitlist now: the first 100 get three months of Kobi Premium."}
+     ],
+     "end": {"title": "Four weeks to go.", "sub": "Follow so you don't miss launch day. Waitlist in bio."}},
+    {"id": "01_meet_kobi",
+     "cover": {"kicker": "Meet", "title": "Kobi.", "sub": "Your K-beauty companion, in Korea and anywhere."},
+     "slides": [
+       {"tag": "01", "title": "Scan", "body": "Point your phone at any product in the shop. Kobi reads the barcode."},
+       {"tag": "02", "title": "Decode", "body": "Every ingredient, what it does, and whether it suits your skin type."},
+       {"tag": "03", "title": "Build", "body": "A five-step routine made for your skin, from products you can find here."},
+       {"tag": "04", "title": "Four languages", "body": "English, French, Korean and Mongolian. Same app, same answers."}
+     ],
+     "end": {"title": "Start with your skin type.", "sub": "It takes a minute. Everything after that is personal."}},
+    {"id": "02_skin_types",
+     "cover": {"kicker": "Your skin type,", "title": "decoded.", "sub": "Most products are made for one type, not all four."},
+     "slides": [
+       {"tag": "01", "title": "Oily", "body": "Shine by midday, larger pores, breakouts. Look for lightweight gels, niacinamide, BHA."},
+       {"tag": "02", "title": "Dry", "body": "Tight after washing, flaky patches, dull. Look for ceramides, hyaluronic acid, creams over gels."},
+       {"tag": "03", "title": "Combination", "body": "Oily T-zone, dry cheeks. Look for balancing toners and light moisturisers."},
+       {"tag": "04", "title": "Sensitive", "body": "Redness, stings easily. Look for fragrance-free formulas, centella, short ingredient lists."}
+     ],
+     "end": {"title": "Not sure which one you are?", "sub": "Kobi asks five questions and sets your profile once."}},
+    {"id": "03_routine",
+     "cover": {"kicker": "A routine in", "title": "60 seconds.", "sub": "Five steps, in this order. Everything else is optional."},
+     "slides": [
+       {"tag": "01", "title": "Cleanse", "body": "Oil cleanser at night if you wore SPF or makeup, then a gentle foam."},
+       {"tag": "02", "title": "Tone", "body": "Not the harsh kind. A hydrating toner that preps your skin."},
+       {"tag": "03", "title": "Treat", "body": "One serum, one goal. Add a second only once the first works."},
+       {"tag": "04", "title": "Moisturise", "body": "Gel for oily, cream for dry. Lock in what you just applied."},
+       {"tag": "05", "title": "Protect", "body": "SPF50+ PA++++ every morning, even indoors."}
+     ],
+     "end": {"title": "Kobi builds the five for you.", "sub": "From your skin type and products you can find in Korea."}},
+    {"id": "04_niacinamide",
+     "cover": {"kicker": "Ingredient spotlight", "title": "Niacinamide.", "sub": "Vitamin B3. The one almost everyone can use."},
+     "slides": [
+       {"tag": "01", "title": "What it does", "body": "Evens out tone, calms redness, supports the barrier and helps keep oil in check."},
+       {"tag": "02", "title": "How much", "body": "Most Korean serums use 2 to 5%. Higher isn't better: 10% and up can irritate."},
+       {"tag": "03", "title": "Pairs well with", "body": "Hyaluronic acid, ceramides, centella and SPF. Fine with retinol too."},
+       {"tag": "04", "title": "Go slow if", "body": "Your skin is very sensitive. Start every other day and watch for flushing."}
+     ],
+     "end": {"title": "Scan the bottle.", "sub": "Kobi shows what's inside and whether it fits your skin."}},
+    {"id": "05_centella",
+     "cover": {"kicker": "Ingredient spotlight", "title": "Centella.", "sub": "Cica, tiger grass, 병풀. Korea's favourite calming ingredient."},
+     "slides": [
+       {"tag": "01", "title": "What it does", "body": "Soothes redness and irritation and supports the skin barrier."},
+       {"tag": "02", "title": "On the label", "body": "Centella Asiatica Extract, Madecassoside, Asiaticoside. Any of these means cica."},
+       {"tag": "03", "title": "Best for", "body": "Sensitive and acne-prone skin, after exfoliation, after sun."},
+       {"tag": "04", "title": "Pairs well with", "body": "Niacinamide, hyaluronic acid, panthenol. Great in a toner or a light cream."}
+     ],
+     "end": {"title": "Reactive skin?", "sub": "Tell Kobi. It flags the products that calm, not sting."}},
+    {"id": "06_korean_label",
+     "cover": {"kicker": "Reading a", "title": "Korean label.", "sub": "Five words that tell you what the product does."},
+     "slides": [
+       {"tag": "보습", "title": "Moisturising", "body": "Hydration. Toners, essences, gel creams."},
+       {"tag": "진정", "title": "Soothing", "body": "Calming. Usually centella, mugwort or heartleaf inside."},
+       {"tag": "미백", "title": "Brightening", "body": "Tone-evening. Niacinamide, vitamin C, arbutin."},
+       {"tag": "주름개선", "title": "Wrinkle care", "body": "Anti-ageing. Adenosine, peptides, retinol."},
+       {"tag": "자외선 차단", "title": "Sun protection", "body": "It's a sunscreen. Look for SPF50+ and PA++++."}
+     ],
+     "end": {"title": "Or just scan it.", "sub": "Kobi translates the whole ingredient list for you."}},
+    {"id": "07_olive_young",
+     "cover": {"kicker": "Olive Young,", "title": "done right.", "sub": "How to shop the biggest K-beauty store without wasting money."},
+     "slides": [
+       {"tag": "01", "title": "Time it with a sale", "body": "Olive Young runs big sale events several times a year. Check the app first."},
+       {"tag": "02", "title": "Use the testers", "body": "Try the texture on your hand before you buy the full size."},
+       {"tag": "03", "title": "Bring your passport", "body": "Visitors can get the tax back. Ask at the counter."},
+       {"tag": "04", "title": "Ignore the hype tag", "body": "Bestseller means popular, not right for your skin."},
+       {"tag": "05", "title": "Mini first", "body": "Most hits come in mini sizes. Try for two weeks, then go big."}
+     ],
+     "end": {"title": "Kobi works in the aisle.", "sub": "Scan, compare, decide. Then pay."}},
+    {"id": "08_spf",
+     "cover": {"kicker": "Sunscreen,", "title": "decoded.", "sub": "Why Korean sunscreens are the ones people fly home with."},
+     "slides": [
+       {"tag": "01", "title": "SPF50+", "body": "Protection from UVB, the burning rays. 50+ is the norm in Korea."},
+       {"tag": "02", "title": "PA++++", "body": "Protection from UVA, the ageing rays. Four plus signs is the top grade."},
+       {"tag": "03", "title": "Texture", "body": "Light, no white cast, no greasy film. That's why people actually wear it."},
+       {"tag": "04", "title": "How much", "body": "Two finger-lengths for the face. Reapply every two hours outdoors."},
+       {"tag": "05", "title": "Every day", "body": "Cloudy, winter, by a window. UVA gets through."}
+     ],
+     "end": {"title": "Need one for your skin?", "sub": "Gel for oily, cream for dry, mineral for sensitive. Ask Kobi."}},
+    {"id": "09_am_pm",
+     "cover": {"kicker": "Morning", "title": "vs night.", "sub": "Same five steps. Different job."},
+     "slides": [
+       {"tag": "AM", "title": "Morning protects", "body": "Light cleanse, toner, vitamin C or niacinamide, light moisturiser, SPF."},
+       {"tag": "PM", "title": "Night repairs", "body": "Double cleanse, toner, your active, a richer cream. No SPF."},
+       {"tag": "!", "title": "Split your actives", "body": "Retinol at night, vitamin C in the morning. Exfoliate two or three nights a week."}
+     ],
+     "end": {"title": "Kobi splits it AM / PM.", "sub": "And tells you which active goes where."}},
+    {"id": "10_mistakes",
+     "cover": {"kicker": "Five mistakes", "title": "that waste your haul.", "sub": "And how to fix each one."},
+     "slides": [
+       {"tag": "01", "title": "Everything at once", "body": "Add one new product at a time, two weeks apart."},
+       {"tag": "02", "title": "Over-exfoliating", "body": "Two or three nights a week. Redness and tightness mean stop."},
+       {"tag": "03", "title": "Mixing actives", "body": "Retinol plus acids plus vitamin C in one go damages the barrier."},
+       {"tag": "04", "title": "Skipping SPF", "body": "Serums work for months. The sun undoes it in an afternoon."},
+       {"tag": "05", "title": "Copying someone else", "body": "The viral serum was made for a skin type. Maybe not yours."}
+     ],
+     "end": {"title": "Scan before you buy.", "sub": "Kobi checks the product against your skin, not the hype."}}
+  ],
+  "dari": [
+    {"id": "00_launch",
+     "cover": {"kicker": "Launching", "title": "25 November.", "sub": "Dari, the app that makes Korea easy, whether you visit or live here."},
+     "slides": [
+       {"tag": "01", "title": "Eat and explore", "body": "Neighbourhood walks, day trips and the places locals actually book."},
+       {"tag": "02", "title": "Settle in", "body": "The arrival kit, the ARC playbook, the apps that work without one."},
+       {"tag": "03", "title": "Ask anything", "body": "A concierge that answers with real addresses, in English, French, Korean or Mongolian."},
+       {"tag": "04", "title": "First 100 get Dari Plus", "body": "Join the waitlist now: the first 100 get three months free."}
+     ],
+     "end": {"title": "Four weeks to go.", "sub": "Follow so you don't miss launch day. Waitlist in bio."}},
+    {"id": "01_meet_dari",
+     "cover": {"kicker": "Meet", "title": "Dari.", "sub": "Your bridge to Korea, whether you're here for a week or for good."},
+     "slides": [
+       {"tag": "01", "title": "Eat", "body": "The places locals book, not the tourist menus."},
+       {"tag": "02", "title": "Explore", "body": "Neighbourhoods to walk and day trips to take, in your language."},
+       {"tag": "03", "title": "Settle", "body": "Phone, bank, ARC. The practical side, explained once."},
+       {"tag": "04", "title": "Ask", "body": "A concierge that answers with real addresses."}
+     ],
+     "end": {"title": "다리 means bridge.", "sub": "That's the whole idea."}},
+    {"id": "02_just_landed",
+     "cover": {"kicker": "Just landed?", "title": "Do these five first.", "sub": "Before you even leave the airport."},
+     "slides": [
+       {"tag": "01", "title": "SIM or eSIM", "body": "Buy it at the airport or set up an eSIM before you fly. Data is everything here."},
+       {"tag": "02", "title": "T-money card", "body": "Any convenience store. Metro, bus, taxi, shops."},
+       {"tag": "03", "title": "Naver Map", "body": "The map locals use. Metro exits, live buses, real addresses."},
+       {"tag": "04", "title": "Papago", "body": "Point your camera at a menu or a sign. Instant translation."},
+       {"tag": "05", "title": "Kakao T", "body": "Order a taxi without saying a word."}
+     ],
+     "end": {"title": "The full arrival kit is in Dari.", "sub": "Step by step, in your language."}},
+    {"id": "03_no_arc",
+     "cover": {"kicker": "No ARC yet?", "title": "You can still live here.", "sub": "Your residence card can take weeks. Here's what works meanwhile."},
+     "slides": [
+       {"tag": "01", "title": "Maps, taxis, translation", "body": "Naver Map, Kakao T and Papago need no Korean ID. Use them from day one."},
+       {"tag": "02", "title": "Deliveries", "body": "Some delivery apps accept foreign cards. Dari lists which ones."},
+       {"tag": "03", "title": "A bank account", "body": "Most banks want the ARC. A few open limited accounts before it."},
+       {"tag": "04", "title": "A phone plan", "body": "Prepaid SIM until the card arrives, then switch to a contract."}
+     ],
+     "end": {"title": "The waiting-room guide.", "sub": "Everything you can do before the card, in order."}},
+    {"id": "04_apps",
+     "cover": {"kicker": "Six apps", "title": "Korea runs on.", "sub": "Download them before you need them."},
+     "slides": [
+       {"tag": "01", "title": "Naver Map", "body": "Directions, metro exits, bus arrivals."},
+       {"tag": "02", "title": "Kakao T", "body": "Taxis. Type the destination, no Korean needed."},
+       {"tag": "03", "title": "Papago", "body": "Camera, voice and text translation."},
+       {"tag": "04", "title": "KakaoTalk", "body": "Everyone messages on it. Shops, landlords, friends."},
+       {"tag": "05", "title": "Coupang", "body": "Next-day delivery of almost anything."},
+       {"tag": "06", "title": "Baemin", "body": "Food delivery, including the place you can't find on foot."}
+     ],
+     "end": {"title": "Dari explains each one.", "sub": "Set-up, and what needs an ARC."}},
+    {"id": "05_tmoney",
+     "cover": {"kicker": "T-money,", "title": "explained.", "sub": "One card for the metro, the bus, taxis and the convenience store."},
+     "slides": [
+       {"tag": "01", "title": "Where to buy", "body": "Any CU, GS25 or 7-Eleven, or a metro station."},
+       {"tag": "02", "title": "Top up", "body": "Cash at the store counter or the metro machines."},
+       {"tag": "03", "title": "Tap in, tap out", "body": "On the bus too. Tapping out is what unlocks the transfer discount."},
+       {"tag": "04", "title": "Also works", "body": "Taxis, convenience stores, some lockers and vending machines."}
+     ],
+     "end": {"title": "Or use your phone.", "sub": "Dari shows which mobile options work for visitors."}},
+    {"id": "06_taxi",
+     "cover": {"kicker": "A taxi,", "title": "without a word of Korean.", "sub": "Three ways that work."},
+     "slides": [
+       {"tag": "01", "title": "Kakao T", "body": "Type the destination, confirm. The driver already knows where you're going."},
+       {"tag": "02", "title": "Show the address", "body": "Flag a cab, show the destination on Naver Map. Drivers read, no need to speak."},
+       {"tag": "03", "title": "Pay", "body": "Card and T-money accepted in almost every taxi."},
+       {"tag": "04", "title": "Late at night", "body": "Fares rise after midnight and free taxis get rare. Order ahead."}
+     ],
+     "end": {"title": "Dari has the phrases.", "sub": "Written in Korean, ready to show the driver."}},
+    {"id": "07_convenience",
+     "cover": {"kicker": "The convenience store", "title": "does more than snacks.", "sub": "CU, GS25, 7-Eleven. Open 24/7, on every corner."},
+     "slides": [
+       {"tag": "01", "title": "T-money", "body": "Buy and top up your transit card at the counter."},
+       {"tag": "02", "title": "ATM", "body": "Look for the Global ATM sticker for foreign cards."},
+       {"tag": "03", "title": "Dinner", "body": "Triangle kimbap, lunch boxes, ramyeon with hot water on the spot."},
+       {"tag": "04", "title": "Parcels", "body": "Send and collect packages."}
+     ],
+     "end": {"title": "Dari's survival guide covers it all.", "sub": "Including what the ramyeon machine does."}},
+    {"id": "08_etiquette",
+     "cover": {"kicker": "Five things", "title": "nobody tells you.", "sub": "Small rules that make you look like you've been here a while."},
+     "slides": [
+       {"tag": "01", "title": "No tipping", "body": "Not in restaurants, not in taxis. It isn't expected."},
+       {"tag": "02", "title": "Press the bell", "body": "Restaurants have a call button on the table. Use it."},
+       {"tag": "03", "title": "Two hands", "body": "Give and receive cards, cash and gifts with both hands."},
+       {"tag": "04", "title": "Shoes off", "body": "At homes, many guesthouses, some restaurants. Look for the shoe shelf."},
+       {"tag": "05", "title": "Quiet on the metro", "body": "Calls and loud talking are frowned upon."}
+     ],
+     "end": {"title": "More in Dari.", "sub": "The etiquette guide, written by people who got it wrong first."}},
+    {"id": "09_neighbourhoods",
+     "cover": {"kicker": "Seoul,", "title": "one neighbourhood at a time.", "sub": "Five areas, five moods."},
+     "slides": [
+       {"tag": "01", "title": "Seongsu", "body": "Converted warehouses, cafés, pop-up stores."},
+       {"tag": "02", "title": "Ikseon-dong", "body": "Hanok alleys full of tiny restaurants. Go on a weekday."},
+       {"tag": "03", "title": "Yeonnam", "body": "The quiet side of Hongdae. Brunch and a park along the old railway."},
+       {"tag": "04", "title": "Hannam", "body": "Galleries, design shops, rooftop views."},
+       {"tag": "05", "title": "Euljiro", "body": "Printing shops by day, hidden bars by night."}
+     ],
+     "end": {"title": "Each one has a Dari walk.", "sub": "Addresses, order, and where to stop for a drink."}},
+    {"id": "10_daytrips",
+     "cover": {"kicker": "Five day trips", "title": "from Seoul.", "sub": "All back in time for dinner."},
+     "slides": [
+       {"tag": "01", "title": "Suwon", "body": "A walled fortress city. Fried chicken street for lunch."},
+       {"tag": "02", "title": "Nami Island", "body": "Tree-lined paths and lake views. Best in autumn."},
+       {"tag": "03", "title": "Incheon", "body": "Chinatown and Songdo's skyline. One metro line away."},
+       {"tag": "04", "title": "Gapyeong", "body": "Gardens, rail bikes and calm rivers."},
+       {"tag": "05", "title": "Paju", "body": "Book town, art villages, and where DMZ tours start."}
+     ],
+     "end": {"title": "Each trip is planned in Dari.", "sub": "Transport, timing, what to eat."}}
+  ]
+}
