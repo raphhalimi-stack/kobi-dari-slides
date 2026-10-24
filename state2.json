@@ -41,13 +41,6 @@
    "at": "2026-10-24T21:34:38.896828+00:00"
   }
  },
- "errors": {
-  "kobi:s:Labels_1": 1,
-  "kobi:c:00_launch": 2,
-  "dari:c:00_launch": 2
- },
- "last_error": {
-  "kobi:c:00_launch": "POST me/media_publish -> HTTP 400: {\"error\":{\"message\":\"Media ID is not available\",\"type\":\"OAuthException\",\"code\":9007,\"error_subcode\":2207027,\"is_transient\":false,\"error_user_title\":\"Cannot Publish\",\"error_user_msg\":\"The media is not ready for publishing, please wait for a moment\",\"fbtrace_id\":\"AhnU4uKiowJbIWjaWRhAOEy\"}}",
-  "dari:c:00_launch": "POST me/media_publish -> HTTP 400: {\"error\":{\"message\":\"Media ID is not available\",\"type\":\"OAuthException\",\"code\":9007,\"error_subcode\":2207027,\"is_transient\":false,\"error_user_title\":\"Cannot Publish\",\"error_user_msg\":\"The media is not ready for publishing, please wait for a moment\",\"fbtrace_id\":\"A3vie1pPrs0Y3xuyLLpu-rx\"}}"
- }
+ "errors": {},
+ "last_error": {}
 }

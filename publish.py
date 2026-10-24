@@ -88,8 +88,17 @@ def publish_item(it):
         wait(r["id"], tok, delay=3)
     else:
         raise RuntimeError("type inconnu " + kind)
-    pub = api("POST", "me/media_publish", {"creation_id": r["id"]}, tok)
-    return pub["id"]
+    time.sleep(8)
+    for attempt in range(12):
+        try:
+            pub = api("POST", "me/media_publish", {"creation_id": r["id"]}, tok)
+            return pub["id"]
+        except RuntimeError as e:
+            if "2207027" in str(e) or "9007" in str(e) or "is_transient\":true" in str(e):
+                time.sleep(10 + attempt * 5)
+                continue
+            raise
+    raise RuntimeError("media_publish : toujours pas prêt après plusieurs essais")
 
 
 def main():
