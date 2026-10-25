@@ -4,33 +4,74 @@
 @font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900}
 @font-face{font-family:Serif;src:url(fonts/NewsreaderItalic.ttf);font-style:italic;font-weight:200 800}
 *{margin:0;padding:0;box-sizing:border-box}
-#s{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter;color:#fff;-webkit-font-smoothing:antialiased;background:#0b1422}
-.half{position:absolute;left:0;right:0;height:960px;padding:0 90px;display:flex;flex-direction:column}
-#k{top:0;background:radial-gradient(900px 700px at 85% 10%,rgba(29,90,82,.75),transparent 70%),linear-gradient(175deg,#13262f,#0d1720 80%);justify-content:flex-start;padding-top:230px}
-#d{top:960px;background:radial-gradient(900px 700px at 15% 95%,rgba(20,70,150,.75),transparent 70%),linear-gradient(185deg,#0a1224 20%,#10203f);justify-content:flex-end;padding-bottom:250px}
-.brand{display:flex;align-items:center;gap:26px;font-size:64px;font-weight:900;letter-spacing:-1.5px}
-.h{font-size:34px;font-weight:600;opacity:.6;margin-left:auto;letter-spacing:0}
-.line{font-size:84px;font-weight:900;letter-spacing:-2.5px;line-height:1.06;margin-top:44px}
-.serif{font-family:Serif;font-style:italic;font-weight:400;letter-spacing:0}
-#mid{position:absolute;left:0;top:700px;width:1080px;height:460px}
-#date{position:absolute;left:0;right:0;top:930px;text-align:center}
-#date span{display:inline-block;background:#fff;color:#0b1422;font-weight:900;font-size:76px;letter-spacing:-2px;padding:26px 64px;border-radius:999px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
-#date small{display:block;margin-top:90px;font-size:34px;font-weight:700;letter-spacing:6px;color:rgba(255,255,255,.75)}
+html,body{background:#000}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter;color:#fff;-webkit-font-smoothing:antialiased;background:#04070d}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);mix-blend-mode:screen;will-change:transform}
+#grain{position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+#vig{position:absolute;inset:0;background:radial-gradient(1300px 1700px at 50% 50%,transparent 55%,rgba(0,0,0,.65))}
+#stars i{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 12px 3px rgba(255,255,255,.8)}
+#beam{position:absolute;left:0;right:0;top:958px;height:4px;transform-origin:50% 50%;
+  background:linear-gradient(90deg,transparent,#8ee6c3 18%,#fff 50%,#f2cf9e 82%,transparent);
+  box-shadow:0 0 30px 6px rgba(255,255,255,.55),0 0 120px 30px rgba(180,230,210,.25)}
+#flare{position:absolute;left:50%;top:960px;width:1400px;height:260px;margin:-130px 0 0 -700px;
+  background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,240,215,.18) 45%,transparent);mix-blend-mode:screen}
+#sweep{position:absolute;top:900px;height:120px;width:300px;background:radial-gradient(closest-side,rgba(255,255,255,.9),transparent);mix-blend-mode:screen;filter:blur(6px)}
+#big{position:absolute;left:0;right:0;top:640px;text-align:center;font-family:Serif;font-style:italic;font-weight:300;font-size:600px;line-height:1;letter-spacing:-20px;
+  background:linear-gradient(180deg,#ffffff 0%,#e9fff6 38%,#f6dcae 62%,#d9a868 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 40px rgba(255,235,200,.35)) drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+#nov{position:absolute;left:0;right:0;top:1196px;text-align:center;font-weight:800;font-size:58px;letter-spacing:34px;padding-left:34px;color:#fff}
+#sub{position:absolute;left:0;right:0;top:1290px;text-align:center;font-size:30px;font-weight:600;letter-spacing:12px;padding-left:12px;color:rgba(255,255,255,.6)}
+.card{position:absolute;left:70px;right:70px;padding:52px 58px;border-radius:60px;background:linear-gradient(140deg,rgba(255,255,255,.13),rgba(255,255,255,.03));
+  border:2px solid rgba(255,255,255,.2);backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);box-shadow:0 30px 80px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.25)}
+.brand{display:flex;align-items:center;gap:28px;font-size:76px;font-weight:900;letter-spacing:-2px}
+.brand .h{margin-left:auto;font-size:32px;font-weight:600;letter-spacing:0;color:rgba(255,255,255,.65)}
+.line{margin-top:30px;font-size:68px;font-weight:800;letter-spacing:-2px;line-height:1.08}
+.serif{font-family:Serif;font-style:italic;font-weight:400;letter-spacing:-.5px}
+#kc{top:250px}
+#dc{top:1420px}
 </style></head><body>
 <div id="s">
- <div class="half" id="k">
-  <div class="brand"><svg width="96" height="96" viewBox="0 0 60 60"><rect width="60" height="60" rx="16" fill="#ebc9c6"/><circle cx="43" cy="43" r="9" fill="#181415"/></svg>Kobi<span class="h">@kobiapp.cc</span></div>
-  <div class="line">Ta skincare coréenne, <span class="serif" style="color:#8ee6c3">enfin expliquée.</span></div>
+ <div class="blob" id="b1" style="width:900px;height:900px;background:#1b8f74;left:-250px;top:-200px"></div>
+ <div class="blob" id="b2" style="width:700px;height:700px;background:#ebc9c6;left:560px;top:120px;opacity:.55"></div>
+ <div class="blob" id="b3" style="width:800px;height:800px;background:#8ee6c3;left:300px;top:420px;opacity:.35"></div>
+ <div class="blob" id="b4" style="width:1000px;height:1000px;background:#1f4fb8;left:-300px;top:1150px"></div>
+ <div class="blob" id="b5" style="width:760px;height:760px;background:#f2cf9e;left:560px;top:1420px;opacity:.5"></div>
+ <div class="blob" id="b6" style="width:700px;height:700px;background:#8fb4f0;left:400px;top:1000px;opacity:.35"></div>
+ <div id="stars"></div>
+ <div id="flare"></div><div id="beam"></div><div id="sweep"></div>
+ <div id="big">25</div>
+ <div id="nov">NOVEMBRE</div>
+ <div id="sub">LANCEMENT · 2026</div>
+ <div class="card" id="kc">
+  <div class="brand"><svg width="104" height="104" viewBox="0 0 60 60"><rect width="60" height="60" rx="16" fill="#ebc9c6"/><circle cx="43" cy="43" r="9" fill="#181415"/></svg>Kobi<span class="h">@kobiapp.cc</span></div>
+  <div class="line">Ta skincare coréenne, <span class="serif" style="color:#a9f2d4">enfin expliquée.</span></div>
  </div>
- <div class="half" id="d">
-  <div class="line" style="margin:0 0 44px">La Corée, <span class="serif" style="color:#f2cf9e">rendue facile.</span></div>
-  <div class="brand"><svg width="128" height="76" viewBox="0 0 81 48"><path d="M4 44 A36.5 36.5 0 0 1 77 44 Z" fill="none" stroke="#8fb4f0" stroke-width="6"/><path d="M4 44H77" stroke="#8fb4f0" stroke-width="6" stroke-linecap="round"/><path d="M25 18V44M40.5 13V44M56 18V44" stroke="#8fb4f0" stroke-width="5.5"/></svg>Dari<span class="h">@dariapp.cc</span></div>
+ <div class="card" id="dc">
+  <div class="brand"><svg width="136" height="81" viewBox="0 0 81 48"><path d="M4 44 A36.5 36.5 0 0 1 77 44 Z" fill="none" stroke="#a9c6f7" stroke-width="6"/><path d="M4 44H77" stroke="#a9c6f7" stroke-width="6" stroke-linecap="round"/><path d="M25 18V44M40.5 13V44M56 18V44" stroke="#a9c6f7" stroke-width="5.5"/></svg>Dari<span class="h">@dariapp.cc</span></div>
+  <div class="line">La Corée, <span class="serif" style="color:#f6d9ab">rendue facile.</span></div>
  </div>
- <svg id="mid" viewBox="0 0 1080 460">
-  <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1080" y2="0"><stop offset="0" stop-color="#8ee6c3"/><stop offset="1" stop-color="#f2cf9e"/></linearGradient></defs>
-  <path d="M0 420 Q540 -220 1080 420" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/>
-  <path d="M0 420 H1080" stroke="url(#g)" stroke-width="12"/>
-  <g stroke="url(#g)" stroke-width="8"><path d="M120 420V294"/><path d="M260 420V186"/><path d="M820 420V186"/><path d="M960 420V294"/></g>
- </svg>
- <div id="date"><span>25 novembre</span><small>LANCEMENT</small></div>
-</div></body></html>
+ <div id="vig"></div><div id="grain"></div>
+</div>
+<script>
+const cl=x=>Math.max(0,Math.min(1,x)),ease=x=>1-Math.pow(1-cl(x),3),back=x=>{x=cl(x);const c=1.4,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const $=id=>document.getElementById(id);
+let rnd=7;const R=()=>{rnd=(rnd*16807)%2147483647;return rnd/2147483647};
+const ST=[];for(let i=0;i<46;i++){const e=document.createElement('i');const x=R()*1080,y=R()*1920,s=.4+R()*1.2,ph=R()*6.28,sp=1+R()*2;
+  e.style.left=x+'px';e.style.top=y+'px';e.style.transform=`scale(${s})`;$('stars').appendChild(e);ST.push({e,ph,sp,s})}
+const B=[['b1',60,40],['b2',-50,70],['b3',80,-40],['b4',70,50],['b5',-60,-60],['b6',-80,40]];
+function frame(t){
+  B.forEach(([id,ax,ay],i)=>{$(id).style.transform=`translate(${Math.sin(t*.5+i)*ax}px,${Math.cos(t*.4+i*1.3)*ay}px)`});
+  const fi=ease(t/1.2);document.querySelectorAll('.blob').forEach(b=>b.style.visibility='visible');$('s').style.filter=`brightness(${.3+.7*fi})`;
+  ST.forEach(o=>{o.e.style.opacity=cl((t-.8)/1)*(.25+.75*Math.pow(Math.sin(t*o.sp+o.ph)*.5+.5,3))});
+  const bw=ease((t-.5)/1.1);$('beam').style.transform=`scaleX(${bw})`;$('flare').style.opacity=bw*(.85+.15*Math.sin(t*2.2));
+  const sw=((t-2.2)%3.2)/3.2;$('sweep').style.left=(-300+sw*1680)+'px';$('sweep').style.opacity=t>2.2?Math.sin(Math.PI*cl(sw))*.9:0;
+  const g=ease((t-1.0)/1.3);$('big').style.opacity=g;$('big').style.transform=`scale(${1.25-.25*g}) translateY(${(1-g)*30}px)`;
+  $('big').style.filter=`blur(${(1-g)*24}px) drop-shadow(0 0 ${40+20*Math.sin(t*1.6)}px rgba(255,235,200,.4)) drop-shadow(0 30px 60px rgba(0,0,0,.6))`;
+  const n=ease((t-1.9)/.9);$('nov').style.opacity=n;$('nov').style.letterSpacing=(70-36*n)+'px';
+  $('sub').style.opacity=ease((t-2.3)/.8)*.9;
+  const k=back((t-2.6)/.9),d=back((t-3.0)/.9);
+  $('kc').style.opacity=cl((t-2.6)/.4);$('kc').style.transform=`translateY(${(1-k)*-160}px)`;
+  $('dc').style.opacity=cl((t-3.0)/.4);$('dc').style.transform=`translateY(${(1-d)*160}px)`;
+}
+frame(6);
+</script></body></html>

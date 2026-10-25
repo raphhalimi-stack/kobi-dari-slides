@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900}
+@font-face{font-family:Serif;src:url(fonts/NewsreaderItalic.ttf);font-style:italic;font-weight:200 800}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#000}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter;color:#fff;-webkit-font-smoothing:antialiased;background:#04070d}
+.blob{position:absolute;border-radius:50%;filter:blur(100px);mix-blend-mode:screen}
+#grain{position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+#vig{position:absolute;inset:0;background:radial-gradient(1300px 1700px at 50% 50%,transparent 55%,rgba(0,0,0,.7))}
+#stars i{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 12px 3px rgba(255,255,255,.8)}
+#beam{position:absolute;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--a1) 18%,#fff 50%,var(--a2) 82%,transparent);box-shadow:0 0 30px 6px rgba(255,255,255,.5),0 0 120px 30px rgba(255,255,255,.15)}
+#flare{position:absolute;left:50%;width:1400px;height:260px;margin:-130px 0 0 -700px;background:radial-gradient(closest-side,rgba(255,255,255,.5),rgba(255,240,215,.15) 45%,transparent);mix-blend-mode:screen}
+#L{position:absolute;inset:0}
+.c{position:absolute;left:80px;right:80px;text-align:center}
+.serif{font-family:Serif;font-style:italic;font-weight:300}
+.grad{background:linear-gradient(180deg,#fff 0%,var(--g1) 45%,var(--g2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{border-radius:56px;background:linear-gradient(140deg,rgba(255,255,255,.14),rgba(255,255,255,.03));border:2px solid rgba(255,255,255,.2);backdrop-filter:blur(26px);box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.25)}
+#cap{position:absolute;left:60px;right:60px;top:1560px;text-align:center;font-weight:800;font-size:58px;letter-spacing:-.5px;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.6)}
+#cap span{display:inline-block;margin:0 .06em;padding:0 10px;border-radius:12px}
+#cap span.on{background:var(--a1);color:#0a0f18;text-shadow:none}
+#fade{position:absolute;inset:0;background:#000;opacity:0}
+.kobi{--a1:#8ee6c3;--a2:#ebc9c6;--g1:#e9fff6;--g2:#9fe9cb}
+.dari{--a1:#8fb4f0;--a2:#f2cf9e;--g1:#fff3df;--g2:#e7b877}
+</style></head><body>
+<div id="s"><div id="blobs"></div><div id="stars"></div><div id="flare"></div><div id="beam"></div><div id="L"></div><div id="cap"></div><div id="vig"></div><div id="grain"></div><div id="fade"></div></div>
+<script>
+const cl=x=>Math.max(0,Math.min(1,x)),ease=x=>1-Math.pow(1-cl(x),3),back=x=>{x=cl(x);const c=1.5,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const $=id=>document.getElementById(id);let rnd=11;const R=()=>{rnd=(rnd*16807)%2147483647;return rnd/2147483647};
+const TH={kobi:{blobs:[['#1b8f74',900,-250,-150,.9],['#ebc9c6',700,560,200,.5],['#8ee6c3',760,250,800,.3],['#0f5c4c',1000,-300,1200,.8],['#ebc9c6',700,600,1400,.35]],
+  logo:`<svg width="300" height="300" viewBox="0 0 60 60"><rect width="60" height="60" rx="16" fill="#ebc9c6"/><circle cx="43" cy="43" r="9" fill="#181415"/></svg>`,name:'Kobi',handle:'@kobiapp.cc',
+  tag:['Skincare,','explained.'],time:'EVERY DAY · 7PM KST',series:['Myth or Fact','Ingredient Explained','Read the Label','Skin Quiz']},
+ dari:{blobs:[['#1f4fb8',950,-300,-150,.9],['#f2cf9e',700,560,250,.45],['#8fb4f0',760,250,800,.3],['#173a8a',1000,-300,1200,.85],['#f2cf9e',720,600,1400,.4]],
+  logo:`<svg width="380" height="226" viewBox="0 0 81 48"><path d="M4 44 A36.5 36.5 0 0 1 77 44 Z" fill="none" stroke="#a9c6f7" stroke-width="5"/><path d="M4 44H77" stroke="#a9c6f7" stroke-width="5" stroke-linecap="round"/><path d="M25 18V44M40.5 13V44M56 18V44" stroke="#a9c6f7" stroke-width="4.5"/></svg>`,name:'Dari',handle:'@dariapp.cc',
+  tag:['Korea,','made easy.'],time:'EVERY DAY · 7:30PM KST',series:['Myth or Fact: Korea','Say it in Korean','Korea Quiz']}};
+let C,SC,E={},BL=[],ST=[];
+function init(acc){C=TH[acc];$('s').className=acc;
+  C.blobs.forEach(([c,s,x,y,o])=>{const d=document.createElement('div');d.className='blob';d.style.cssText=`width:${s}px;height:${s}px;background:${c};left:${x}px;top:${y}px;opacity:${o}`;$('blobs').appendChild(d);BL.push(d)});
+  for(let i=0;i<46;i++){const e=document.createElement('i');e.style.left=R()*1080+'px';e.style.top=R()*1920+'px';e.style.transform=`scale(${.4+R()*1.2})`;$('stars').appendChild(e);ST.push({e,ph:R()*6.28,sp:1+R()*2})}}
+function el(h,top,css=''){const d=document.createElement('div');d.className='c';d.style.top=top+'px';d.style.cssText+=css;d.innerHTML=h;$('L').appendChild(d);return d}
+function setScene(n){SC=n;$('L').innerHTML='';E={};
+  if(n==='logo'){E.logo=el(`<div style="display:inline-block;filter:drop-shadow(0 0 60px rgba(255,255,255,.35))">${C.logo}</div>`,430);
+    E.name=el(`<div style="font-size:230px;font-weight:900;letter-spacing:-9px">${C.name}</div>`,830);
+    E.h=el(`<div style="font-size:44px;font-weight:600;letter-spacing:4px;color:rgba(255,255,255,.7)">${C.handle}</div>`,1100)}
+  if(n==='tag'){E.a=el(`<div style="font-size:190px;font-weight:900;letter-spacing:-8px;line-height:1">${C.tag[0]}</div>`,560);
+    E.b=el(`<div class="serif grad" style="font-size:210px;line-height:1.05;letter-spacing:-4px;padding-bottom:20px">${C.tag[1]}</div>`,770);
+    E.c=el(`<div style="font-size:44px;font-weight:600;letter-spacing:10px;color:rgba(255,255,255,.75)">${C.time}</div>`,1130)}
+  if(n==='series'){E.k=el(`<div style="font-size:40px;font-weight:700;letter-spacing:10px;color:rgba(255,255,255,.7)">ON THIS ACCOUNT</div>`,330);
+    E.items=C.series.map((s,i)=>el(`<div class="glass" style="padding:46px 40px;font-size:68px;font-weight:800;letter-spacing:-1.5px">${s}</div>`,450+i*(C.series.length>3?250:290)))}
+  if(n==='launch'){E.k=el(`<div style="font-size:42px;font-weight:700;letter-spacing:12px;color:rgba(255,255,255,.75)">THE APP LAUNCHES</div>`,360);
+    E.big=el(`<div class="serif grad" style="font-size:620px;line-height:1;letter-spacing:-22px">25</div>`,430);
+    E.nov=el(`<div style="font-size:64px;font-weight:800;letter-spacing:34px;padding-left:34px">NOVEMBER</div>`,1080);
+    E.f=el(`<div style="display:inline-block;background:#fff;color:#0a0f18;font-weight:900;font-size:56px;padding:30px 60px;border-radius:999px;box-shadow:0 20px 60px rgba(0,0,0,.45)">Follow ${C.handle}</div>`,1260)}
+}
+function frame(o){const t=o.t,T=o.T;
+  BL.forEach((b,i)=>b.style.transform=`translate(${Math.sin(T*.45+i)*70}px,${Math.cos(T*.38+i*1.3)*60}px)`);
+  ST.forEach(s=>s.e.style.opacity=(.25+.75*Math.pow(Math.sin(T*s.sp+s.ph)*.5+.5,3)));
+  $('s').style.filter=`brightness(${.35+.65*ease(T/1)})`;
+  let by=SC==='logo'?760:SC==='launch'?1010:-100;$('beam').style.top=by+'px';$('flare').style.top=by+'px';
+  const bw=SC==='logo'?ease((t-.1)/1):SC==='launch'?ease((t-.2)/.9):0;$('beam').style.transform=`scaleX(${bw})`;$('flare').style.opacity=bw*(.85+.15*Math.sin(T*2.2));
+  if(SC==='logo'){const a=back((t-.15)/.8);E.logo.style.transform=`scale(${.4+.6*a})`;E.logo.style.opacity=cl((t-.15)/.4);
+    const n=ease((t-.6)/.7);E.name.style.opacity=n;E.name.style.transform=`translateY(${(1-n)*50}px)`;E.name.style.filter=`blur(${(1-n)*14}px)`;E.h.style.opacity=ease((t-1)/.6)}
+  if(SC==='tag'){const a=ease(t/.6),b=ease((t-.35)/.8);E.a.style.opacity=a;E.a.style.transform=`translateX(${(1-a)*-120}px)`;
+    E.b.style.opacity=b;E.b.style.transform=`scale(${1.15-.15*b})`;E.b.style.filter=`blur(${(1-b)*16}px)`;E.c.style.opacity=ease((t-1)/.6)}
+  if(SC==='series'){E.k.style.opacity=ease(t/.5);E.items.forEach((d,i)=>{const a=back((t-.3-i*.45)/.6);d.style.opacity=cl((t-.3-i*.45)/.3);d.style.transform=`translateX(${(1-a)*(i%2?160:-160)}px)`})}
+  if(SC==='launch'){E.k.style.opacity=ease(t/.5);const g=ease((t-.15)/1.1);E.big.style.opacity=g;E.big.style.transform=`scale(${1.3-.3*g})`;E.big.style.filter=`blur(${(1-g)*24}px) drop-shadow(0 0 ${40+20*Math.sin(T*1.6)}px rgba(255,235,200,.4))`;
+    const n=ease((t-.9)/.8);E.nov.style.opacity=n;E.nov.style.letterSpacing=(70-36*n)+'px';const f=back((t-1.4)/.7);E.f.style.opacity=cl((t-1.4)/.3);E.f.style.transform=`scale(${.6+.4*f})`}
+  const c=$('cap');if(o.cap){c.innerHTML=o.cap.words.map((w,i)=>`<span class="${i===o.cap.on?'on':''}">${w}</span>`).join(' ')}else c.innerHTML='';
+  $('fade').style.opacity=o.out||0;
+}
+</script></body></html>
