@@ -1,0 +1,157 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900}
+@font-face{font-family:Serif;src:url(fonts/NewsreaderItalic.ttf);font-style:italic;font-weight:200 800}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter;-webkit-font-smoothing:antialiased;background:#0d1720}
+svg{position:absolute;inset:0}
+#tag{position:absolute;left:80px;top:140px;display:flex;align-items:center;gap:18px;color:#e8f1f5;font-size:32px;font-weight:700;letter-spacing:.5px}
+#tag i{width:52px;height:52px;border-radius:15px;background:#ebc9c6;position:relative;display:block}
+#tag i:after{content:'';position:absolute;right:7px;bottom:7px;width:15px;height:15px;border-radius:50%;background:#181415}
+#head{position:absolute;left:80px;right:80px;top:250px;color:#fff;font-size:92px;font-weight:900;letter-spacing:-2.5px;line-height:1.02}
+#head em{font-family:Serif;font-style:italic;font-weight:400;color:#8ee6c3;letter-spacing:-1px}
+#cap{position:absolute;left:60px;right:150px;top:1440px;text-align:center;font-weight:800;font-size:58px;letter-spacing:-.5px;line-height:1.2;color:#fff}
+#cap span{display:inline-block;margin:0 .06em;padding:0 10px;border-radius:12px}
+#cap span.on{background:#8ee6c3;color:#0d1720}
+#grain{position:absolute;inset:0;opacity:.06;mix-blend-mode:overlay;pointer-events:none}
+#fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+</style></head>
+<body><div id="stage">
+<svg id="sv" viewBox="0 0 1080 1920" width="1080" height="1920"></svg>
+<div id="grain"></div><div id="tag"><i></i>INGREDIENT EXPLAINED · EP.01</div><div id="head"></div><div id="cap"></div><div id="fade"></div></div>
+<script>
+const NS='http://www.w3.org/2000/svg', sv=document.getElementById('sv');
+const cl=x=>Math.max(0,Math.min(1,x));
+const ease=x=>1-Math.pow(1-cl(x),3), easeIO=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const back=x=>{x=cl(x);const c=1.70158,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const lerp=(a,b,u)=>a+(b-a)*u;
+function mk(p,t,a={}){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+function set(e,a){for(const k in a)e.setAttribute(k,a[k])}
+function rnd(i){const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x)}
+const LX=160,LY=580,LR=380; // loupe : boîte 760x760
+let S={};
+function build(){
+  sv.innerHTML='';
+  const d=mk(sv,'defs');
+  d.innerHTML=`<radialGradient id="bgg" cx=".85" cy=".08" r=".75"><stop offset="0" stop-color="#1d5a52" stop-opacity=".55"/><stop offset="1" stop-color="#0d1720" stop-opacity="0"/></radialGradient>
+  <clipPath id="lens"><circle id="lc" cx="540" cy="960" r="380"/></clipPath>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="sh"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".45"/></filter>
+  <radialGradient id="skinF" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="#fbe0d0"/><stop offset="1" stop-color="#eec2ac"/></radialGradient>`;
+  mk(sv,'rect',{x:0,y:0,width:1080,height:1920,fill:'#0d1720'});
+  mk(sv,'rect',{x:0,y:0,width:1080,height:1920,fill:'url(#bgg)'});
+  // ---------- visage (accroche)
+  const face=S.face=mk(sv,'g',{});
+  mk(face,'path',{d:'M260 1650 Q260 1300 540 1250 Q820 1300 820 1650 Z',fill:'#8ee6c3',opacity:.85});
+  mk(face,'path',{d:'M300 820 C280 520 800 520 780 820 L800 1250 Q540 1320 280 1250 Z',fill:'#2b1d1a'});
+  mk(face,'ellipse',{cx:540,cy:930,rx:250,ry:300,fill:'url(#skinF)'});
+  mk(face,'path',{d:'M290 820 C270 560 810 560 790 820 C760 700 640 690 560 760 C470 690 340 700 290 820 Z',fill:'#2b1d1a'});
+  [[-95,0],[95,0]].forEach(([x])=>{mk(face,'ellipse',{cx:540+x,cy:930,rx:20,ry:28,fill:'#2b1d1a'})});
+  mk(face,'path',{d:'M500 1090 Q540 1115 580 1090',stroke:'#a9454f','stroke-width':12,fill:'none','stroke-linecap':'round'});
+  S.faceSpot=mk(face,'ellipse',{cx:670,cy:1040,rx:44,ry:32,fill:'#a0624b',opacity:.75});
+  // ---------- coupe de peau (dans la loupe)
+  const L=S.L=mk(sv,'g',{'clip-path':'url(#lens)'});
+  const g=S.g=mk(L,'g',{transform:`translate(${LX},${LY})`});
+  mk(g,'rect',{x:0,y:0,width:760,height:760,fill:'#fdf4ef'});
+  mk(g,'rect',{x:0,y:540,width:760,height:220,fill:'#efbcab'});
+  for(let i=0;i<6;i++){let p='';for(let k=0;k<=30;k++){const x=k*26,y=600+i*26+Math.sin(k*.6+i)*8;p+=(k?'L':'M')+x+' '+y.toFixed(1)}mk(g,'path',{d:p,stroke:'#f7d4c7','stroke-width':6,fill:'none',opacity:.7})}
+  mk(g,'rect',{x:0,y:140,width:760,height:400,fill:'#f8dccd'});
+  S.cells=[];for(let r=0;r<4;r++)for(let c=-1;c<8;c++){const x=c*110+(r%2?55:0)+30,y=200+r*80;S.cells.push(mk(g,'ellipse',{cx:x,cy:y,rx:50,ry:33,fill:'#f6d1bf',stroke:'#e7b29c','stroke-width':4}))}
+  // surface (couche cornée)
+  S.mortar=mk(g,'rect',{x:0,y:70,width:760,height:72,fill:'#efc6b6'});
+  S.bricks=[];for(let r=0;r<2;r++)for(let c=-1;c<8;c++){S.bricks.push(mk(g,'rect',{x:c*104+(r?52:0)+6,y:76+r*33,width:92,height:27,rx:9,fill:'#fbe9e0'}))}
+  S.spot=mk(g,'ellipse',{cx:390,cy:108,rx:170,ry:40,fill:'#8e5640',opacity:.6,filter:'url(#glow)'});
+  // mélanocytes
+  S.mel=[];[220,560].forEach((mx,mi)=>{
+    const tips=[[mx-115,350],[mx,320],[mx+115,350]];
+    const dd=tips.map(([tx,ty],j)=>{const cx=mx+(tx-mx)*0.35,cy=420;mk(g,'path',{d:`M${mx} 495 Q${cx} ${cy} ${tx} ${ty}`,stroke:'#a8664c','stroke-width':13,fill:'none','stroke-linecap':'round'});return {x0:mx,y0:495,cx,cy,tx,ty}});
+    const body=mk(g,'ellipse',{cx:mx,cy:505,rx:48,ry:34,fill:'#a8664c'});
+    const glow=mk(g,'ellipse',{cx:mx,cy:505,rx:70,ry:52,fill:'none',stroke:'#ffd08a','stroke-width':6,opacity:0});
+    S.mel.push({mx,dd,body,glow});
+  });
+  // granules de mélanine
+  S.gr=[];for(let i=0;i<26;i++)S.gr.push(mk(g,'circle',{r:8,fill:'#5b3324',opacity:0}));
+  // niacinamide
+  S.ni=[];S.mel.forEach(m=>m.dd.forEach(d=>{S.ni.push({d,el:mk(g,'path',{d:'M0 -18 L18 0 L0 18 L-18 0 Z',fill:'#3ccf97',filter:'url(#glow)',opacity:0})})}));
+  // céramides / eau
+  S.cer=[];for(let i=0;i<16;i++)S.cer.push(mk(g,'rect',{x:(i%8)*104+(i<8?-2:50),y:i<8?101:70,width:10,height:i<8?8:6,rx:3,fill:'#3ccf97',opacity:0}));
+  S.water=[];for(let i=0;i<6;i++)S.water.push(mk(g,'circle',{r:11,fill:'#7fc4ff',opacity:0}));
+  // étiquettes
+  S.labels={};
+  const lab=(k,x,y,txt,col)=>{const gg=mk(g,'g',{opacity:0});const w=txt.length*20+50;mk(gg,'rect',{x:x,y:y,width:w,height:62,rx:31,fill:'#0d1720',opacity:.88});const t=mk(gg,'text',{x:x+25,y:y+42,'font-size':34,'font-weight':800,fill:col});t.textContent=txt;S.labels[k]=gg};
+  lab('mel',290,600,'melanocyte','#ffd08a');lab('pig',470,230,'melanin','#e9b28f');lab('ni',60,240,'niacinamide','#8ee6c3');lab('cer',420,150,'ceramides','#8ee6c3');lab('spot',250,8,'dark spot','#e9b28f');
+  // anneau de loupe
+  S.ring=mk(sv,'circle',{cx:540,cy:960,r:380,fill:'none',stroke:'#e8f1f5','stroke-width':18,filter:'url(#sh)'});
+  S.ring2=mk(sv,'circle',{cx:540,cy:960,r:404,fill:'none',stroke:'#e8f1f5','stroke-width':3,opacity:.35});
+  S.handle=mk(sv,'path',{d:'',stroke:'#e8f1f5','stroke-width':34,'stroke-linecap':'round'});
+  // compteur de semaines
+  S.week=mk(sv,'g',{opacity:0});mk(S.week,'rect',{x:740,y:1250,width:260,height:96,rx:48,fill:'#8ee6c3'});S.weekT=mk(S.week,'text',{x:870,y:1313,'text-anchor':'middle','font-size':44,'font-weight':900,fill:'#0d1720'});
+  // carte de fin
+  S.end=mk(sv,'g',{opacity:0});
+  mk(S.end,'rect',{x:190,y:560,width:700,height:760,rx:44,fill:'none',stroke:'#8ee6c3','stroke-width':10});
+  const t1=mk(S.end,'text',{x:240,y:660,'font-size':54,'font-weight':800,fill:'#8ee6c3'});t1.textContent='01';
+  const t1b=mk(S.end,'text',{x:840,y:660,'text-anchor':'end','font-size':54,'font-weight':800,fill:'#8ee6c3'});t1b.textContent='B3';
+  const t2=mk(S.end,'text',{x:540,y:960,'text-anchor':'middle','font-size':300,'font-weight':900,fill:'#fff','letter-spacing':-8});t2.textContent='Nc';
+  const t3=mk(S.end,'text',{x:540,y:1080,'text-anchor':'middle','font-size':72,'font-weight':800,fill:'#fff'});t3.textContent='Niacinamide';
+  S.chips=[['2–5%',300],['8 weeks',540],['daily',780]].map(([txt,x])=>{const c=mk(S.end,'g',{});mk(c,'rect',{x:x-110,y:1160,width:220,height:84,rx:42,fill:'#16303a'});const tt=mk(c,'text',{x,y:1216,'text-anchor':'middle','font-size':38,'font-weight':800,fill:'#8ee6c3'});tt.textContent=txt;return c});
+  S.next=mk(S.end,'text',{x:540,y:1400,'text-anchor':'middle','font-size':46,'font-weight':700,fill:'#9fb3bd'});S.next.textContent='Next episode: Centella  →';
+}
+function bez(d,u){const a=(1-u)*(1-u),b=2*u*(1-u),c=u*u;return [a*d.x0+b*d.cx+c*d.tx,a*d.y0+b*d.cy+c*d.ty]}
+function granule(i,t,mode){
+  // mode : 'idle' | 'flow' | 'blocked'
+  const m=S.mel[i%2], d=m.dd[i%3], per=2.6, ph=((t+rnd(i)*per)%per)/per;
+  if(mode==='idle'){const a=t*1.5+i;return [m.mx+Math.cos(a)*(30+rnd(i+3)*18),505+Math.sin(a)*22,1]}
+  if(mode==='blocked'){const u=Math.min(ph*2.2,0.92);const [x,y]=bez(d,u);return [x+Math.sin(t*6+i)*3,y,1]}
+  if(ph<0.45){const [x,y]=bez(d,ph/0.45);return [x,y,1]}
+  const u=(ph-0.45)/0.55, tx=lerp(d.tx,390+(rnd(i+9)-.5)*220,u), ty=lerp(d.ty,122,easeIO(u));
+  return [tx,ty,1-Math.max(0,(u-0.85)/0.15)];
+}
+function lensAt(cx,cy,r){
+  set(document.getElementById('lc'),{cx,cy,r});set(S.ring,{cx,cy,r});set(S.ring2,{cx,cy,r:r+24});
+  const a=Math.PI/4;S.handle.setAttribute('d',`M${cx+(r+30)*Math.cos(a)} ${cy+(r+30)*Math.sin(a)} L${cx+(r+150)*Math.cos(a)} ${cy+(r+150)*Math.sin(a)}`);
+  S.g.setAttribute('transform',`translate(${cx-r*(380/380)-(LR-r)*0}, ${cy-r}) scale(${r/380}) translate(${LX-160} ${LY-580})`);
+}
+const HEAD={hook:'What niacinamide<br><em>does inside</em> your skin',melanocyte:'<em>Step 1</em><br>Pigment is made',transfer:'<em>Step 2</em><br>It moves up',block:'<em>Step 3</em><br>Niacinamide blocks it',fade:'<em>Step 4</em><br>The spot fades',barrier:'<em>Bonus</em><br>A stronger barrier',end:''};
+let cur='';
+function setScene(n){cur=n;document.getElementById('head').innerHTML=HEAD[n]}
+function frame(o){
+  const t=o.t, n=cur, dur=o.dur;
+  // valeurs par défaut
+  let spot=.6, mode='flow', niA=0, cerA=0, faceA=0, lens=[540,960,380], lensA=1, week=0, endA=0;
+  if(n==='hook'){
+    faceA=1-ease((t-1.5)/0.6);
+    const z=easeIO((t-0.9)/1.2);lens=[lerp(670,540,z),lerp(1040,960,z),lerp(110,380,z)];
+    S.face.setAttribute('transform',`translate(670 1040) scale(${lerp(1,2.6,easeIO((t-0.9)/1.2))}) translate(-670 -1040)`);
+    mode='flow';spot=.6;
+  }
+  if(n==='melanocyte'){mode='idle';spot=.6}
+  if(n==='transfer'){mode='flow';spot=lerp(.6,.95,ease(t/dur))}
+  if(n==='block'){niA=ease((t-0.3)/0.8);mode=t>0.9?'blocked':'flow';spot=.95}
+  if(n==='fade'){niA=1;mode='blocked';const u=easeIO((t-0.3)/(dur-0.8));spot=lerp(.95,.18,u);week=Math.round(lerp(0,8,u))}
+  if(n==='barrier'){niA=1;mode='blocked';spot=.18;cerA=ease((t-0.4)/0.9)}
+  if(n==='end'){lensA=1-ease(t/0.5);endA=ease((t-0.35)/0.6);spot=.18;niA=1;cerA=1;mode='blocked'}
+  S.face.setAttribute('opacity',faceA.toFixed(3));
+  S.L.setAttribute('opacity',lensA.toFixed(3));S.ring.setAttribute('opacity',lensA);S.ring2.setAttribute('opacity',(.35*lensA).toFixed(3));S.handle.setAttribute('opacity',(n==='hook'?1-ease((t-1.6)/0.5):0).toFixed(3));
+  lensAt(...lens);
+  S.spot.setAttribute('opacity',spot.toFixed(3));
+  S.gr.forEach((e,i)=>{const [x,y,a]=granule(i,o.T,mode);set(e,{cx:x.toFixed(1),cy:y.toFixed(1),opacity:(a*(n==='hook'?ease((t-1.4)/0.6):1)).toFixed(3)})});
+  S.ni.forEach((s,i)=>{const d=s.d,p=ease((t-0.3-i*0.08)/0.8),x=d.tx,y=lerp(-40,d.ty-26,n==='block'?p:1);const pul=1+Math.sin(o.T*5+i)*0.08;
+    s.el.setAttribute('transform',`translate(${x} ${y.toFixed(1)}) scale(${pul.toFixed(3)})`);s.el.setAttribute('opacity',(n==='block'?Math.min(niA,p):niA).toFixed(3))});
+  S.mel.forEach(m=>m.glow.setAttribute('opacity',(n==='melanocyte'?0.4+0.4*Math.sin(o.T*5):0).toFixed(3)));
+  S.cer.forEach((c,i)=>c.setAttribute('opacity',(cerA*ease((t-0.4-i*0.05)/0.4)*(n==='end'?1:1)).toFixed(3)));
+  S.mortar.setAttribute('fill',cerA>0?`rgb(${Math.round(lerp(239,142,cerA*0.5))},${Math.round(lerp(198,230,cerA*0.5))},${Math.round(lerp(182,195,cerA*0.5))})`:'#efc6b6');
+  S.water.forEach((w,i)=>{if(n!=='barrier'){w.setAttribute('opacity',0);return}const per=1.4,ph=((o.T+i*0.33)%per)/per;const y=lerp(260,150,Math.sin(Math.PI*ph));set(w,{cx:100+i*115,cy:y.toFixed(1),opacity:(0.85*cerA).toFixed(2)})});
+  const L=S.labels, la=(k,on)=>L[k].setAttribute('opacity',on.toFixed(3));
+  la('mel',n==='melanocyte'?ease((t-0.3)/0.4):0);la('pig',n==='transfer'?ease((t-0.4)/0.4):0);la('ni',n==='block'?ease((t-0.9)/0.4):0);la('cer',n==='barrier'?ease((t-0.8)/0.4):0);
+  la('spot',(n==='transfer'?ease((t-dur*0.55)/0.4):0));
+  S.week.setAttribute('opacity',n==='fade'?ease((t-0.2)/0.3):0);S.weekT.textContent='Week '+week;
+  S.end.setAttribute('opacity',endA.toFixed(3));S.end.setAttribute('transform',`translate(0 ${((1-endA)*30).toFixed(1)})`);
+  S.chips.forEach((c,i)=>{const p=back((t-0.8-i*0.15)/0.4);c.setAttribute('transform',`translate(${[300,540,780][i]} 1202) scale(${Math.max(0,p).toFixed(3)}) translate(${-[300,540,780][i]} -1202)`)});
+  const head=document.getElementById('head');const ha=ease((t-0.05)/0.35);head.style.opacity=ha;head.style.transform=`translateY(${(1-ha)*-20}px)`;
+  document.getElementById('fade').style.opacity=Math.max(n==='hook'?0:1-ease(t/0.15),o.out||0).toFixed(3);
+  const cap=document.getElementById('cap');cap.style.top=(cur==='end'?1530:1440)+'px';cap.innerHTML=o.cap?o.cap.words.map((w,i)=>`<span class="${i===o.cap.on?'on':''}">${w}</span>`).join(''):'';
+}
+function init(grain){build();document.getElementById('grain').style.backgroundImage=`url(${grain})`}
+</script></body></html>
