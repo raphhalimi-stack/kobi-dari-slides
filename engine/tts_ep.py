@@ -5,7 +5,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 k = Kokoro("kokoro-v1.0.onnx", "voices-v1.0.bin")
 for p in sorted(glob.glob(os.path.join(ROOT, "content/episodes/*.json"))):
     ep = json.load(open(p, encoding="utf-8"))
-    d = os.path.join(ROOT, "audio/episodes", ep["id"]); os.makedirs(d, exist_ok=True)
+    d = os.path.join(ROOT, "audio/episodes", ep["id"])
+    if os.path.exists(os.path.join(d, "durations.json")):
+        continue
+    os.makedirs(d, exist_ok=True)
     durs = []
     for i, s in enumerate(ep["scenes"]):
         speed = 1.08 if s["who"] == "mina" else 1.02

@@ -1,0 +1,118 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900}
+@font-face{font-family:Serif;src:url(fonts/NewsreaderItalic.ttf);font-style:italic;font-weight:200 800}
+:root{--bg:#0d1720;--bg2:#13262f;--glow:rgba(29,90,82,.55);--acc:#8ee6c3;--acc2:#ebc9c6;--text:#ffffff;--sub:#9fb3bd;--card:#16303a;--myth:#e5484d;--fact:#1fa36b}
+.dari{--bg:#0a1224;--bg2:#10203f;--glow:rgba(20,70,150,.55);--acc:#f2cf9e;--acc2:#8fb4f0;--sub:#96a3ba;--card:#14244a}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter;color:var(--text);-webkit-font-smoothing:antialiased;background:var(--bg)}
+#bg{position:absolute;inset:0;background:radial-gradient(1100px 900px at 90% 6%,var(--glow),transparent 70%),linear-gradient(170deg,var(--bg2),var(--bg) 55%)}
+#flood{position:absolute;inset:0;opacity:0}
+#grain{position:absolute;inset:0;opacity:.06;mix-blend-mode:overlay}
+#tag{position:absolute;left:80px;top:140px;display:flex;align-items:center;gap:18px;font-size:32px;font-weight:700;letter-spacing:.5px;color:#e8f1f5}
+#logo{display:block}
+.el{position:absolute;left:80px;right:80px}
+.big{font-weight:900;letter-spacing:-2.5px;line-height:1.04}
+.serif{font-family:Serif;font-style:italic;font-weight:400}
+.ko{word-break:keep-all;font-family:'Noto Sans CJK KR',sans-serif;font-weight:800}
+.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:900}
+#cap{position:absolute;left:60px;right:150px;top:1440px;text-align:center;font-weight:800;font-size:58px;letter-spacing:-.5px;line-height:1.2;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.5)}
+#cap span{display:inline-block;margin:0 .06em;padding:0 10px;border-radius:12px}
+#cap span.on{background:var(--acc);color:var(--bg);text-shadow:none}
+#fade{position:absolute;inset:0;background:#000;opacity:0}
+</style></head>
+<body><div id="stage"><div id="bg"></div><div id="flood"></div><div id="grain"></div><div id="layer"></div><div id="tag"><span id="logo"></span><span id="tagt"></span></div><div id="cap"></div><div id="fade"></div></div>
+<script>
+const cl=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-cl(x),3), easeIO=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const back=x=>{x=cl(x);const c=1.70158,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const L=document.getElementById('layer'), F=document.getElementById('flood');
+let CFG={}, SC=null, E={}, ITEMS=[];
+function logo(acc){return acc==='kobi'?`<svg width="52" height="52" viewBox="0 0 60 60"><rect width="60" height="60" rx="16" fill="#ebc9c6"/><circle cx="43" cy="43" r="9" fill="#181415"/></svg>`:`<svg width="70" height="42" viewBox="0 0 81 48"><path d="M4 44 A36.5 36.5 0 0 1 77 44 Z" fill="none" stroke="#8fb4f0" stroke-width="6"/><path d="M4 44H77" stroke="#8fb4f0" stroke-width="6" stroke-linecap="round"/><path d="M25 18V44M40.5 13V44M56 18V44" stroke="#8fb4f0" stroke-width="5.5"/></svg>`}
+function init(o){CFG=o;document.getElementById('stage').className=o.acc;document.getElementById('grain').style.backgroundImage=`url(${o.grain})`;
+  document.getElementById('logo').innerHTML=logo(o.acc);document.getElementById('tagt').textContent=`${o.series.toUpperCase()} · EP.${o.ep}`}
+function el(html,top,start,extra=''){const d=document.createElement('div');d.className='el';d.style.top=top+'px';d.style.cssText+=extra;d.innerHTML=html;L.appendChild(d);ITEMS.push({d,start});return d}
+function H(d){return d.getBoundingClientRect().height}
+function stack(list,top,gap){let y=top;list.forEach(d=>{d.style.top=y+'px';y+=H(d)+gap})}
+function setScene(name,d){
+  L.innerHTML='';ITEMS=[];E={};SC={name,d};F.style.opacity=0;
+  const T=CFG.template;
+  if(T==='myth'){
+    if(name==='myth'||name==='verdict'){
+      const k=el(`<div class="pill" style="height:72px;padding:0 30px;background:var(--card);font-size:34px;color:var(--acc)">MYTH OR FACT?</div>`,0,-1);
+      const q=el(`<div class="big" style="font-size:${CFG.quote.length>30?104:120}px"><span class="serif" style="color:var(--acc);font-size:1.2em">“</span>${CFG.quote}<span class="serif" style="color:var(--acc);font-size:1.2em">”</span></div>`,0,-1);
+      const p=el(`<div style="display:flex;gap:30px"><div class="pill" id="pm" style="height:120px;flex:1;border:6px solid var(--myth);color:var(--myth);font-size:56px">MYTH</div><div class="pill" id="pf" style="height:120px;flex:1;border:6px solid var(--fact);color:var(--fact);font-size:56px">FACT</div></div>`,0,0.2);
+      const bar=el(`<div style="height:14px;border-radius:7px;background:rgba(255,255,255,.12)"><div id="bar" style="height:100%;width:100%;border-radius:7px;background:var(--acc)"></div></div>`,0,0.2);
+      stack([k,q,p,bar],460,60);E.q=q;E.p=p;E.bar=bar;
+      if(name==='verdict'){const v=SC.d.verdict==='MYTH';E.stamp=el(`<div style="text-align:center"><span style="display:inline-block;padding:30px 70px;border:16px solid #fff;border-radius:40px;font-size:220px;font-weight:900;letter-spacing:-6px;color:#fff">${SC.d.verdict}</span></div>`,620,-1);E.v=v}
+    } else if(name==='explain'){
+      const a=el(`<div class="pill" style="height:72px;padding:0 30px;background:var(--fact);font-size:34px;color:#fff">THE TRUTH</div>`,0,0);
+      const b=el(`<div class="big" style="font-size:112px">${SC.d.head}</div>`,0,0.1);
+      const u=el(`<div id="ul" style="height:12px;width:0;border-radius:6px;background:var(--acc)"></div>`,0,0.25);
+      const c=el(`<div style="font-size:58px;line-height:1.35;color:var(--sub);font-weight:500">${SC.d.body}</div>`,0,0.35);
+      stack([a,b,u,c],480,50);
+    } else if(name==='rule'){
+      const c=el(`<div style="background:var(--acc);border-radius:56px;padding:70px 64px;color:var(--bg)"><div style="font-size:40px;font-weight:900;letter-spacing:3px;opacity:.75">THE RULE</div><div class="big" style="font-size:100px;margin-top:24px">${SC.d.rule}</div></div>`,560,0);E.card=c;
+    }
+  }
+  if(T==='word'){
+    if(name==='word'||name==='meaning'){
+      const long=CFG.word.length>4;
+      E.w=el(`<div class="ko" style="font-size:${long?150:260}px;line-height:1.15;color:#fff"><span id="typed"></span><span id="caret" style="color:var(--acc)">|</span></div>`,520,-1);
+      E.r=el(`<div class="serif" style="font-size:72px;color:var(--acc)">${CFG.roman}</div>`,0,0.6);
+      if(name==='meaning'){E.m=el(`<div><div style="font-size:48px;font-weight:700;color:var(--sub)">means</div><div class="big" style="font-size:130px;color:var(--acc)">${SC.d.meaning}</div><div style="font-size:52px;color:var(--sub);font-weight:500;margin-top:20px">${SC.d.note}</div></div>`,0,0.15)}
+    } else if(name==='examples'){
+      const a=el(`<div class="ko" style="font-size:110px;color:#fff">${CFG.word}</div>`,0,-1);
+      const b=el(`<div style="font-size:48px;font-weight:700;color:var(--sub)">${SC.d.label}</div>`,0,0.05);
+      const c=el(`<div style="display:flex;flex-direction:column;gap:26px">${SC.d.items.map((x,i)=>`<div class="pill chip" style="height:130px;justify-content:flex-start;padding:0 50px;background:var(--card);font-size:62px;color:#fff;border:3px solid rgba(255,255,255,.08)"><span style="color:var(--acc);margin-right:30px">0${i+1}</span>${x}</div>`).join('')}</div>`,0,0.15);
+      stack([a,b,c],440,40);E.chips=[...c.querySelectorAll('.chip')];
+    }
+  }
+  if(T==='quiz'){
+    if(name!=='end'){
+      const q=el(`<div class="big" style="font-size:${CFG.q.length>34?96:110}px">${CFG.q.replace(/([가-힣]+)/g,'<span class="ko" style="color:var(--acc)">$1</span>')}</div>`,0,-1);
+      const o=el(`<div style="display:flex;gap:30px"><div class="pill opt" id="oa" style="flex:1;height:240px;background:#fff;color:#111;font-size:${CFG.a.length>8?54:84}px;padding:0 20px;text-align:center">${CFG.a}</div><div class="pill opt" id="ob" style="flex:1;height:240px;background:#fff;color:#111;font-size:${CFG.b.length>8?54:84}px;padding:0 20px;text-align:center">${CFG.b}</div></div>`,0,name==='question'?0.2:-1);
+      stack([q,o],440,90);E.o=o;
+      if(name==='count'){E.n=el(`<div style="text-align:center;font-size:300px;font-weight:900;color:var(--acc)" id="num">3</div>`,1060,-1)}
+      if(name==='answer'){E.why=el(`<div style="font-size:54px;line-height:1.35;color:var(--sub);font-weight:500">${SC.d.why}</div>`,H(q)+440+90+240+70,0.4)}
+    }
+  }
+  if(name==='end'){
+    const a=el(`<div style="display:flex;justify-content:center">${logo(CFG.acc).replace(/width="\d+" height="\d+"/,'width="150" height="150"').replace('width="70" height="42"','width="210" height="126"')}</div>`,0,0);
+    const b=el(`<div class="serif" style="text-align:center;font-size:76px;color:var(--acc)">${CFG.series}</div>`,0,0.1);
+    const c=el(`<div class="big" style="text-align:center;font-size:96px">${SC.d.cta||'Follow for more'}</div>`,0,0.2);
+    const e2=el(`<div style="text-align:center;font-size:44px;font-weight:600;color:var(--sub)">${CFG.acc==='kobi'?'Kobi':'Dari'} launches 25 Nov · link in bio</div>`,0,0.35);
+    stack([a,b,c,e2],520,44);
+  }
+}
+function frame(o){
+  const t=o.t,d=o.dur,n=SC.name,T=CFG.template;
+  ITEMS.forEach(it=>{let a=1,dy=0;if(it.start>=0){const p=ease((t-it.start)/0.45);a=p;dy=(1-p)*40}it.d.style.opacity=a.toFixed(3);it.d.style.transform=`translateY(${dy.toFixed(1)}px)`});
+  if(T==='myth'&&(n==='myth'||n==='verdict')){
+    const bar=document.getElementById('bar');if(bar)bar.style.width=(n==='myth'?100*(1-t/d):0)+'%';
+    const pm=document.getElementById('pm'),pf=document.getElementById('pf');
+    if(n==='myth'){const a=(Math.sin(t*7)+1)/2;pm.style.transform=`scale(${1+a*0.05})`;pf.style.transform=`scale(${1+(1-a)*0.05})`}
+    if(n==='verdict'){const p=ease(t/0.35);F.style.background=E.v?'var(--myth)':'var(--fact)';F.style.opacity=p;E.q.style.opacity=(1-p*0.75).toFixed(3);E.p.style.opacity=(1-p).toFixed(3);E.bar.style.opacity=0;
+      const s=back((t-0.05)/0.4);const shake=t<0.6?Math.sin(t*60)*(0.6-t)*12:0;E.stamp.style.transform=`translate(${shake}px,0) rotate(-8deg) scale(${(2-s).toFixed(3)})`;E.stamp.style.opacity=cl((t-0.05)/0.15)}
+  }
+  if(T==='myth'&&n==='explain'){const u=document.getElementById('ul');if(u)u.style.width=(360*ease((t-0.3)/0.6))+'px'}
+  if(T==='myth'&&n==='rule'){const s=back(t/0.5);E.card.style.transform=`scale(${(0.85+0.15*s).toFixed(3)})`}
+  if(T==='word'&&(n==='word'||n==='meaning')){
+    const chars=[...CFG.word];const k=n==='word'?Math.floor(cl((t-0.2)/1.0)*chars.length):chars.length;document.getElementById('typed').textContent=chars.slice(0,k).join('');
+    document.getElementById('caret').style.opacity=(n==='word'&&k<chars.length)||Math.floor(t*2.5)%2?1:0;
+    const top0=n==='meaning'?lerpN(520,380,easeIO(t/0.5)):520;E.w.style.top=top0+'px';E.r.style.top=(top0+H(E.w)+20)+'px';
+    if(E.m)E.m.style.top=(top0+H(E.w)+20+H(E.r)+70)+'px';
+  }
+  if(T==='word'&&n==='examples'){E.chips.forEach((c,i)=>{const p=back((t-0.3-i*0.35)/0.4);c.style.transform=`translateX(${((1-cl(p))*-60).toFixed(1)}px) scale(${(0.9+0.1*p).toFixed(3)})`;c.style.opacity=cl(p*1.5)})}
+  if(T==='quiz'){
+    if(n==='count'&&E.n){const k=Math.min(2,Math.floor(t/(d/3)));const u=(t%(d/3))/(d/3);E.n.textContent=3-k;E.n.style.transform=`scale(${(1.4-0.4*ease(u/0.3)).toFixed(3)})`;E.n.style.opacity=(1-Math.max(0,(u-0.75)/0.25)).toFixed(3)}
+    if(n==='answer'){const p=ease(t/0.4);const ok=SC.d.correct;const A=document.getElementById('oa'),B=document.getElementById('ob');const good=ok==='a'?A:B,bad=ok==='a'?B:A;
+      good.style.background=`rgb(${lerpN(255,31,p)},${lerpN(255,163,p)},${lerpN(255,107,p)})`;good.style.color=p>.5?'#fff':'#111';good.style.transform=`scale(${1+0.06*back(t/0.5)})`;bad.style.opacity=(1-0.6*p).toFixed(3)}
+  }
+  document.getElementById('fade').style.opacity=Math.max(1-ease(t/0.15),o.out||0).toFixed(3);
+  const cap=document.getElementById('cap');cap.style.top=(n==='end'?1560:1440)+'px';
+  cap.innerHTML=o.cap?o.cap.words.map((w,i)=>`<span class="${i===o.cap.on?'on':''}">${w}</span>`).join(''):'';
+}
+function lerpN(a,b,u){return a+(b-a)*u}
+</script></body></html>

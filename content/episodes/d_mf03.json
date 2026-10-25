@@ -1,0 +1,44 @@
+{
+ "id": "d_mf03",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "03",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? The Seoul subway is impossible without Korean.",
+   "quote": "The Seoul subway is impossible without Korean."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Signs and announcements are in English too, and every station has a number. Lines have colors and numbers.",
+   "head": "Signs are in English too.",
+   "body": "Every station has a number. Every line has a color."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Follow the line color and the station number, and you can't get lost.",
+   "rule": "Follow the color. Check the station number."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to whoever's coming to Seoul with you. Follow for more.",
+   "cta": "Send this to your travel buddy."
+  }
+ ],
+ "caption": "Is the Seoul subway impossible without Korean? Myth. 🚇\nSigns and announcements are in English too. Every line has a color, every station a number.\nSend this to whoever's coming to Seoul with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#seoulsubway #seoul #koreatravel #visitkorea #dariapp"
+}

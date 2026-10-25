@@ -77,11 +77,13 @@ function build(){
   S.ni=[];S.mel.forEach(m=>m.dd.forEach(d=>{S.ni.push({d,el:mk(g,'path',{d:'M0 -18 L18 0 L0 18 L-18 0 Z',fill:'#3ccf97',filter:'url(#glow)',opacity:0})})}));
   // céramides / eau
   S.cer=[];for(let i=0;i<16;i++)S.cer.push(mk(g,'rect',{x:(i%8)*104+(i<8?-2:50),y:i<8?101:70,width:10,height:i<8?8:6,rx:3,fill:'#3ccf97',opacity:0}));
+  S.inf=[];[[150,300,90],[330,230,110],[520,330,95],[640,240,70],[260,420,70],[470,450,80]].forEach(([x,y,r])=>S.inf.push(mk(g,'ellipse',{cx:x,cy:y,rx:r,ry:r*0.7,fill:'#e0585a',opacity:0,filter:'url(#glow)'})));
+  S.leaf=[];for(let i=0;i<10;i++)S.leaf.push(mk(g,'path',{d:'M0 -22 C16 -14 18 8 0 22 C-18 8 -16 -14 0 -22 Z M0 -18 L0 18',fill:'#7bd389',stroke:'#3f9b5a','stroke-width':3,opacity:0,filter:'url(#glow)'}));
   S.water=[];for(let i=0;i<6;i++)S.water.push(mk(g,'circle',{r:11,fill:'#7fc4ff',opacity:0}));
   // étiquettes
   S.labels={};
   const lab=(k,x,y,txt,col)=>{const gg=mk(g,'g',{opacity:0});const w=txt.length*20+50;mk(gg,'rect',{x:x,y:y,width:w,height:62,rx:31,fill:'#0d1720',opacity:.88});const t=mk(gg,'text',{x:x+25,y:y+42,'font-size':34,'font-weight':800,fill:col});t.textContent=txt;S.labels[k]=gg};
-  lab('mel',290,600,'melanocyte','#ffd08a');lab('pig',470,230,'melanin','#e9b28f');lab('ni',60,240,'niacinamide','#8ee6c3');lab('cer',420,150,'ceramides','#8ee6c3');lab('spot',250,8,'dark spot','#e9b28f');
+  lab('mel',290,600,'melanocyte','#ffd08a');lab('pig',470,230,'melanin','#e9b28f');lab('ni',60,240,'niacinamide','#8ee6c3');lab('cer',420,150,'ceramides','#8ee6c3');lab('spot',250,8,'dark spot','#e9b28f');lab('irr',300,520,'irritation','#ff9a9a');lab('cica',80,200,'centella','#a6efb8');
   // anneau de loupe
   S.ring=mk(sv,'circle',{cx:540,cy:960,r:380,fill:'none',stroke:'#e8f1f5','stroke-width':18,filter:'url(#sh)'});
   S.ring2=mk(sv,'circle',{cx:540,cy:960,r:404,fill:'none',stroke:'#e8f1f5','stroke-width':3,opacity:.35});
@@ -91,11 +93,11 @@ function build(){
   // carte de fin
   S.end=mk(sv,'g',{opacity:0});
   mk(S.end,'rect',{x:190,y:560,width:700,height:760,rx:44,fill:'none',stroke:'#8ee6c3','stroke-width':10});
-  const t1=mk(S.end,'text',{x:240,y:660,'font-size':54,'font-weight':800,fill:'#8ee6c3'});t1.textContent='01';
-  const t1b=mk(S.end,'text',{x:840,y:660,'text-anchor':'end','font-size':54,'font-weight':800,fill:'#8ee6c3'});t1b.textContent='B3';
-  const t2=mk(S.end,'text',{x:540,y:960,'text-anchor':'middle','font-size':300,'font-weight':900,fill:'#fff','letter-spacing':-8});t2.textContent='Nc';
-  const t3=mk(S.end,'text',{x:540,y:1080,'text-anchor':'middle','font-size':72,'font-weight':800,fill:'#fff'});t3.textContent='Niacinamide';
-  S.chips=[['2–5%',300],['8 weeks',540],['daily',780]].map(([txt,x])=>{const c=mk(S.end,'g',{});mk(c,'rect',{x:x-110,y:1160,width:220,height:84,rx:42,fill:'#16303a'});const tt=mk(c,'text',{x,y:1216,'text-anchor':'middle','font-size':38,'font-weight':800,fill:'#8ee6c3'});tt.textContent=txt;return c});
+  const t1=mk(S.end,'text',{x:240,y:660,'font-size':54,'font-weight':800,fill:'#8ee6c3'});t1.textContent='01';S.t1=t1;
+  const t1b=mk(S.end,'text',{x:840,y:660,'text-anchor':'end','font-size':54,'font-weight':800,fill:'#8ee6c3'});t1b.textContent='B3';S.t1b=t1b;
+  const t2=mk(S.end,'text',{x:540,y:960,'text-anchor':'middle','font-size':300,'font-weight':900,fill:'#fff','letter-spacing':-8});t2.textContent='Nc';S.t2=t2;
+  const t3=mk(S.end,'text',{x:540,y:1080,'text-anchor':'middle','font-size':72,'font-weight':800,fill:'#fff'});t3.textContent='Niacinamide';S.t3=t3;
+  S.chips=[['2–5%',300],['8 weeks',540],['daily',780]].map(([txt,x])=>{const c=mk(S.end,'g',{});mk(c,'rect',{x:x-110,y:1160,width:220,height:84,rx:42,fill:'#16303a'});const tt=mk(c,'text',{x,y:1216,'text-anchor':'middle','font-size':38,'font-weight':800,fill:'#8ee6c3'});tt.textContent=txt;c._t=tt;return c});
   S.next=mk(S.end,'text',{x:540,y:1400,'text-anchor':'middle','font-size':46,'font-weight':700,fill:'#9fb3bd'});S.next.textContent='Next episode: Centella  →';
 }
 function bez(d,u){const a=(1-u)*(1-u),b=2*u*(1-u),c=u*u;return [a*d.x0+b*d.cx+c*d.tx,a*d.y0+b*d.cy+c*d.ty]}
@@ -115,7 +117,7 @@ function lensAt(cx,cy,r){
 }
 const HEAD={hook:'What niacinamide<br><em>does inside</em> your skin',melanocyte:'<em>Step 1</em><br>Pigment is made',transfer:'<em>Step 2</em><br>It moves up',block:'<em>Step 3</em><br>Niacinamide blocks it',fade:'<em>Step 4</em><br>The spot fades',barrier:'<em>Bonus</em><br>A stronger barrier',end:''};
 let cur='';
-function setScene(n){cur=n;document.getElementById('head').innerHTML=HEAD[n]}
+function setScene(n,h){cur=n;document.getElementById('head').innerHTML=(h!==undefined&&h!==null)?h:(HEAD[n]||'')}
 function frame(o){
   const t=o.t, n=cur, dur=o.dur;
   // valeurs par défaut
@@ -131,12 +133,18 @@ function frame(o){
   if(n==='block'){niA=ease((t-0.3)/0.8);mode=t>0.9?'blocked':'flow';spot=.95}
   if(n==='fade'){niA=1;mode='blocked';const u=easeIO((t-0.3)/(dur-0.8));spot=lerp(.95,.18,u);week=Math.round(lerp(0,8,u))}
   if(n==='barrier'){niA=1;mode='blocked';spot=.18;cerA=ease((t-0.4)/0.9)}
+  if(n==='inflame'){mode='idle'}
+  if(n==='calm'){mode='idle'}
   if(n==='end'){lensA=1-ease(t/0.5);endA=ease((t-0.35)/0.6);spot=.18;niA=1;cerA=1;mode='blocked'}
+  if(CFG.red){spot=0;niA=0;}
+  let infA=0;if(CFG.red){infA=n==='hook'?.8:n==='inflame'?lerp(.3,1,ease(t/1.2)):n==='calm'?lerp(1,.08,easeIO((t-0.6)/(dur-1.2))):.06}
+  S.inf.forEach((e,i)=>e.setAttribute('opacity',(infA*(0.75+0.25*Math.sin(o.T*4+i))).toFixed(3)));
+  S.leaf.forEach((e,i)=>{if(!CFG.red||(n!=='calm'&&n!=='barrier')){e.setAttribute('opacity',0);return}const st=0.2+i*0.12,p=easeIO((t-st)/1.0);const x=60+i*72,y=lerp(-30,240+rnd(i)*240,n==='calm'?p:1);e.setAttribute('transform',`translate(${x} ${y.toFixed(1)}) rotate(${(Math.sin(o.T*2+i)*25).toFixed(1)})`);e.setAttribute('opacity',(n==='calm'?cl(p*2):0.9).toFixed(3))});
   S.face.setAttribute('opacity',faceA.toFixed(3));
   S.L.setAttribute('opacity',lensA.toFixed(3));S.ring.setAttribute('opacity',lensA);S.ring2.setAttribute('opacity',(.35*lensA).toFixed(3));S.handle.setAttribute('opacity',(n==='hook'?1-ease((t-1.6)/0.5):0).toFixed(3));
   lensAt(...lens);
   S.spot.setAttribute('opacity',spot.toFixed(3));
-  S.gr.forEach((e,i)=>{const [x,y,a]=granule(i,o.T,mode);set(e,{cx:x.toFixed(1),cy:y.toFixed(1),opacity:(a*(n==='hook'?ease((t-1.4)/0.6):1)).toFixed(3)})});
+  S.gr.forEach((e,i)=>{const [x,y,a]=granule(i,o.T,mode);set(e,{cx:x.toFixed(1),cy:y.toFixed(1),opacity:(CFG.red?0:a*(n==='hook'?ease((t-1.4)/0.6):1)).toFixed(3)})});
   S.ni.forEach((s,i)=>{const d=s.d,p=ease((t-0.3-i*0.08)/0.8),x=d.tx,y=lerp(-40,d.ty-26,n==='block'?p:1);const pul=1+Math.sin(o.T*5+i)*0.08;
     s.el.setAttribute('transform',`translate(${x} ${y.toFixed(1)}) scale(${pul.toFixed(3)})`);s.el.setAttribute('opacity',(n==='block'?Math.min(niA,p):niA).toFixed(3))});
   S.mel.forEach(m=>m.glow.setAttribute('opacity',(n==='melanocyte'?0.4+0.4*Math.sin(o.T*5):0).toFixed(3)));
@@ -145,7 +153,7 @@ function frame(o){
   S.water.forEach((w,i)=>{if(n!=='barrier'){w.setAttribute('opacity',0);return}const per=1.4,ph=((o.T+i*0.33)%per)/per;const y=lerp(260,150,Math.sin(Math.PI*ph));set(w,{cx:100+i*115,cy:y.toFixed(1),opacity:(0.85*cerA).toFixed(2)})});
   const L=S.labels, la=(k,on)=>L[k].setAttribute('opacity',on.toFixed(3));
   la('mel',n==='melanocyte'?ease((t-0.3)/0.4):0);la('pig',n==='transfer'?ease((t-0.4)/0.4):0);la('ni',n==='block'?ease((t-0.9)/0.4):0);la('cer',n==='barrier'?ease((t-0.8)/0.4):0);
-  la('spot',(n==='transfer'?ease((t-dur*0.55)/0.4):0));
+  la('spot',(n==='transfer'?ease((t-dur*0.55)/0.4):0));la('irr',CFG.red&&n==='inflame'?ease((t-0.5)/0.4):0);la('cica',CFG.red&&n==='calm'?ease((t-1.0)/0.4):0);
   S.week.setAttribute('opacity',n==='fade'?ease((t-0.2)/0.3):0);S.weekT.textContent='Week '+week;
   S.end.setAttribute('opacity',endA.toFixed(3));S.end.setAttribute('transform',`translate(0 ${((1-endA)*30).toFixed(1)})`);
   S.chips.forEach((c,i)=>{const p=back((t-0.8-i*0.15)/0.4);c.setAttribute('transform',`translate(${[300,540,780][i]} 1202) scale(${Math.max(0,p).toFixed(3)}) translate(${-[300,540,780][i]} -1202)`)});
@@ -153,5 +161,8 @@ function frame(o){
   document.getElementById('fade').style.opacity=Math.max(n==='hook'?0:1-ease(t/0.15),o.out||0).toFixed(3);
   const cap=document.getElementById('cap');cap.style.top=(cur==='end'?1530:1440)+'px';cap.innerHTML=o.cap?o.cap.words.map((w,i)=>`<span class="${i===o.cap.on?'on':''}">${w}</span>`).join(''):'';
 }
-function init(grain){build();document.getElementById('grain').style.backgroundImage=`url(${grain})`}
+let CFG={};
+function init(grain,cfg){CFG=cfg||{};build();document.getElementById('grain').style.backgroundImage=`url(${grain})`;
+  if(CFG.name){S.t1.textContent=CFG.num;S.t1b.textContent=CFG.tag;S.t2.textContent=CFG.sym;S.t3.textContent=CFG.name;S.chips.forEach((c,i)=>c._t.textContent=CFG.chips[i]);S.next.textContent=CFG.next;document.getElementById('tag').lastChild.textContent='INGREDIENT EXPLAINED · EP.'+CFG.num}
+  if(CFG.red){set(S.faceSpot,{fill:'#e0585a',rx:90,ry:60,opacity:.55});}}
 </script></body></html>

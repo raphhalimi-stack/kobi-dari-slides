@@ -1,0 +1,44 @@
+{
+ "id": "d_mf02",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "02",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? You need cash everywhere in Korea.",
+   "quote": "You need cash everywhere in Korea."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Cards work almost everywhere, even for a coffee or a convenience store snack. Some street stalls and old markets still prefer cash.",
+   "head": "Cards work almost everywhere.",
+   "body": "Even for a coffee. Some street stalls still prefer cash."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Pay by card, and keep a little cash for street food.",
+   "rule": "Card first. A little cash for street food."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to whoever's coming to Korea with you. Follow for more.",
+   "cta": "Send this to your travel buddy."
+  }
+ ],
+ "caption": "Do you need cash everywhere in Korea? Myth. 💳\nCards work almost everywhere, even for a coffee. Keep a little cash for street stalls and old markets.\nSend this to whoever's coming with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #seoul #travelkorea #visitkorea #dariapp"
+}

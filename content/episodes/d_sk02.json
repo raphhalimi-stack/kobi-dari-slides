@@ -1,0 +1,44 @@
+{
+ "id": "d_sk02",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "02",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "Shopping in a Korean market? This is the only phrase you need.",
+   "word": "얼마예요?",
+   "roman": "eol-ma-ye-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: how much is it? Point, smile, and ask.",
+   "meaning": "How much is it?",
+   "note": "Point, smile, ask"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Use it at markets, street food stalls and small shops. Vendors love it when you try.",
+   "items": [
+    "Markets",
+    "Street food",
+    "Small shops"
+   ],
+   "label": "Use it at"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "The only phrase you need in a Korean market 🛍️\n얼마예요? (eol-ma-ye-yo) = how much is it? Point, smile, ask. Vendors love it when you try.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #seoul #koreatravel #koreanmarket #dariapp"
+}
