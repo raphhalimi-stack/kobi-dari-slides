@@ -65,7 +65,7 @@ function setScene(name,d){
     } else if(name==='examples'){
       const a=el(`<div class="ko" style="font-size:110px;color:#fff">${CFG.word}</div>`,0,-1);
       const b=el(`<div style="font-size:48px;font-weight:700;color:var(--sub)">${SC.d.label}</div>`,0,0.05);
-      const c=el(`<div style="display:flex;flex-direction:column;gap:26px">${SC.d.items.map((x,i)=>`<div class="pill chip" style="height:130px;justify-content:flex-start;padding:0 50px;background:var(--card);font-size:62px;color:#fff;border:3px solid rgba(255,255,255,.08)"><span style="color:var(--acc);margin-right:30px">0${i+1}</span>${x}</div>`).join('')}</div>`,0,0.15);
+      const c=el(`<div style="display:flex;flex-direction:column;gap:26px">${SC.d.items.map((x,i)=>`<div class="pill chip" style="height:130px;justify-content:flex-start;padding:0 50px;background:var(--card);font-size:62px;color:#fff;border:3px solid rgba(255,255,255,.08)"><span style="width:18px;height:18px;border-radius:50%;background:var(--acc);margin-right:34px;flex:none"></span>${x}</div>`).join('')}</div>`,0,0.15);
       stack([a,b,c],440,40);E.chips=[...c.querySelectorAll('.chip')];
     }
   }

@@ -7,8 +7,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def rows(items):
-    return "".join(f'<div class="row"><div class="n">{i+1:02d}</div><div><div class="t">{t}</div><div class="d">{d}</div></div></div>'
-                   for i, (t, d) in enumerate(items))
+    return "".join(f'<div class="row"><div><div class="t">{t}</div><div class="d">{d}</div></div></div>'
+                   for t, d in items)
 
 
 DECKS = {

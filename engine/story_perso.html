@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900}
+@font-face{font-family:Serif;src:url(fonts/NewsreaderItalic.ttf);font-style:italic;font-weight:200 800}
+*{margin:0;padding:0;box-sizing:border-box}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter;color:#fff;-webkit-font-smoothing:antialiased;background:#0b1422}
+.half{position:absolute;left:0;right:0;height:960px;padding:0 90px;display:flex;flex-direction:column}
+#k{top:0;background:radial-gradient(900px 700px at 85% 10%,rgba(29,90,82,.75),transparent 70%),linear-gradient(175deg,#13262f,#0d1720 80%);justify-content:flex-start;padding-top:230px}
+#d{top:960px;background:radial-gradient(900px 700px at 15% 95%,rgba(20,70,150,.75),transparent 70%),linear-gradient(185deg,#0a1224 20%,#10203f);justify-content:flex-end;padding-bottom:250px}
+.brand{display:flex;align-items:center;gap:26px;font-size:64px;font-weight:900;letter-spacing:-1.5px}
+.h{font-size:34px;font-weight:600;opacity:.6;margin-left:auto;letter-spacing:0}
+.line{font-size:84px;font-weight:900;letter-spacing:-2.5px;line-height:1.06;margin-top:44px}
+.serif{font-family:Serif;font-style:italic;font-weight:400;letter-spacing:0}
+#mid{position:absolute;left:0;top:700px;width:1080px;height:460px}
+#date{position:absolute;left:0;right:0;top:930px;text-align:center}
+#date span{display:inline-block;background:#fff;color:#0b1422;font-weight:900;font-size:76px;letter-spacing:-2px;padding:26px 64px;border-radius:999px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+#date small{display:block;margin-top:90px;font-size:34px;font-weight:700;letter-spacing:6px;color:rgba(255,255,255,.75)}
+</style></head><body>
+<div id="s">
+ <div class="half" id="k">
+  <div class="brand"><svg width="96" height="96" viewBox="0 0 60 60"><rect width="60" height="60" rx="16" fill="#ebc9c6"/><circle cx="43" cy="43" r="9" fill="#181415"/></svg>Kobi<span class="h">@kobiapp.cc</span></div>
+  <div class="line">Ta skincare coréenne, <span class="serif" style="color:#8ee6c3">enfin expliquée.</span></div>
+ </div>
+ <div class="half" id="d">
+  <div class="line" style="margin:0 0 44px">La Corée, <span class="serif" style="color:#f2cf9e">rendue facile.</span></div>
+  <div class="brand"><svg width="128" height="76" viewBox="0 0 81 48"><path d="M4 44 A36.5 36.5 0 0 1 77 44 Z" fill="none" stroke="#8fb4f0" stroke-width="6"/><path d="M4 44H77" stroke="#8fb4f0" stroke-width="6" stroke-linecap="round"/><path d="M25 18V44M40.5 13V44M56 18V44" stroke="#8fb4f0" stroke-width="5.5"/></svg>Dari<span class="h">@dariapp.cc</span></div>
+ </div>
+ <svg id="mid" viewBox="0 0 1080 460">
+  <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1080" y2="0"><stop offset="0" stop-color="#8ee6c3"/><stop offset="1" stop-color="#f2cf9e"/></linearGradient></defs>
+  <path d="M0 420 Q540 -220 1080 420" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M0 420 H1080" stroke="url(#g)" stroke-width="12"/>
+  <g stroke="url(#g)" stroke-width="8"><path d="M120 420V294"/><path d="M260 420V186"/><path d="M820 420V186"/><path d="M960 420V294"/></g>
+ </svg>
+ <div id="date"><span>25 novembre</span><small>LANCEMENT</small></div>
+</div></body></html>
