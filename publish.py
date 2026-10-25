@@ -76,7 +76,7 @@ def publish_item(it):
         for url in (cdn(it["media"][0]), raw(it["media"][0])):
             try:
                 r = api("POST", "me/media", {"media_type": "REELS", "video_url": url, "caption": it["caption"],
-                                             "share_to_feed": "true", "thumb_offset": "400"}, tok)
+                                             "share_to_feed": "true", "thumb_offset": str(it.get("thumb", 400))}, tok)
                 wait(r["id"], tok, tries=90)
                 break
             except Exception as e:
