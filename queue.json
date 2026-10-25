@@ -386,6 +386,17 @@
   "not_before": "2026-10-25T11:00:00+00:00"
  },
  {
+  "key": "dari:r:d_mf01",
+  "account": "dari",
+  "kind": "reel",
+  "media": [
+   "v2/episodes/d_mf01.mp4"
+  ],
+  "thumb": 1500,
+  "caption": "Should you tip in Korea? Myth. 💸\nTipping isn't part of the culture, in restaurants or taxis, and it can even confuse staff. Pay the bill and say 감사합니다.\nSend this to whoever's coming to Korea with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #seoul #koreanculture #visitkorea #dariapp",
+  "not_before": "2026-10-25T11:00:00+00:00"
+ },
+ {
   "key": "dari:c:20_intro",
   "account": "dari",
   "kind": "carousel",
@@ -412,17 +423,6 @@
   "not_before": "2026-10-26T09:00:00+00:00"
  },
  {
-  "key": "dari:r:d_mf01",
-  "account": "dari",
-  "kind": "reel",
-  "media": [
-   "v2/episodes/d_mf01.mp4"
-  ],
-  "thumb": 1500,
-  "caption": "Should you tip in Korea? Myth. 💸\nTipping isn't part of the culture, in restaurants or taxis, and it can even confuse staff. Pay the bill and say 감사합니다.\nSend this to whoever's coming to Korea with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #seoul #koreanculture #visitkorea #dariapp",
-  "not_before": "2026-10-26T10:30:00+00:00"
- },
- {
   "key": "kobi:r:k_rl01",
   "account": "kobi",
   "kind": "reel",
@@ -431,7 +431,7 @@
   ],
   "thumb": 1500,
   "caption": "진정 on a Korean label? It means soothing. 🌿\nMade to calm redness and irritation. Usually with centella, mugwort or heartleaf.\nSave this for your next Olive Young trip. One Korean label word every week.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #oliveyoung #learnkorean #koreanskincare #kobiapp",
-  "not_before": "2026-10-27T10:00:00+00:00"
+  "not_before": "2026-10-26T10:00:00+00:00"
  },
  {
   "key": "dari:r:d_sk01",
@@ -442,7 +442,7 @@
   ],
   "thumb": 1500,
   "caption": "Can't handle spicy food in Korea? Say this 🌶️\n안 맵게 해 주세요 (an maep-ge hae ju-se-yo) = not spicy, please. Say it when you order.\nSend this to the friend who can't handle spice. One Korean phrase every week.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanfood #koreatravel #seoul #dariapp",
-  "not_before": "2026-10-27T10:30:00+00:00"
+  "not_before": "2026-10-26T10:30:00+00:00"
  },
  {
   "key": "kobi:r:ni01",
@@ -453,7 +453,7 @@
   ],
   "thumb": 1500,
   "caption": "What niacinamide actually does inside your skin 🔬\nMelanocytes make pigment and hand it up to the cells above. Niacinamide slows that handoff, so dark spots fade over time. Bonus: more ceramides, stronger barrier.\n2–5% is enough. Give it 8 weeks.\nIngredient Explained, ep. 01. Next: centella.\nKobi launches 25 Nov. Waitlist in bio.\n\n#niacinamide #skincarescience #kbeauty #koreanskincare #hyperpigmentation",
-  "not_before": "2026-10-28T10:00:00+00:00"
+  "not_before": "2026-10-27T10:00:00+00:00"
  },
  {
   "key": "dari:r:d_qz01",
@@ -464,7 +464,7 @@
   ],
   "thumb": 1500,
   "caption": "What does 파이팅 mean? 💪\nIt's \"you can do it!\" It comes from the English word fighting, but Koreans use it as pure encouragement.\nDid you know it? Comment below.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanculture #korea #kdrama #dariapp",
-  "not_before": "2026-10-28T10:30:00+00:00"
+  "not_before": "2026-10-27T10:30:00+00:00"
  },
  {
   "key": "kobi:r:k_qz01",
@@ -475,7 +475,7 @@
   ],
   "thumb": 1500,
   "caption": "Can you use niacinamide with vitamin C? 🤔\nYes. The old warning came from outdated studies, and today's formulas work fine together.\nDid you get it right? Comment YES or NO.\nKobi launches 25 Nov. Waitlist in bio.\n\n#niacinamide #vitaminc #skincarequiz #kbeauty #kobiapp",
-  "not_before": "2026-10-29T10:00:00+00:00"
+  "not_before": "2026-10-28T10:00:00+00:00"
  },
  {
   "key": "dari:r:d_mf02",
@@ -486,7 +486,7 @@
   ],
   "thumb": 1500,
   "caption": "Do you need cash everywhere in Korea? Myth. 💳\nCards work almost everywhere, even for a coffee. Keep a little cash for street stalls and old markets.\nSend this to whoever's coming with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #seoul #travelkorea #visitkorea #dariapp",
-  "not_before": "2026-10-29T10:30:00+00:00"
+  "not_before": "2026-10-28T10:30:00+00:00"
  },
  {
   "key": "kobi:r:k_ie02",
@@ -497,7 +497,7 @@
   ],
   "thumb": 1500,
   "caption": "What centella actually does to irritated skin 🌿\nIrritation builds inflammation under the surface. Centella (cica) helps calm it and supports your barrier while it repairs.\nOn the label: centella asiatica, madecassoside, asiaticoside.\nSend this to someone with sensitive skin. Ingredient Explained, ep. 02.\n\n#centella #cica #sensitiveskin #kbeauty #kobiapp",
-  "not_before": "2026-10-30T10:00:00+00:00"
+  "not_before": "2026-10-29T10:00:00+00:00"
  },
  {
   "key": "dari:r:d_sk02",
@@ -508,7 +508,7 @@
   ],
   "thumb": 1500,
   "caption": "The only phrase you need in a Korean market 🛍️\n얼마예요? (eol-ma-ye-yo) = how much is it? Point, smile, ask. Vendors love it when you try.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #seoul #koreatravel #koreanmarket #dariapp",
-  "not_before": "2026-10-30T10:30:00+00:00"
+  "not_before": "2026-10-29T10:30:00+00:00"
  },
  {
   "key": "kobi:r:k_mf02",
@@ -519,7 +519,7 @@
   ],
   "thumb": 1500,
   "caption": "SPF 50 lasts all day? Myth. ☀️\nSweat, touching your face and the sun itself wear sunscreen off, whatever the number. Outdoors, reapply every 2 hours.\nSend this to whoever you're travelling with.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #spf #skincaremyths #kbeauty #kobiapp",
-  "not_before": "2026-10-31T10:00:00+00:00"
+  "not_before": "2026-10-30T10:00:00+00:00"
  },
  {
   "key": "dari:r:d_qz02",
@@ -530,7 +530,7 @@
   ],
   "thumb": 1500,
   "caption": "Chopsticks standing up in your rice? Never 🥢\nIt looks like the rice offered at ancestral rites. Lay them on the table or across your bowl instead.\nDid you know it? Comment below.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanculture #koreanfood #koreatravel #korea #dariapp",
-  "not_before": "2026-10-31T10:30:00+00:00"
+  "not_before": "2026-10-30T10:30:00+00:00"
  },
  {
   "key": "kobi:r:k_qz02",
@@ -541,7 +541,7 @@
   ],
   "thumb": 1500,
   "caption": "Sunscreen on a cloudy day? Yes ☁️\nMost UV rays pass right through clouds. Grey sky, same sunscreen.\nDid you get it right? Comment below.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #skincaretips #kbeauty #koreanskincare #kobiapp",
-  "not_before": "2026-11-01T10:00:00+00:00"
+  "not_before": "2026-10-31T10:00:00+00:00"
  },
  {
   "key": "dari:r:d_mf03",
@@ -552,6 +552,6 @@
   ],
   "thumb": 1500,
   "caption": "Is the Seoul subway impossible without Korean? Myth. 🚇\nSigns and announcements are in English too. Every line has a color, every station a number.\nSend this to whoever's coming to Seoul with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#seoulsubway #seoul #koreatravel #visitkorea #dariapp",
-  "not_before": "2026-11-01T10:30:00+00:00"
+  "not_before": "2026-10-31T10:30:00+00:00"
  }
 ]
