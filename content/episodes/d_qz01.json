@@ -1,0 +1,39 @@
+{
+ "account": "dari",
+ "template": "quiz",
+ "series": "Korea Quiz",
+ "ep": "01",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Koreans shout this word all the time. What does it mean?",
+   "q": "What does 파이팅 mean?",
+   "a": "You can do it!",
+   "b": "Let's fight"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "It means: you can do it! Pa-i-ting comes from the English word fighting, but it's pure encouragement.",
+   "correct": "a",
+   "why": "From the English word 'fighting', used as pure encouragement."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you know it? Comment below. Follow for more Korea.",
+   "cta": "Did you know it? Comment below."
+  }
+ ],
+ "caption": "What does 파이팅 mean? 💪\nIt's \"you can do it!\" It comes from the English word fighting, but Koreans use it as pure encouragement.\nDid you know it? Comment below.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanculture #korea #kdrama #dariapp",
+ "id": "d_qz01"
+}

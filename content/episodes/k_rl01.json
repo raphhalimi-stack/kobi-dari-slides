@@ -1,0 +1,44 @@
+{
+ "account": "kobi",
+ "template": "word",
+ "series": "Read the Label",
+ "ep": "01",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "See this word on a Korean product? Here's what it means.",
+   "word": "진정",
+   "roman": "jin-jeong"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "Jin-jeong means soothing. The product is made to calm redness and irritation.",
+   "meaning": "Soothing",
+   "note": "Calms redness and irritation"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "It usually contains centella, mugwort, or heartleaf.",
+   "items": [
+    "Centella",
+    "Mugwort",
+    "Heartleaf"
+   ],
+   "label": "Usually inside"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your next Olive Young trip. Follow to learn one word a week.",
+   "cta": "Save this for Olive Young."
+  }
+ ],
+ "caption": "진정 on a Korean label? It means soothing. 🌿\nMade to calm redness and irritation. Usually with centella, mugwort or heartleaf.\nSave this for your next Olive Young trip. One Korean label word every week.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #oliveyoung #learnkorean #koreanskincare #kobiapp",
+ "id": "k_rl01"
+}

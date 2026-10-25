@@ -1,0 +1,44 @@
+{
+ "account": "kobi",
+ "template": "myth",
+ "series": "Myth or Fact",
+ "ep": "01",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? Oily skin doesn't need moisturiser.",
+   "quote": "Oily skin doesn't need moisturiser."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Skip moisturiser, and your skin gets dehydrated. Dehydrated skin can actually make more oil.",
+   "head": "Dehydrated skin can make more oil.",
+   "body": "Skipping moisturiser often makes shine worse, not better."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "So use a light gel moisturiser, every day.",
+   "rule": "Oily skin? Use a light gel moisturiser."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to your friend with oily skin. Follow for more.",
+   "cta": "Send this to your oily-skin friend."
+  }
+ ],
+ "caption": "Oily skin doesn't need moisturiser? Myth. 💧\nSkipping it can dehydrate your skin, and dehydrated skin can make even more oil. A light gel moisturiser fixes it.\nSend this to your oily-skin friend. Follow for Myth or Fact every week.\nKobi launches 25 Nov. Waitlist in bio.\n\n#oilyskin #skincaremyths #kbeauty #skincaretips #kobiapp",
+ "id": "k_mf01"
+}

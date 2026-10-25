@@ -1,0 +1,44 @@
+{
+ "account": "kobi",
+ "template": "myth",
+ "series": "Myth or Fact",
+ "ep": "02",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? SPF fifty lasts all day.",
+   "quote": "SPF 50 lasts all day."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Sweat, touching your face and the sun itself wear it off. A high number doesn't change that.",
+   "head": "Every sunscreen wears off.",
+   "body": "Sweat, touching your face and the sun break it down."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Outdoors, reapply every two hours.",
+   "rule": "Outdoors? Reapply every 2 hours."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to whoever you're travelling with. Follow for more.",
+   "cta": "Send this to your travel buddy."
+  }
+ ],
+ "caption": "SPF 50 lasts all day? Myth. ☀️\nSweat, touching your face and the sun itself wear sunscreen off, whatever the number. Outdoors, reapply every 2 hours.\nSend this to whoever you're travelling with.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #spf #skincaremyths #kbeauty #kobiapp",
+ "id": "k_mf02"
+}

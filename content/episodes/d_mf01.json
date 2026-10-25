@@ -1,0 +1,44 @@
+{
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "01",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? You should tip in Korea.",
+   "quote": "You should tip in Korea."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Tipping isn't part of the culture. Not in restaurants, not in taxis. Leaving money can even confuse people.",
+   "head": "Tipping isn't expected.",
+   "body": "Not in restaurants, not in taxis. It can even confuse staff."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Just pay the price on the bill, and say thank you.",
+   "rule": "Pay the bill. Say 감사합니다."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to whoever's coming to Korea with you. Follow for more.",
+   "cta": "Send this to your travel buddy."
+  }
+ ],
+ "caption": "Should you tip in Korea? Myth. 💸\nTipping isn't part of the culture, in restaurants or taxis, and it can even confuse staff. Pay the bill and say 감사합니다.\nSend this to whoever's coming to Korea with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #seoul #koreanculture #visitkorea #dariapp",
+ "id": "d_mf01"
+}

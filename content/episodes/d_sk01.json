@@ -1,0 +1,44 @@
+{
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "01",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "Eating out in Korea and scared of spicy food? Learn this one.",
+   "word": "안 맵게 해 주세요",
+   "roman": "an maep-ge hae ju-se-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: not spicy, please. Say it when you order.",
+   "meaning": "Not spicy, please",
+   "note": "Say it when you order"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Works for tteokbokki, jjigae and ramyeon. Some dishes can't be made mild, so ask first.",
+   "items": [
+    "Tteokbokki",
+    "Jjigae",
+    "Ramyeon"
+   ],
+   "label": "Try it with"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to the friend who can't handle spice. Follow for one Korean phrase a week.",
+   "cta": "Send this to your no-spice friend."
+  }
+ ],
+ "caption": "Can't handle spicy food in Korea? Say this 🌶️\n안 맵게 해 주세요 (an maep-ge hae ju-se-yo) = not spicy, please. Say it when you order.\nSend this to the friend who can't handle spice. One Korean phrase every week.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanfood #koreatravel #seoul #dariapp",
+ "id": "d_sk01"
+}

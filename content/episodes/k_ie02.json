@@ -1,0 +1,56 @@
+{
+ "account": "kobi",
+ "template": "micro",
+ "series": "Ingredient Explained",
+ "ep": "02",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "cfg": {
+  "sym": "Ce",
+  "name": "Centella",
+  "num": "02",
+  "tag": "CICA",
+  "chips": [
+   "Calming",
+   "Barrier",
+   "Daily"
+  ],
+  "next": "Next episode: Hyaluronic acid  →",
+  "red": true
+ },
+ "scenes": [
+  {
+   "scene": "hook",
+   "who": "narr",
+   "text": "This is what centella actually does to irritated skin.",
+   "head": "What centella<br><em>does to</em> red skin"
+  },
+  {
+   "scene": "inflame",
+   "who": "narr",
+   "text": "When your skin is irritated, inflammation builds up under the surface. That's the redness, and the sting.",
+   "head": "<em>Step 1</em><br>Irritation builds"
+  },
+  {
+   "scene": "calm",
+   "who": "narr",
+   "text": "Centella, also called cica, helps calm that inflammation down.",
+   "head": "<em>Step 2</em><br>Centella calms it"
+  },
+  {
+   "scene": "barrier",
+   "who": "narr",
+   "text": "It also supports your skin barrier, so it can repair itself.",
+   "head": "<em>Step 3</em><br>The barrier repairs"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "On the label, look for madecassoside. Next episode: hyaluronic acid.",
+   "head": ""
+  }
+ ],
+ "caption": "What centella actually does to irritated skin 🌿\nIrritation builds inflammation under the surface. Centella (cica) helps calm it and supports your barrier while it repairs.\nOn the label: centella asiatica, madecassoside, asiaticoside.\nSend this to someone with sensitive skin. Ingredient Explained, ep. 02.\n\n#centella #cica #sensitiveskin #kbeauty #kobiapp",
+ "id": "k_ie02"
+}

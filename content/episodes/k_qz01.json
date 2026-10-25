@@ -1,0 +1,39 @@
+{
+ "account": "kobi",
+ "template": "quiz",
+ "series": "Skin Quiz",
+ "ep": "01",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Can you use niacinamide with vitamin C? Answer before the timer ends.",
+   "q": "Can you use niacinamide with vitamin C?",
+   "a": "YES",
+   "b": "NO"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Yes. That old warning came from outdated studies. Today's formulas work fine together.",
+   "correct": "a",
+   "why": "The old warning came from outdated studies. Modern formulas pair fine."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you get it right? Comment yes or no. Follow for more.",
+   "cta": "Got it right? Comment below."
+  }
+ ],
+ "caption": "Can you use niacinamide with vitamin C? 🤔\nYes. The old warning came from outdated studies, and today's formulas work fine together.\nDid you get it right? Comment YES or NO.\nKobi launches 25 Nov. Waitlist in bio.\n\n#niacinamide #vitaminc #skincarequiz #kbeauty #kobiapp",
+ "id": "k_qz01"
+}
