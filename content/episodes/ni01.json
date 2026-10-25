@@ -1,0 +1,16 @@
+{
+ "id": "ni01",
+ "series": "Ingredient Explained",
+ "title": "Niacinamide, under the microscope",
+ "voices": {"narr": "af_heart"},
+ "scenes": [
+  {"scene": "hook", "who": "narr", "text": "This is what niacinamide actually does inside your skin."},
+  {"scene": "melanocyte", "who": "narr", "text": "Deep down, cells called melanocytes make melanin. That's your skin's pigment."},
+  {"scene": "transfer", "who": "narr", "text": "They hand it up to the cells above. Too much of it, and you get a dark spot."},
+  {"scene": "block", "who": "narr", "text": "Niacinamide steps in, and slows down that handoff."},
+  {"scene": "fade", "who": "narr", "text": "Less pigment reaches the surface, so the spot slowly fades."},
+  {"scene": "barrier", "who": "narr", "text": "Bonus: it helps your skin make more ceramides, so your barrier gets stronger."},
+  {"scene": "end", "who": "narr", "text": "Two to five percent is enough. Give it eight weeks. Next episode: centella."}
+ ],
+ "caption": "What niacinamide actually does inside your skin 🔬\nMelanocytes make pigment and hand it up to the cells above. Niacinamide slows that handoff, so dark spots fade over time. Bonus: more ceramides, stronger barrier.\n2–5% is enough. Give it 8 weeks.\nIngredient Explained, ep. 01. Next: centella.\nKobi launches 25 Nov. Waitlist in bio.\n\n#niacinamide #skincarescience #kbeauty #koreanskincare #hyperpigmentation #skinbarrier #kobiapp"
+}
