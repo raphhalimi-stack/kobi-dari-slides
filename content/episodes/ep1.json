@@ -4,7 +4,7 @@
  "title": "7 new products in one night",
  "voices": {"mina": "af_bella", "kobi": "af_heart"},
  "scenes": [
-  {"scene": "shelf", "who": "mina", "text": "I tried seven new products. In one night.", "top": "I tried 7 new products in ONE night"},
+  {"scene": "shelf", "who": "mina", "text": "I tried seven new products. In one night.", "top": "7 new products. ONE night."},
   {"scene": "morning", "who": "mina", "text": "And the next morning... this.", "top": "The next morning..."},
   {"scene": "kobi_enter", "who": "kobi", "text": "Classic. Too much, too fast.", "top": "Classic mistake."},
   {"scene": "barrier", "who": "kobi", "text": "Seven new formulas hit your skin barrier at once. When it reacts, there's no way to know which one did it.", "top": "7 formulas, 1 skin barrier"},
@@ -12,5 +12,5 @@
   {"scene": "happy", "who": "mina", "text": "Okay. One at a time. Got it.", "top": ""},
   {"scene": "end", "who": "kobi", "text": "Follow for more skin mistakes. Kobi launches November twenty fifth.", "top": ""}
  ],
- "caption": "Skin Mistakes, ep. 1: 7 new products in one night 😳\nMina tried her whole haul at once. The next morning: redness and bumps, and no way to know which product did it.\nThe rule: one new product at a time, two weeks apart, patch test behind the ear first.\nSave this before your next haul.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skincaremistakes #kbeauty #koreanskincare #skincaretips #oliveyoung #skinbarrier #kobiapp"
+ "caption": "Skin Mistakes, ep. 1: 7 new products in one night 😳\nMathilda tried her whole haul at once. The next morning: redness and bumps, and no way to know which product did it.\nThe rule: one new product at a time, two weeks apart, patch test behind the ear first.\nSave this before your next haul.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skincaremistakes #kbeauty #koreanskincare #skincaretips #oliveyoung #skinbarrier #kobiapp"
 }
