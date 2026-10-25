@@ -375,6 +375,32 @@
   "not_before": "2026-10-25T02:00:00+00:00"
  },
  {
+  "key": "dari:c:20_intro",
+  "account": "dari",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/dari/20_intro/01.jpg",
+   "v2/carousels/dari/20_intro/02.jpg",
+   "v2/carousels/dari/20_intro/03.jpg",
+   "v2/carousels/dari/20_intro/04.jpg"
+  ],
+  "caption": "Korea, explained. 🇰🇷\nFor everyone visiting or living in Korea, every day at 7:30pm KST: Myth or Fact: Korea, Say it in Korean, Korea Quiz.\nFollow so you don't miss an episode.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #livinginkorea #seoul #learnkorean #dariapp",
+  "not_before": "2026-10-25T10:40:00+00:00"
+ },
+ {
+  "key": "kobi:c:20_intro",
+  "account": "kobi",
+  "kind": "carousel",
+  "media": [
+   "v2/carousels/kobi/20_intro/01.jpg",
+   "v2/carousels/kobi/20_intro/02.jpg",
+   "v2/carousels/kobi/20_intro/03.jpg",
+   "v2/carousels/kobi/20_intro/04.jpg"
+  ],
+  "caption": "Skincare, explained. 🔬\nShort, honest science about what you put on your skin, every day at 7pm KST: Myth or Fact, Ingredient Explained, Read the Label, Skin Quiz.\nFollow so you don't miss an episode.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #koreanskincare #skincarescience #skincaretips #kobiapp",
+  "not_before": "2026-10-25T10:40:00+00:00"
+ },
+ {
   "key": "kobi:r:k_mf01",
   "account": "kobi",
   "kind": "reel",

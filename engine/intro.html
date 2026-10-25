@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900}
+@font-face{font-family:Serif;src:url(fonts/NewsreaderItalic.ttf);font-style:italic;font-weight:200 800}
+:root{--bg:#0d1720;--bg2:#13262f;--glow:rgba(29,90,82,.6);--acc:#8ee6c3;--acc2:#ebc9c6;--sub:#9fb3bd;--card:#16303a}
+.dari{--bg:#0a1224;--bg2:#10203f;--glow:rgba(20,70,150,.6);--acc:#f2cf9e;--acc2:#8fb4f0;--sub:#96a3ba;--card:#14244a}
+*{margin:0;padding:0;box-sizing:border-box}
+#s{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:Inter;color:#fff;background:var(--bg);-webkit-font-smoothing:antialiased}
+#bg{position:absolute;inset:0;background:radial-gradient(1000px 800px at 88% 4%,var(--glow),transparent 70%),linear-gradient(170deg,var(--bg2),var(--bg) 60%)}
+#top{position:absolute;left:80px;right:80px;top:80px;display:flex;align-items:center;gap:18px;font-size:30px;font-weight:700;color:#e8f1f5}
+#top .h{margin-left:auto;color:var(--sub);font-weight:600}
+#c{position:absolute;left:80px;right:80px;top:230px;bottom:150px;display:flex;flex-direction:column;justify-content:center}
+#foot{position:absolute;left:80px;right:80px;bottom:80px;font-size:28px;color:var(--sub);font-weight:600;display:flex}
+#foot b{margin-left:auto;color:var(--acc)}
+.big{font-weight:900;letter-spacing:-3px;line-height:1.02}
+.serif{font-family:Serif;font-style:italic;font-weight:400;letter-spacing:0}
+.k{display:inline-flex;align-self:flex-start;height:64px;align-items:center;padding:0 28px;border-radius:999px;background:var(--card);color:var(--acc);font-weight:900;font-size:30px;letter-spacing:1px}
+.row{display:flex;gap:34px;align-items:flex-start;padding:34px 0;border-top:2px solid rgba(255,255,255,.1)}
+.row .n{font-size:30px;font-weight:900;color:var(--bg);background:var(--acc);border-radius:16px;min-width:68px;height:68px;display:flex;align-items:center;justify-content:center}
+.row .t{font-size:52px;font-weight:800;letter-spacing:-1px}
+.row .d{font-size:36px;color:var(--sub);margin-top:8px;line-height:1.3;font-weight:500}
+.ko{font-family:'Noto Sans CJK KR',sans-serif;font-weight:800;word-break:keep-all}
+.cta{align-self:flex-start;margin-top:56px;background:var(--acc);color:var(--bg);font-weight:900;font-size:44px;padding:30px 50px;border-radius:999px}
+</style></head><body>
+<div id="s"><div id="bg"></div><div id="top"><span id="logo"></span><span id="name"></span><span class="h" id="handle"></span></div><div id="c"></div><div id="foot"><span id="fl"></span><b id="fr"></b></div></div>
+<script>
+function logo(a){return a==='kobi'?`<svg width="52" height="52" viewBox="0 0 60 60"><rect width="60" height="60" rx="16" fill="#ebc9c6"/><circle cx="43" cy="43" r="9" fill="#181415"/></svg>`:`<svg width="70" height="42" viewBox="0 0 81 48"><path d="M4 44 A36.5 36.5 0 0 1 77 44 Z" fill="none" stroke="#8fb4f0" stroke-width="6"/><path d="M4 44H77" stroke="#8fb4f0" stroke-width="6" stroke-linecap="round"/><path d="M25 18V44M40.5 13V44M56 18V44" stroke="#8fb4f0" stroke-width="5.5"/></svg>`}
+function show(o){
+  document.getElementById('s').className=o.acc;
+  document.getElementById('logo').innerHTML=logo(o.acc);
+  document.getElementById('name').textContent=o.acc==='kobi'?'Kobi':'Dari';
+  document.getElementById('handle').textContent=o.acc==='kobi'?'@kobiapp.cc':'@dariapp.cc';
+  document.getElementById('fl').textContent=o.fl||'';document.getElementById('fr').textContent=o.fr||'';
+  document.getElementById('c').innerHTML=o.html;
+}
+</script></body></html>
