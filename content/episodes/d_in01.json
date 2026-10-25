@@ -1,0 +1,33 @@
+{
+ "id": "d_in01",
+ "account": "dari",
+ "template": "intro",
+ "series": "Intro",
+ "ep": "00",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "logo",
+   "who": "narr",
+   "text": "This is Dari. Dari means bridge, in Korean."
+  },
+  {
+   "scene": "tag",
+   "who": "narr",
+   "text": "Korea, made easy. One video, every single day."
+  },
+  {
+   "scene": "series",
+   "who": "narr",
+   "text": "Myths about Korea, checked. Korean phrases you'll actually use. Culture quizzes."
+  },
+  {
+   "scene": "launch",
+   "who": "narr",
+   "text": "Our app launches November twenty-fifth. Follow, so you don't miss a thing."
+  }
+ ],
+ "caption": "This is Dari. 다리 means bridge. 🌉\nKorea made easy, every day at 7:30pm KST: myths about Korea checked, Korean phrases you'll actually use, culture quizzes.\nFollow so you don't miss an episode.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #livinginkorea #seoul #learnkorean #dariapp"
+}

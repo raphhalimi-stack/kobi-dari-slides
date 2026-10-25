@@ -1,0 +1,33 @@
+{
+ "id": "k_in01",
+ "account": "kobi",
+ "template": "intro",
+ "series": "Intro",
+ "ep": "00",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "logo",
+   "who": "narr",
+   "text": "This is Kobi."
+  },
+  {
+   "scene": "tag",
+   "who": "narr",
+   "text": "Short, honest skincare science. Every single day."
+  },
+  {
+   "scene": "series",
+   "who": "narr",
+   "text": "Skincare myths, checked. Ingredients, explained. Korean labels, translated."
+  },
+  {
+   "scene": "launch",
+   "who": "narr",
+   "text": "Our app launches November twenty-fifth. Follow, so you don't miss a thing."
+  }
+ ],
+ "caption": "This is Kobi. 🔬\nShort, honest skincare science, every day at 7pm KST: myths checked, ingredients explained, Korean labels translated.\nFollow so you don't miss an episode.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #koreanskincare #skincarescience #skincaretips #kobiapp"
+}
