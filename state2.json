@@ -122,11 +122,11 @@
   }
  },
  "errors": {
-  "kobi:c:07_olive_young": 1,
-  "dari:c:09_neighbourhoods": 1
+  "kobi:c:07_olive_young": 2,
+  "dari:c:09_neighbourhoods": 2
  },
  "last_error": {
-  "kobi:c:07_olive_young": "POST me/media_publish -> HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_title\":\"action is blocked\",\"error_user_msg\":\"We restrict certain activity to protect our community. Tell us if you think we made a mistake.\",\"fbtrace_id\":\"A35Xv6CrFwZ1TL7vAyGSawp\"}}",
-  "dari:c:09_neighbourhoods": "POST me/media_publish -> HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_title\":\"action is blocked\",\"error_user_msg\":\"We restrict certain activity to protect our community. Tell us if you think we made a mistake.\",\"fbtrace_id\":\"AmQBzzyhu4H08NCGjNHh0u4\"}}"
+  "kobi:c:07_olive_young": "POST me/media_publish -> HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_title\":\"action is blocked\",\"error_user_msg\":\"We restrict certain activity to protect our community. Tell us if you think we made a mistake.\",\"fbtrace_id\":\"AdT8SA4CDqzACYXMx-IHP3m\"}}",
+  "dari:c:09_neighbourhoods": "POST me/media_publish -> HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_title\":\"action is blocked\",\"error_user_msg\":\"We restrict certain activity to protect our community. Tell us if you think we made a mistake.\",\"fbtrace_id\":\"A-Zj6Rvoykc6phcqm25Ic8y\"}}"
  }
 }
