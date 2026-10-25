@@ -2,3 +2,5 @@ reels/out/
 __pycache__/
 *.wav.tmp
 engine/_concept.html
+engine/_pdf.html
+v2/concepts/pdf_img/
