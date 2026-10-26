@@ -1,0 +1,39 @@
+{
+ "id": "d_qz04",
+ "account": "dari",
+ "template": "quiz",
+ "series": "Korea Quiz",
+ "ep": "04",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Emergency in Korea. Which number do you call for an ambulance? Answer before the timer ends.",
+   "q": "Which number calls an ambulance in Korea?",
+   "a": "119",
+   "b": "911"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "One one nine, for fire and ambulance. Police is one one two. And for tourist help in English, call one three three zero.",
+   "correct": "a",
+   "why": "119 fire and ambulance. 112 police. 1330 tourist help in English."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this, and send it to whoever you travel with. Follow for more Korea.",
+   "cta": "Save this. Send it to your travel buddy."
+  }
+ ],
+ "caption": "Which number calls an ambulance in Korea? 🚑\n119 for fire and ambulance. 112 for police. 1330 for tourist help in English.\nSave this, and send it to whoever you travel with.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreatravel #seoul #travelsafety #visitkorea #dariapp"
+}

@@ -1,0 +1,39 @@
+{
+ "id": "k_qz04",
+ "account": "kobi",
+ "template": "quiz",
+ "series": "Skin Quiz",
+ "ep": "04",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "What does P A plus plus plus plus mean on a Korean sunscreen? Answer before the timer ends.",
+   "q": "What does PA++++ mean on a Korean sunscreen?",
+   "a": "UVA protection",
+   "b": "Water resistant"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "UVA protection. SPF mostly measures UVB. PA rates UVA, the rays that age your skin. Four pluses is the highest.",
+   "correct": "a",
+   "why": "SPF is mostly UVB. PA rates UVA, the ageing rays. ++++ is the top grade."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you know it? Comment below. Follow for more skin science.",
+   "cta": "Did you know it? Comment below."
+  }
+ ],
+ "caption": "What does PA++++ mean on a Korean sunscreen? ☀️\nIt's the UVA rating. SPF mostly measures UVB, the burning rays. PA rates UVA, the ones that age your skin. ++++ is the highest grade.\nDid you know it? Comment below.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #kbeauty #koreansunscreen #skincarescience #kobiapp"
+}

@@ -1,0 +1,44 @@
+{
+ "id": "d_sk03",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "03",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "Can't get a waiter's attention in Korea? Say this.",
+   "word": "여기요!",
+   "roman": "yeo-gi-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: over here! In Korea, calling out is polite. Nobody comes to your table by themselves.",
+   "meaning": "Over here!",
+   "note": "Calling out is polite"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Say it to order, to get more side dishes, or when you're ready to pay. If there's a bell on the table, press it.",
+   "items": [
+    "To order",
+    "More side dishes",
+    "Ready to pay"
+   ],
+   "label": "Use it"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "Waiting forever for a waiter in Korea? Say this 🙋\n여기요! (yeo-gi-yo) = over here! Calling out is normal and polite. If there's a bell on the table, press it instead.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanfood #koreatravel #seoul #dariapp"
+}

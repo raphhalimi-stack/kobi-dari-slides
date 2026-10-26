@@ -1,0 +1,44 @@
+{
+ "id": "k_mf04",
+ "account": "kobi",
+ "template": "myth",
+ "series": "Myth or Fact",
+ "ep": "04",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? Natural ingredients are always gentler on your skin.",
+   "quote": "Natural means gentle."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Fragrant plant oils and extracts are some of the most common irritants. Poison ivy is natural too.",
+   "head": "Natural isn't always gentle.",
+   "body": "Fragrant plant oils are common irritants."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Judge the ingredient, not the word natural.",
+   "rule": "Judge the ingredient, not the label."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to someone who only buys natural. Follow for more.",
+   "cta": "Send this to your all-natural friend."
+  }
+ ],
+ "caption": "Natural means gentle? Myth. 🌿\nFragrant plant oils and extracts are some of the most common skin irritants. Poison ivy is natural too. Judge the ingredient, not the word on the front.\nSend this to someone who only buys natural.\nKobi launches 25 Nov. Waitlist in bio.\n\n#cleanbeauty #skincaremyths #sensitiveskin #kbeauty #kobiapp"
+}

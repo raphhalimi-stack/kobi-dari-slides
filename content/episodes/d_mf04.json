@@ -1,0 +1,44 @@
+{
+ "id": "d_mf04",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "04",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? Korean convenience stores only sell snacks.",
+   "quote": "Convenience stores only sell snacks."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "They sell hot meals, top up your T-money card, and most have an ATM. Many are open all night.",
+   "head": "They're your 24/7 helper.",
+   "body": "Hot meals, T-money top-ups, ATMs."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Lost, hungry or out of cash? Find a convenience store.",
+   "rule": "Lost or hungry? Find a convenience store."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to whoever's coming to Korea with you. Follow for more.",
+   "cta": "Send this to your travel buddy."
+  }
+ ],
+ "caption": "Korean convenience stores only sell snacks? Myth. 🏪\nThey sell hot meals, top up your T-money card, and most have an ATM. Many never close. Lost, hungry or out of cash? Find a 편의점.\nSend this to whoever's coming to Korea with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanconveniencestore #seoul #koreatravel #visitkorea #dariapp"
+}

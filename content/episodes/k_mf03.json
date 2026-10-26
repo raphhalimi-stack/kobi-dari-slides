@@ -1,0 +1,44 @@
+{
+ "id": "k_mf03",
+ "account": "kobi",
+ "template": "myth",
+ "series": "Myth or Fact",
+ "ep": "03",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? Hot water opens your pores, and cold water closes them.",
+   "quote": "Hot water opens your pores."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Pores have no muscles, so they can't open or close. Heat only softens the oil inside them.",
+   "head": "Pores can't open or close.",
+   "body": "They have no muscles. Heat only softens the oil inside."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Wash with lukewarm water. Hot water just dries you out.",
+   "rule": "Lukewarm water. Every time."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to the friend who splashes ice water on their face. Follow for more.",
+   "cta": "Send this to your ice-water friend."
+  }
+ ],
+ "caption": "Hot water opens your pores? Myth. 🚿\nPores have no muscles, so they can't open or close. Heat only softens the oil inside, and very hot water dries your skin out. Lukewarm, every time.\nSend this to the friend who splashes ice water on their face.\nKobi launches 25 Nov. Waitlist in bio.\n\n#pores #skincaremyths #skincaretips #kbeauty #kobiapp"
+}

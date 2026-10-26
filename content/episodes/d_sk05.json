@@ -1,0 +1,44 @@
+{
+ "id": "d_sk05",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "05",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "One Korean word that makes every restaurant owner smile.",
+   "word": "맛있어요!",
+   "roman": "ma-si-sseo-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: it's delicious! Say it with a thumbs up.",
+   "meaning": "It's delicious!",
+   "note": "Say it with a thumbs up"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Say it to the owner, to your host, or at a market stall when you taste something.",
+   "items": [
+    "To the owner",
+    "To your host",
+    "At a food stall"
+   ],
+   "label": "Say it"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "One Korean word that makes every restaurant owner smile 😋\n맛있어요! (ma-si-sseo-yo) = it's delicious! Say it to the owner, your host or a market vendor.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanfood #koreatravel #seoul #dariapp"
+}

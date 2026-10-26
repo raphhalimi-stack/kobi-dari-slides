@@ -1,0 +1,39 @@
+{
+ "id": "k_qz03",
+ "account": "kobi",
+ "template": "quiz",
+ "series": "Skin Quiz",
+ "ep": "03",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "How long does your skin take to renew its surface? Answer before the timer ends.",
+   "q": "How long does your skin take to renew its surface?",
+   "a": "1 week",
+   "b": "About 4 weeks"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "About four weeks, and longer as you get older. That's why a new product needs a month before you judge it.",
+   "correct": "b",
+   "why": "About 4 weeks, longer with age. Give a new product a month."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you get it right? Comment below. Follow for more skin science.",
+   "cta": "Did you get it right? Comment below."
+  }
+ ],
+ "caption": "How long does your skin take to renew its surface? 🔄\nAbout 4 weeks, and longer with age. That's why a new product deserves a month before you judge it.\nDid you get it right? Comment below.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skincarescience #skincaretips #kbeauty #koreanskincare #kobiapp"
+}

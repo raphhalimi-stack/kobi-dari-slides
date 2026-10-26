@@ -1,0 +1,44 @@
+{
+ "id": "k_rl02",
+ "account": "kobi",
+ "template": "word",
+ "series": "Read the Label",
+ "ep": "02",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "Low irritation on the label? Read this before you trust it.",
+   "word": "저자극",
+   "roman": "jeo-ja-geuk"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "Jeo-ja-geuk means low irritation. It's a claim, not a guarantee.",
+   "meaning": "Low irritation",
+   "note": "A claim, not a guarantee"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Still check the list for fragrance, essential oils and alcohol.",
+   "items": [
+    "Fragrance",
+    "Essential oils",
+    "Alcohol"
+   ],
+   "label": "Still check for"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your next Olive Young trip. Follow to learn one word a week.",
+   "cta": "Save this for Olive Young."
+  }
+ ],
+ "caption": "저자극 on a Korean label? Don't stop reading there. 🏷️\nIt means low irritation, but it's a brand claim, not a guarantee. Still check the list for fragrance, essential oils and alcohol.\nSave this for your next Olive Young trip.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #sensitiveskin #oliveyoung #koreanskincare #kobiapp"
+}

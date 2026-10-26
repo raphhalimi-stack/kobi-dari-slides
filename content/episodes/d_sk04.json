@@ -1,0 +1,44 @@
+{
+ "id": "d_sk04",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "04",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "The one sentence you'll need on day one in Korea.",
+   "word": "화장실 어디예요?",
+   "roman": "hwa-jang-sil eo-di-ye-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: where is the bathroom? Good news: public toilets in Korea are free.",
+   "meaning": "Where's the bathroom?",
+   "note": "Public toilets are free"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "You'll find clean, free toilets in subway stations, malls and big cafés.",
+   "items": [
+    "Subway stations",
+    "Malls",
+    "Big cafés"
+   ],
+   "label": "Free toilets in"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "The one sentence you'll need on day one in Korea 🚻\n화장실 어디예요? (hwa-jang-sil eo-di-ye-yo) = where is the bathroom? Public toilets are free: subway stations, malls, big cafés.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreatravel #seoul #visitkorea #dariapp"
+}

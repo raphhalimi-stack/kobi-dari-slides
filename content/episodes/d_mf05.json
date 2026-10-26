@@ -1,0 +1,44 @@
+{
+ "id": "d_mf05",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "05",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? In Korea, you take your shoes off everywhere.",
+   "quote": "You take your shoes off everywhere in Korea."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Only in homes, at some temples, and in restaurants where you sit on the floor. Shops and offices, keep them on.",
+   "head": "Not everywhere.",
+   "body": "Homes, some temples, floor-seating restaurants."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "See a step up or a shoe shelf at the door? Shoes off.",
+   "rule": "See a shoe shelf? Shoes off."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to whoever's coming to Korea with you. Follow for more.",
+   "cta": "Send this to your travel buddy."
+  }
+ ],
+ "caption": "Shoes off everywhere in Korea? Myth. 👟\nOnly in homes, at some temples, and in restaurants with floor seating. See a step up or a shoe shelf at the door? Shoes off.\nSend this to whoever's coming to Korea with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanculture #koreanetiquette #koreatravel #seoul #dariapp"
+}

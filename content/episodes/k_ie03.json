@@ -1,0 +1,56 @@
+{
+ "id": "k_ie03",
+ "account": "kobi",
+ "template": "micro",
+ "series": "Ingredient Explained",
+ "ep": "03",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "cfg": {
+  "sym": "Ha",
+  "name": "Hyaluronic acid",
+  "num": "03",
+  "tag": "HYDRATE",
+  "chips": [
+   "Hydrating",
+   "Damp skin",
+   "Daily"
+  ],
+  "next": "Next episode: Ceramides  →",
+  "hydra": true
+ },
+ "scenes": [
+  {
+   "scene": "hook",
+   "who": "narr",
+   "text": "This is what hyaluronic acid actually does to dry skin.",
+   "head": "What hyaluronic acid<br><em>does to</em> dry skin"
+  },
+  {
+   "scene": "dry",
+   "who": "narr",
+   "text": "When your skin is dehydrated, the top layer runs low on water. It feels tight and looks dull.",
+   "head": "<em>Step 1</em><br>The surface dries out"
+  },
+  {
+   "scene": "draw",
+   "who": "narr",
+   "text": "Hyaluronic acid is a humectant. It pulls water into that top layer and holds it there.",
+   "head": "<em>Step 2</em><br>It pulls water in"
+  },
+  {
+   "scene": "plump",
+   "who": "narr",
+   "text": "Your skin looks plumper and smoother. Seal it in with a moisturiser.",
+   "head": "<em>Step 3</em><br>Skin looks plumper"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Tip: apply it on damp skin. Next episode: ceramides.",
+   "head": ""
+  }
+ ],
+ "caption": "What hyaluronic acid actually does to dry skin 💧\nIt's a humectant: it pulls water into the top layer of your skin and holds it there, so skin looks plumper. Apply on damp skin, then seal with a moisturiser.\nOn the label: sodium hyaluronate, hyaluronic acid.\nSave this for your next routine. Ingredient Explained, ep. 03.\nKobi launches 25 Nov. Waitlist in bio.\n\n#hyaluronicacid #hydration #skincarescience #kbeauty #kobiapp"
+}
