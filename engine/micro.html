@@ -86,7 +86,7 @@ function build(){
   // étiquettes
   S.labels={};
   const lab=(k,x,y,txt,col)=>{const gg=mk(g,'g',{opacity:0});const w=txt.length*20+50;mk(gg,'rect',{x:x,y:y,width:w,height:62,rx:31,fill:'#0d1720',opacity:.88});const t=mk(gg,'text',{x:x+25,y:y+42,'font-size':34,'font-weight':800,fill:col});t.textContent=txt;S.labels[k]=gg};
-  lab('mel',290,600,'melanocyte','#ffd08a');lab('pig',470,230,'melanin','#e9b28f');lab('ni',60,240,'niacinamide','#8ee6c3');lab('cer',420,150,'ceramides','#8ee6c3');lab('spot',250,8,'dark spot','#e9b28f');lab('irr',300,520,'irritation','#ff9a9a');lab('cica',80,200,'centella','#a6efb8');lab('dry',230,8,'dehydrated surface','#e9b28f');lab('ha',60,240,'hyaluronic acid','#8ee6c3');lab('wat',420,240,'water','#7fc4ff');
+  lab('mel',290,600,'melanocyte','#ffd08a');lab('pig',470,230,'melanin','#e9b28f');lab('ni',60,240,'niacinamide','#8ee6c3');lab('cer',420,150,'ceramides','#8ee6c3');lab('spot',250,8,'dark spot','#e9b28f');lab('irr',300,520,'irritation','#ff9a9a');lab('cica',80,200,'centella','#a6efb8');lab('dry',190,190,'dehydrated surface','#e9b28f');lab('ha',60,240,'hyaluronic acid','#8ee6c3');lab('wat',420,240,'water','#7fc4ff');
   // anneau de loupe
   S.ring=mk(sv,'circle',{cx:540,cy:960,r:380,fill:'none',stroke:'#e8f1f5','stroke-width':18,filter:'url(#sh)'});
   S.ring2=mk(sv,'circle',{cx:540,cy:960,r:404,fill:'none',stroke:'#e8f1f5','stroke-width':3,opacity:.35});
