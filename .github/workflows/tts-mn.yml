@@ -2,6 +2,8 @@ name: Voix mongole (présentation QG)
 on:
   push:
     branches: [tts-mn]
+permissions:
+  contents: write
 jobs:
   tts:
     runs-on: ubuntu-latest
@@ -17,7 +19,9 @@ jobs:
           i=0
           while IFS= read -r line; do i=$((i+1)); for v in mn-MN-YesuiNeural mn-MN-BataaNeural; do edge-tts --voice "$v" --rate=+4% --text "$line" --write-media "out/${v}_$i.mp3"; done; done < segments.txt
           ls -la out
-      - uses: actions/upload-artifact@v4
-        with:
-          name: voix-mn
-          path: out
+      - name: Enregistrer sur la branche
+        if: ${{ !contains(github.event.head_commit.message, '[voix]') }}
+        run: |
+          git config user.name "tts-bot"; git config user.email "tts-bot@users.noreply.github.com"
+          git add out; git commit -m "[voix] fichiers générés" || exit 0
+          git push
