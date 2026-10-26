@@ -1,0 +1,44 @@
+{
+ "id": "k_rl07",
+ "account": "kobi",
+ "template": "word",
+ "series": "Read the Label",
+ "ep": "07",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "This Korean word on a cleanser tells you it's gentle on your barrier.",
+   "word": "약산성",
+   "roman": "yak-san-seong"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "Yak-san-seong means weakly acidic. Your skin's surface is slightly acidic too, around pH five.",
+   "meaning": "Weakly acidic",
+   "note": "Close to your skin's own pH"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "You'll see it on cleansers, toners and body washes.",
+   "items": [
+    "Cleansers",
+    "Toners",
+    "Body wash"
+   ],
+   "label": "Usually on"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your next Olive Young trip. Follow to learn one word a week.",
+   "cta": "Save this for Olive Young."
+  }
+ ],
+ "caption": "This word on a Korean cleanser means gentle on your barrier 🏷️\n약산성 (yak-san-seong) means weakly acidic. Your skin's surface is slightly acidic too, around pH 5, so a low-pH cleanser is gentler on it.\nSave this for your next Olive Young trip.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #oliveyoung #cleanser #koreanskincare #kobiapp"
+}

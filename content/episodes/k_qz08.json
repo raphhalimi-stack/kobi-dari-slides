@@ -1,0 +1,39 @@
+{
+ "id": "k_qz08",
+ "account": "kobi",
+ "template": "quiz",
+ "series": "Skin Quiz",
+ "ep": "08",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Which one exfoliates your skin? Answer before the timer ends.",
+   "q": "Which one exfoliates?",
+   "a": "Salicylic acid",
+   "b": "Hyaluronic acid"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Salicylic acid. It's a B H A that clears dead cells inside your pores. Hyaluronic acid only hydrates.",
+   "correct": "a",
+   "why": "Salicylic acid is a BHA. Hyaluronic acid hydrates."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you get it right? Comment below. Follow for more skin science.",
+   "cta": "Did you get it right? Comment below."
+  }
+ ],
+ "caption": "Salicylic acid or hyaluronic acid: which one exfoliates? 🧪\nSalicylic acid. It's a BHA that clears dead skin cells inside your pores. Hyaluronic acid doesn't exfoliate: it hydrates.\nDid you get it right? Comment below.\nKobi launches 25 Nov. Waitlist in bio.\n\n#salicylicacid #skincareingredients #skincaretips #kbeauty #kobiapp"
+}

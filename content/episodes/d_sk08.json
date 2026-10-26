@@ -1,0 +1,44 @@
+{
+ "id": "d_sk08",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "08",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "Before you pay anywhere in Korea, ask this.",
+   "word": "카드 돼요?",
+   "roman": "ka-deu dwae-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: do you take card? Most places do, but small stalls sometimes don't.",
+   "meaning": "Do you take card?",
+   "note": "Ask before you order"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Use it at street stalls, markets and taxis.",
+   "items": [
+    "Street stalls",
+    "Markets",
+    "Taxis"
+   ],
+   "label": "Say it at"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "Ask this before you pay anywhere in Korea 💳\n카드 돼요? (ka-deu dwae-yo) = do you take card? Most places do, but some street stalls and market stands don't.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanphrases #koreatravel #seoul #dariapp"
+}

@@ -1,0 +1,44 @@
+{
+ "id": "k_mf08",
+ "account": "kobi",
+ "template": "myth",
+ "series": "Myth or Fact",
+ "ep": "08",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? You can shrink your pores for good.",
+   "quote": "You can shrink your pores."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Pore size is mostly genetics. But clear pores look smaller, and sunscreen keeps the skin around them firm.",
+   "head": "Size is mostly genetic.",
+   "body": "Clear pores look smaller."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "You can't shrink pores. You can make them look smaller.",
+   "rule": "Clear them. Protect them."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this before you buy another pore product. Follow for more.",
+   "cta": "Save this before your next pore product."
+  }
+ ],
+ "caption": "Can you shrink your pores for good? 🔍\nNo. Pore size is mostly genetics. But clear pores look smaller, and daily sunscreen keeps the skin around them firm. Look for BHA to keep them clear.\nSave this before you buy another pore product.\nKobi launches 25 Nov. Waitlist in bio.\n\n#pores #skincaremyths #bha #kbeauty #kobiapp"
+}

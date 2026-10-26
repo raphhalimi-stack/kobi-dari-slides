@@ -1,0 +1,44 @@
+{
+ "id": "k_rl06",
+ "account": "kobi",
+ "template": "word",
+ "series": "Read the Label",
+ "ep": "06",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "You'll see this word on every Korean toner pad. Here's what it means.",
+   "word": "각질",
+   "roman": "gak-jil"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "Gak-jil means dead skin cells. A 각질 care product helps lift them away.",
+   "meaning": "Dead skin cells",
+   "note": "각질 케어 = exfoliating care"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "You'll find it on toner pads, peeling gels and A H A or B H A products.",
+   "items": [
+    "Toner pads",
+    "Peeling gels",
+    "AHA / BHA"
+   ],
+   "label": "Usually on"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your next Olive Young trip. Follow to learn one word a week.",
+   "cta": "Save this for Olive Young."
+  }
+ ],
+ "caption": "This word is on every Korean toner pad 🏷️\n각질 (gak-jil) means dead skin cells. 각질 케어 on a label means the product helps lift them away: toner pads, peeling gels, AHA or BHA.\nSave this for your next Olive Young trip.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #oliveyoung #exfoliation #koreanskincare #kobiapp"
+}

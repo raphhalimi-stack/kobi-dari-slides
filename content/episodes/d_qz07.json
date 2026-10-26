@@ -1,0 +1,39 @@
+{
+ "id": "d_qz07",
+ "account": "dari",
+ "template": "quiz",
+ "series": "Korea Quiz",
+ "ep": "07",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Blowing your nose at the dinner table in Korea: OK or not? Answer before the timer ends.",
+   "q": "Blow your nose at the table?",
+   "a": "Step away first",
+   "b": "It's fine"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Step away first. At a Korean table, it's seen as rude. Excuse yourself, or at least turn away.",
+   "correct": "a",
+   "why": "Excuse yourself, or turn away."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you know it? Comment below. Follow for more Korea.",
+   "cta": "Did you know it? Comment below."
+  }
+ ],
+ "caption": "Blowing your nose at the dinner table in Korea: OK or not? 🤧\nBetter not. At a Korean table it's seen as rude. Excuse yourself, or at least turn away. Spicy soup makes it hard, we know.\nDid you know it? Comment below.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanculture #koreanetiquette #koreanfood #koreatravel #dariapp"
+}

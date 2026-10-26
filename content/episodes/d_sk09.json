@@ -1,0 +1,44 @@
+{
+ "id": "d_sk09",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "09",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "Want your food to go in Korea? Say this.",
+   "word": "포장해 주세요",
+   "roman": "po-jang hae ju-se-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: please pack it to go. Works for leftovers too.",
+   "meaning": "To go, please",
+   "note": "Works for leftovers too"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Use it at cafés, restaurants and bakeries.",
+   "items": [
+    "Cafés",
+    "Restaurants",
+    "Bakeries"
+   ],
+   "label": "Say it at"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "Want your food to go in Korea? Say this 🥡\n포장해 주세요 (po-jang hae ju-se-yo) = please pack it to go. Works at cafés, bakeries, and for leftovers at restaurants.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanphrases #koreatravel #seoulfood #dariapp"
+}

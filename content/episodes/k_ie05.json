@@ -1,0 +1,61 @@
+{
+ "id": "k_ie05",
+ "account": "kobi",
+ "template": "micro",
+ "series": "Ingredient Explained",
+ "ep": "05",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "cfg": {
+  "sym": "Pa",
+  "name": "Panthenol",
+  "num": "05",
+  "tag": "SOOTHE",
+  "chips": [
+   "Soothing",
+   "Hydrating",
+   "Daily"
+  ],
+  "next": "Next episode: Squalane  →",
+  "hydra": true,
+  "labels": {
+   "ha": "panthenol",
+   "dry": "dry, tight surface",
+   "wat": "water"
+  }
+ },
+ "scenes": [
+  {
+   "scene": "hook",
+   "who": "narr",
+   "text": "This is what panthenol actually does for dry, tight skin.",
+   "head": "What panthenol<br><em>does for</em> tight skin"
+  },
+  {
+   "scene": "dry",
+   "who": "narr",
+   "text": "When your skin is dry, the surface loses water. It feels tight and uncomfortable.",
+   "head": "<em>Step 1</em><br>The surface feels tight"
+  },
+  {
+   "scene": "draw",
+   "who": "narr",
+   "text": "Panthenol is provitamin B5. It's a humectant: it draws water into the top layer.",
+   "head": "<em>Step 2</em><br>It draws water in"
+  },
+  {
+   "scene": "plump",
+   "who": "narr",
+   "text": "Skin feels softer, calmer and more comfortable.",
+   "head": "<em>Step 3</em><br>Skin feels calmer"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "On the label, look for panthenol or D-panthenol. Next episode: squalane.",
+   "head": ""
+  }
+ ],
+ "caption": "What panthenol actually does for dry, tight skin 🫧\nPanthenol is provitamin B5. It's a humectant: it draws water into the top layer of your skin, so it feels softer, calmer and more comfortable.\nOn the label: panthenol, D-panthenol, 판테놀.\nSave this for your next routine. Ingredient Explained, ep. 05.\nKobi launches 25 Nov. Waitlist in bio.\n\n#panthenol #skincareingredients #skincarescience #kbeauty #kobiapp"
+}

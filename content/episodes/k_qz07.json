@@ -1,0 +1,39 @@
+{
+ "id": "k_qz07",
+ "account": "kobi",
+ "template": "quiz",
+ "series": "Skin Quiz",
+ "ep": "07",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Retinol: morning or night? Answer before the timer ends.",
+   "q": "Retinol: when do you use it?",
+   "a": "At night",
+   "b": "In the morning"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "At night. Sunlight breaks retinol down, and it can make your skin more sensitive to the sun. Wear sunscreen the next morning.",
+   "correct": "a",
+   "why": "Night. Then sunscreen every morning."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you get it right? Comment below. Follow for more skin science.",
+   "cta": "Did you get it right? Comment below."
+  }
+ ],
+ "caption": "Retinol: morning or night? 🌙\nNight. Sunlight breaks retinol down, and retinol can make skin more sensitive to the sun. Use it at night, then sunscreen every morning.\nDid you get it right? Comment below.\nKobi launches 25 Nov. Waitlist in bio.\n\n#retinol #skincareroutine #skincaretips #kbeauty #kobiapp"
+}

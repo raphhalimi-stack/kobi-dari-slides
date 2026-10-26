@@ -1,0 +1,44 @@
+{
+ "id": "d_mf10",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "10",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? Winter in Seoul is mild.",
+   "quote": "Korean winters are mild."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Seoul winters are cold and dry. In January, nights are often below freezing, and wind makes it feel colder.",
+   "head": "Pack for real cold.",
+   "body": "Often below freezing."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Visiting in winter? Bring a real coat.",
+   "rule": "Bring a real coat."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to your friend flying to Seoul this winter. Follow for more.",
+   "cta": "Send this to your winter traveller."
+  }
+ ],
+ "caption": "Is winter in Seoul mild? 🥶\nNo. Seoul winters are cold and dry. In January, nights are often below freezing, and the wind makes it feel colder. Bring a real coat, gloves and a hat.\nSend this to your friend flying to Seoul this winter.\nDari launches 25 Nov. Waitlist in bio.\n\n#seoulwinter #koreatravel #traveltips #seoul #dariapp"
+}

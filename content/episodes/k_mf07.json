@@ -1,0 +1,44 @@
+{
+ "id": "k_mf07",
+ "account": "kobi",
+ "template": "myth",
+ "series": "Myth or Fact",
+ "ep": "07",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? You can't get sun damage through a window.",
+   "quote": "Windows block the sun."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Most windows block UVB, but UVA gets through. UVA is the light linked to dark spots and early wrinkles.",
+   "head": "UVA gets through.",
+   "body": "Glass stops UVB, not UVA."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Sitting by a window all day? Wear sunscreen.",
+   "rule": "Window seat? Wear sunscreen."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to your friend who works by the window. Follow for more.",
+   "cta": "Send this to your window-seat friend."
+  }
+ ],
+ "caption": "Can the sun reach your skin through a window? ☀️\nYes. Most glass blocks UVB, but UVA gets through, and UVA is the light linked to dark spots and early wrinkles. Window seat all day? Wear sunscreen.\nSend this to your friend who works by the window.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #skincaremyths #uva #kbeauty #kobiapp"
+}

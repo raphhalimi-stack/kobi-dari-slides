@@ -11,7 +11,7 @@
       {"type": "list", "kicker": "The order", "title": "Thinnest to thickest.", "items": [["01", "Cleanser"], ["02", "Toner"], ["03", "Serum"], ["04", "Moisturiser"], ["05", "SPF, every morning"]]}
     ],
     "Waitlist": [
-      {"type": "cta", "title": "Launching 25 November.", "sub": "First 100 on the waitlist get 3 months of Premium. Link in bio."}
+      {"type": "cta", "title": "Launching 25 November.", "sub": "Join the waitlist. Link in bio."}
     ]
   },
   "dari": {
@@ -26,7 +26,7 @@
       {"type": "list", "kicker": "5 phrases", "title": "for any day.", "wide": true, "items": [["안녕하세요", "Hello"], ["감사합니다", "Thank you"], ["이거 주세요", "This one, please"], ["얼마예요?", "How much?"], ["화장실 어디예요?", "Restroom?"]]}
     ],
     "Waitlist": [
-      {"type": "cta", "title": "Launching 25 November.", "sub": "First 100 on the waitlist get 3 months of Dari Plus. Link in bio."}
+      {"type": "cta", "title": "Launching 25 November.", "sub": "Join the waitlist. Link in bio."}
     ]
   }
 }

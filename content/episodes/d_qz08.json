@@ -1,0 +1,39 @@
+{
+ "id": "d_qz08",
+ "account": "dari",
+ "template": "quiz",
+ "series": "Korea Quiz",
+ "ep": "08",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "What do Koreans traditionally eat on their birthday? Answer before the timer ends.",
+   "q": "Birthday food in Korea?",
+   "a": "Seaweed soup",
+   "b": "Kimchi stew"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Seaweed soup, called miyeok-guk. Mothers eat it after giving birth, so it became the birthday soup.",
+   "correct": "a",
+   "why": "Miyeok-guk: the birthday soup."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you know it? Comment below. Follow for more Korea.",
+   "cta": "Did you know it? Comment below."
+  }
+ ],
+ "caption": "What do Koreans traditionally eat on their birthday? 🎂\nSeaweed soup, miyeok-guk (미역국). Mothers eat it after giving birth, so it became the birthday soup.\nDid you know it? Comment below.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanfood #koreanculture #miyeokguk #koreatravel #dariapp"
+}

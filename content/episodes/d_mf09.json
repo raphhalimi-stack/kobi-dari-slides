@@ -1,0 +1,44 @@
+{
+ "id": "d_mf09",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "09",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? Free Wi-Fi is hard to find in Seoul.",
+   "quote": "Free Wi-Fi is hard to find."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "Seoul has free public Wi-Fi in many subway stations, buses, parks and squares. Look for the Public WiFi Free network.",
+   "head": "Not in Seoul.",
+   "body": "Subway, buses, parks."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Look for Public WiFi Free.",
+   "rule": "Look for Public WiFi Free."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to the friend who always runs out of data. Follow for more.",
+   "cta": "Send this to your no-data friend."
+  }
+ ],
+ "caption": "Is free Wi-Fi hard to find in Seoul? 📶\nNo. Seoul has free public Wi-Fi in many subway stations, buses, parks and squares. Look for the \"Public WiFi Free\" network.\nSend this to the friend who always runs out of data.\nDari launches 25 Nov. Waitlist in bio.\n\n#seoultravel #koreatravel #traveltips #seoul #dariapp"
+}
