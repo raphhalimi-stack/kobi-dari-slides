@@ -1,0 +1,23 @@
+name: Voix mongole (présentation QG)
+on:
+  push:
+    branches: [tts-mn]
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install edge-tts
+      - name: Générer
+        run: |
+          mkdir -p out
+          i=0
+          while IFS= read -r line; do i=$((i+1)); for v in mn-MN-YesuiNeural mn-MN-BataaNeural; do edge-tts --voice "$v" --rate=+4% --text "$line" --write-media "out/${v}_$i.mp3"; done; done < segments.txt
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voix-mn
+          path: out
