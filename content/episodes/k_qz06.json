@@ -1,0 +1,39 @@
+{
+ "id": "k_qz06",
+ "account": "kobi",
+ "template": "quiz",
+ "series": "Skin Quiz",
+ "ep": "06",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Serum or moisturiser: which one goes on first? Answer before the timer ends.",
+   "q": "Which goes on first?",
+   "a": "Serum",
+   "b": "Moisturiser"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Serum. Go from the thinnest texture to the thickest, so the light layers can reach your skin.",
+   "correct": "a",
+   "why": "Thinnest to thickest. Serum first, then moisturiser."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you get it right? Comment below. Follow for more skin science.",
+   "cta": "Did you get it right? Comment below."
+  }
+ ],
+ "caption": "Serum or moisturiser: which goes on first? 🧴\nSerum. Layer from the thinnest texture to the thickest, so the light layers can reach your skin. Sunscreen last in the morning.\nDid you get it right? Comment below.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skincareroutine #skincaretips #layering #kbeauty #kobiapp"
+}

@@ -1,0 +1,44 @@
+{
+ "id": "d_mf08",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "08",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? All kimchi is spicy.",
+   "quote": "All kimchi is spicy."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "White kimchi, called baek-kimchi, is made without chili flakes. It's mild and refreshing.",
+   "head": "Not all of it.",
+   "body": "Baek-kimchi has no chili."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Can't do spice? Ask for baek-kimchi.",
+   "rule": "Can't do spice? Ask for baek-kimchi."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to your friend who can't handle spice. Follow for more.",
+   "cta": "Send this to your no-spice friend."
+  }
+ ],
+ "caption": "Is all kimchi spicy? 🥬\nNo. White kimchi, baek-kimchi (백김치), is made without chili flakes: mild and refreshing. Can't do spice? Ask for it.\nSend this to your friend who can't handle spice.\nDari launches 25 Nov. Waitlist in bio.\n\n#kimchi #koreanfood #koreatravel #seoulfood #dariapp"
+}

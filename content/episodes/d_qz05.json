@@ -1,0 +1,39 @@
+{
+ "id": "d_qz05",
+ "account": "dari",
+ "template": "quiz",
+ "series": "Korea Quiz",
+ "ep": "05",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "Can you drink tap water in Seoul? Answer before the timer ends.",
+   "q": "Can you drink tap water in Seoul?",
+   "a": "Yes, it's safe",
+   "b": "Never"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Yes. Seoul's tap water, called Arisu, meets drinking water standards. Many locals still filter or boil it out of habit.",
+   "correct": "a",
+   "why": "Yes. Seoul's tap water, Arisu, meets drinking standards."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Would you drink it? Comment below. Follow for more Korea.",
+   "cta": "Would you drink it? Comment below."
+  }
+ ],
+ "caption": "Can you drink tap water in Seoul? 🚰\nYes. Seoul's tap water, called Arisu, meets drinking water standards. Many locals still filter or boil it out of habit.\nWould you drink it? Comment below.\nDari launches 25 Nov. Waitlist in bio.\n\n#seoul #koreatravel #seoultips #visitkorea #dariapp"
+}

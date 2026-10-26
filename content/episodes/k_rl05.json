@@ -1,0 +1,44 @@
+{
+ "id": "k_rl05",
+ "account": "kobi",
+ "template": "word",
+ "series": "Read the Label",
+ "ep": "05",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "This word on a Korean cream is a registered claim. Here's what it means.",
+   "word": "주름개선",
+   "roman": "ju-reum gae-seon"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "Ju-reum gae-seon means wrinkle care. In Korea, products need approval to use it.",
+   "meaning": "Wrinkle care",
+   "note": "An approved claim in Korea"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Look for retinol, adenosine, or retinyl palmitate.",
+   "items": [
+    "Retinol",
+    "Adenosine",
+    "Retinyl palmitate"
+   ],
+   "label": "Usually inside"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your next Olive Young trip. Follow to learn one word a week.",
+   "cta": "Save this for Olive Young."
+  }
+ ],
+ "caption": "This word on a Korean cream is an approved claim 🏷️\n주름개선 (ju-reum gae-seon) means wrinkle care. In Korea, a product needs approval to put it on the label. Usually with retinol, adenosine or retinyl palmitate.\nSave this for your next Olive Young trip.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #oliveyoung #antiaging #koreanskincare #kobiapp"
+}

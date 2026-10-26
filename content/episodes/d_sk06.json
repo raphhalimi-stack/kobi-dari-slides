@@ -1,0 +1,44 @@
+{
+ "id": "d_sk06",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "06",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "Can't read the menu in Korea? Just point and say this.",
+   "word": "이거 주세요",
+   "roman": "i-geo ju-se-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: this one, please. Point at what you want.",
+   "meaning": "This one, please",
+   "note": "Point while you say it"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Use it at restaurants, cafes, and market stalls.",
+   "items": [
+    "Restaurants",
+    "Cafes",
+    "Market stalls"
+   ],
+   "label": "Say it"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "Can't read the menu in Korea? Point and say this 👉\n이거 주세요 (i-geo ju-se-yo) = this one, please. Works at restaurants, cafes and market stalls.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanphrases #koreatravel #seoul #dariapp"
+}

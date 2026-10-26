@@ -1,0 +1,44 @@
+{
+ "id": "d_mf06",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "06",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? The Seoul subway runs all night.",
+   "quote": "The Seoul subway runs all night."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "The last trains leave between about midnight and one a.m. After that, night buses take over. Their numbers start with N.",
+   "head": "It stops at night.",
+   "body": "Night buses start with N."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Going out late? Check your last train first.",
+   "rule": "Check your last train first."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to your night-out crew. Follow for more.",
+   "cta": "Send this to your night-out crew."
+  }
+ ],
+ "caption": "Does the Seoul subway run all night? 🚇\nNo. Last trains leave around midnight to 1 a.m. After that, night buses take over: their numbers start with N.\nSend this to your night-out crew.\nDari launches 25 Nov. Waitlist in bio.\n\n#seoul #seoulsubway #koreatravel #seoulnightlife #dariapp"
+}

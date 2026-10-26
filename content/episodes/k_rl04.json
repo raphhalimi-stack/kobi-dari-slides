@@ -1,0 +1,44 @@
+{
+ "id": "k_rl04",
+ "account": "kobi",
+ "template": "word",
+ "series": "Read the Label",
+ "ep": "04",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "You see this word on Korean serums. It doesn't mean what you think.",
+   "word": "미백",
+   "roman": "mi-baek"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "Mi-baek means brightening. It targets dark spots and dullness, not your natural skin tone.",
+   "meaning": "Brightening",
+   "note": "For dark spots, not skin tone"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Look for niacinamide, arbutin, or vitamin C.",
+   "items": [
+    "Niacinamide",
+    "Arbutin",
+    "Vitamin C"
+   ],
+   "label": "Usually inside"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your next Olive Young trip. Follow to learn one word a week.",
+   "cta": "Save this for Olive Young."
+  }
+ ],
+ "caption": "미백 on a Korean serum doesn't mean what you think 🏷️\n미백 (mi-baek) means brightening: it targets dark spots and dullness, not your natural skin tone. Usually with niacinamide, arbutin or vitamin C.\nSave this for your next Olive Young trip. One Korean label word every week.\nKobi launches 25 Nov. Waitlist in bio.\n\n#kbeauty #oliveyoung #darkspots #koreanskincare #kobiapp"
+}

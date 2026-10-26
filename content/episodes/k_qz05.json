@@ -1,0 +1,39 @@
+{
+ "id": "k_qz05",
+ "account": "kobi",
+ "template": "quiz",
+ "series": "Skin Quiz",
+ "ep": "05",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "How much sunscreen do you need for your face? Answer before the timer ends.",
+   "q": "How much sunscreen for your face?",
+   "a": "Two finger lengths",
+   "b": "One pea-sized drop"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Two finger lengths. Most people use far less, and get much less protection than the S P F on the bottle.",
+   "correct": "a",
+   "why": "About two finger lengths. Too little gives much less protection than the label."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "How much do you use? Comment below. Follow for more skin science.",
+   "cta": "How much do you use? Comment below."
+  }
+ ],
+ "caption": "How much sunscreen does your face actually need? 🧴\nAbout two finger lengths. Most people use far less, and get much less protection than the SPF on the bottle.\nHow much do you use? Comment below.\nKobi launches 25 Nov. Waitlist in bio.\n\n#sunscreen #spf #skincaretips #kbeauty #kobiapp"
+}

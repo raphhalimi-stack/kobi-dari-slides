@@ -1,0 +1,39 @@
+{
+ "id": "d_qz06",
+ "account": "dari",
+ "template": "quiz",
+ "series": "Korea Quiz",
+ "ep": "06",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "question",
+   "who": "narr",
+   "text": "An older person pours you a drink in Korea. What do you do? Answer before the timer ends.",
+   "q": "An elder pours you a drink. You…",
+   "a": "Hold the glass with two hands",
+   "b": "Leave it on the table"
+  },
+  {
+   "scene": "count",
+   "who": "narr",
+   "text": "Three. Two. One."
+  },
+  {
+   "scene": "answer",
+   "who": "narr",
+   "text": "Hold your glass with two hands. It's a sign of respect. When you drink, many people turn their head slightly away.",
+   "correct": "a",
+   "why": "Two hands on the glass. It shows respect."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Did you know it? Comment below. Follow for more Korea.",
+   "cta": "Did you know it? Comment below."
+  }
+ ],
+ "caption": "An older person pours you a drink in Korea. What do you do? 🍶\nHold your glass with two hands: it's a sign of respect. Many people also turn their head slightly away to drink.\nDid you know it? Comment below.\nDari launches 25 Nov. Waitlist in bio.\n\n#koreanculture #koreanetiquette #soju #koreatravel #dariapp"
+}

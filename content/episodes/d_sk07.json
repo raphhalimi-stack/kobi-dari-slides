@@ -1,0 +1,44 @@
+{
+ "id": "d_sk07",
+ "account": "dari",
+ "template": "word",
+ "series": "Say it in Korean",
+ "ep": "07",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "word",
+   "who": "narr",
+   "text": "The most useful Korean word you're not using yet.",
+   "word": "괜찮아요",
+   "roman": "gwaen-chan-a-yo"
+  },
+  {
+   "scene": "meaning",
+   "who": "narr",
+   "text": "It means: it's okay, or no thanks. One word, two uses.",
+   "meaning": "It's okay / No thanks",
+   "note": "One word, two uses"
+  },
+  {
+   "scene": "examples",
+   "who": "narr",
+   "text": "Say no to a bag, answer sorry, or say you're fine.",
+   "items": [
+    "No bag, thanks",
+    "No worries",
+    "I'm fine"
+   ],
+   "label": "Say it"
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Save this for your trip. Follow for one Korean phrase a week.",
+   "cta": "Save this for your Korea trip."
+  }
+ ],
+ "caption": "The most useful Korean word you're not using yet 🙌\n괜찮아요 (gwaen-chan-a-yo) = it's okay, or no thanks. Use it to refuse a bag, answer a sorry, or say you're fine.\nSave this for your trip.\nDari launches 25 Nov. Waitlist in bio.\n\n#learnkorean #koreanphrases #koreatravel #seoul #dariapp"
+}

@@ -1,0 +1,44 @@
+{
+ "id": "d_mf07",
+ "account": "dari",
+ "template": "myth",
+ "series": "Myth or Fact: Korea",
+ "ep": "07",
+ "voices": {
+  "narr": "am_michael"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? A T-money card only works on the subway.",
+   "quote": "T-money only works on the subway."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "It also works on buses, in most taxis, and at convenience stores.",
+   "head": "It does a lot more.",
+   "body": "Buses, taxis, convenience stores."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Top it up with cash at any convenience store.",
+   "rule": "Top up at any convenience store."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to whoever's coming to Korea with you. Follow for more.",
+   "cta": "Send this to your travel buddy."
+  }
+ ],
+ "caption": "Is T-money just a subway card? 💳\nNo. It also works on buses, in most taxis and at convenience stores. Top it up with cash at any convenience store.\nSend this to whoever's coming to Korea with you.\nDari launches 25 Nov. Waitlist in bio.\n\n#tmoney #seoul #koreatravel #seoultips #dariapp"
+}

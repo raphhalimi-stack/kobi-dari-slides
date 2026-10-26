@@ -1,0 +1,44 @@
+{
+ "id": "k_mf06",
+ "account": "kobi",
+ "template": "myth",
+ "series": "Myth or Fact",
+ "ep": "06",
+ "voices": {
+  "narr": "af_heart"
+ },
+ "scenes": [
+  {
+   "scene": "myth",
+   "who": "narr",
+   "text": "Myth or fact? Expensive skincare works better.",
+   "quote": "Expensive means better."
+  },
+  {
+   "scene": "verdict",
+   "who": "narr",
+   "text": "Myth.",
+   "verdict": "MYTH"
+  },
+  {
+   "scene": "explain",
+   "who": "narr",
+   "text": "A big part of the price is the brand, the packaging and the ads. The same ingredients exist at every price.",
+   "head": "Price isn't proof.",
+   "body": "Same ingredients, every price."
+  },
+  {
+   "scene": "rule",
+   "who": "narr",
+   "text": "Read the ingredients, not the price tag.",
+   "rule": "Read the ingredients, not the price."
+  },
+  {
+   "scene": "end",
+   "who": "narr",
+   "text": "Send this to someone who just spent too much. Follow for more.",
+   "cta": "Send this to your big spender."
+  }
+ ],
+ "caption": "Does expensive skincare work better? 💸\nA big part of the price is the brand, the packaging and the ads. The same ingredients exist at every price. Read the list, not the price tag.\nSend this to someone who just spent too much.\nKobi launches 25 Nov. Waitlist in bio.\n\n#skincaremyths #skincareingredients #budgetskincare #kbeauty #kobiapp"
+}
