@@ -8,7 +8,7 @@ from render_ep import sfx_pop, sfx_ding, add  # noqa
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FPS, SR = 30, 44100
-MIN = {"hook": 3.4, "melanocyte": 2.6, "transfer": 3.4, "block": 3.0, "fade": 3.8, "barrier": 3.2, "end": 4.2, "inflame": 3.4, "calm": 3.6, "dry": 3.2, "draw": 3.6, "plump": 3.4}
+MIN = {"hook": 3.4, "melanocyte": 2.6, "transfer": 3.4, "block": 3.0, "fade": 3.8, "barrier": 3.2, "end": 4.2, "inflame": 3.4, "calm": 3.6, "dry": 3.2, "draw": 3.6, "plump": 3.4, "gaps": 3.4, "fill": 3.6, "seal": 3.2}
 
 
 def whoosh(n=0.7):
@@ -35,7 +35,7 @@ def main(eid, html="micro.html"):
     for k in range(1, len(sd) - 1):
         add(fx, sfx_ding() * 0.5, starts[k] + 0.05)
     names = [s["scene"] for s in ep["scenes"]]
-    for nm in ("block", "calm", "draw"):
+    for nm in ("block", "calm", "draw", "fill"):
         if nm in names:
             for i in range(6):
                 add(fx, sfx_pop(0.07, 900, 1400) * 0.6, starts[names.index(nm)] + 0.4 + i * 0.12)

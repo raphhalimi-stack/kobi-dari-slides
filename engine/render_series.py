@@ -79,6 +79,8 @@ def main(eid):
     pg = eng.br.new_page(viewport={"width": 1080, "height": 1920})
     pg.goto("file://" + os.path.join(ROOT, "engine/series.html")); pg.evaluate("document.fonts.ready")
     pg.evaluate("c=>init(c)", cfg)
+    # warm-up: lay out the first scene once so web fonts are applied before measuring (fixes overlap on scene 1)
+    pg.evaluate("a=>setScene(a[0],a[1])", [ep["scenes"][0]["scene"], ep["scenes"][0]]); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(400)
     for i, s in enumerate(ep["scenes"]):
         pg.evaluate("a=>setScene(a[0],a[1])", [s["scene"], s])
         wt = word_times(s["text"], lead, durs[i]); ch = chunks(wt, 3)

@@ -86,7 +86,7 @@ function build(){
   // étiquettes
   S.labels={};
   const lab=(k,x,y,txt,col)=>{const gg=mk(g,'g',{opacity:0});const w=txt.length*20+50;mk(gg,'rect',{x:x,y:y,width:w,height:62,rx:31,fill:'#0d1720',opacity:.88});const t=mk(gg,'text',{x:x+25,y:y+42,'font-size':34,'font-weight':800,fill:col});t.textContent=txt;S.labels[k]=gg};
-  lab('mel',290,600,'melanocyte','#ffd08a');lab('pig',470,230,'melanin','#e9b28f');lab('ni',60,240,'niacinamide','#8ee6c3');lab('cer',420,150,'ceramides','#8ee6c3');lab('spot',250,8,'dark spot','#e9b28f');lab('irr',300,520,'irritation','#ff9a9a');lab('cica',80,200,'centella','#a6efb8');lab('dry',190,190,'dehydrated surface','#e9b28f');lab('ha',60,240,'hyaluronic acid','#8ee6c3');lab('wat',420,240,'water','#7fc4ff');
+  lab('mel',290,600,'melanocyte','#ffd08a');lab('pig',470,230,'melanin','#e9b28f');lab('ni',60,240,'niacinamide','#8ee6c3');lab('cer',420,150,'ceramides','#8ee6c3');lab('spot',250,8,'dark spot','#e9b28f');lab('irr',300,520,'irritation','#ff9a9a');lab('cica',80,200,'centella','#a6efb8');lab('dry',190,190,'dehydrated surface','#e9b28f');lab('ha',60,240,'hyaluronic acid','#8ee6c3');lab('wat',420,240,'water','#7fc4ff');lab('gap',150,190,'gaps in the barrier','#e9b28f');lab('wat2',400,300,'water stays in','#7fc4ff');
   // anneau de loupe
   S.ring=mk(sv,'circle',{cx:540,cy:960,r:380,fill:'none',stroke:'#e8f1f5','stroke-width':18,filter:'url(#sh)'});
   S.ring2=mk(sv,'circle',{cx:540,cy:960,r:404,fill:'none',stroke:'#e8f1f5','stroke-width':3,opacity:.35});
@@ -139,7 +139,8 @@ function frame(o){
   if(n==='inflame'){mode='idle'}
   if(n==='calm'){mode='idle'}
   if(n==='end'){lensA=1-ease(t/0.5);endA=ease((t-0.35)/0.6);spot=.18;niA=1;cerA=1;mode='blocked'}
-  if(CFG.red||CFG.hydra){spot=0;niA=0;}
+  if(CFG.cera){cerA=n==='fill'?ease((t-0.4)/0.9):(n==='seal'||n==='end')?1:0;}
+  if(CFG.red||CFG.hydra||CFG.cera){spot=0;niA=0;}
   let infA=0;if(CFG.red){infA=n==='hook'?.8:n==='inflame'?lerp(.3,1,ease(t/1.2)):n==='calm'?lerp(1,.08,easeIO((t-0.6)/(dur-1.2))):.06}
   S.inf.forEach((e,i)=>e.setAttribute('opacity',(infA*(0.75+0.25*Math.sin(o.T*4+i))).toFixed(3)));
   S.leaf.forEach((e,i)=>{if(!CFG.red||(n!=='calm'&&n!=='barrier')){e.setAttribute('opacity',0);return}const st=0.2+i*0.12,p=easeIO((t-st)/1.0);const x=60+i*72,y=lerp(-30,240+rnd(i)*240,n==='calm'?p:1);e.setAttribute('transform',`translate(${x} ${y.toFixed(1)}) rotate(${(Math.sin(o.T*2+i)*25).toFixed(1)})`);e.setAttribute('opacity',(n==='calm'?cl(p*2):0.9).toFixed(3))});
@@ -147,15 +148,15 @@ function frame(o){
   S.L.setAttribute('opacity',lensA.toFixed(3));S.ring.setAttribute('opacity',lensA);S.ring2.setAttribute('opacity',(.35*lensA).toFixed(3));S.handle.setAttribute('opacity',(n==='hook'?1-ease((t-1.6)/0.5):0).toFixed(3));
   lensAt(...lens);
   S.spot.setAttribute('opacity',spot.toFixed(3));
-  S.gr.forEach((e,i)=>{const [x,y,a]=granule(i,o.T,mode);set(e,{cx:x.toFixed(1),cy:y.toFixed(1),opacity:(CFG.red||CFG.hydra?0:a*(n==='hook'?ease((t-1.4)/0.6):1)).toFixed(3)})});
+  S.gr.forEach((e,i)=>{const [x,y,a]=granule(i,o.T,mode);set(e,{cx:x.toFixed(1),cy:y.toFixed(1),opacity:(CFG.red||CFG.hydra||CFG.cera?0:a*(n==='hook'?ease((t-1.4)/0.6):1)).toFixed(3)})});
   S.ni.forEach((s,i)=>{const d=s.d,p=ease((t-0.3-i*0.08)/0.8),x=d.tx,y=lerp(-40,d.ty-26,n==='block'?p:1);const pul=1+Math.sin(o.T*5+i)*0.08;
     s.el.setAttribute('transform',`translate(${x} ${y.toFixed(1)}) scale(${pul.toFixed(3)})`);s.el.setAttribute('opacity',(n==='block'?Math.min(niA,p):niA).toFixed(3))});
   S.mel.forEach(m=>m.glow.setAttribute('opacity',(n==='melanocyte'?0.4+0.4*Math.sin(o.T*5):0).toFixed(3)));
   S.cer.forEach((c,i)=>c.setAttribute('opacity',(cerA*ease((t-0.4-i*0.05)/0.4)*(n==='end'?1:1)).toFixed(3)));
   S.mortar.setAttribute('fill',cerA>0?`rgb(${Math.round(lerp(239,142,cerA*0.5))},${Math.round(lerp(198,230,cerA*0.5))},${Math.round(lerp(182,195,cerA*0.5))})`:'#efc6b6');
-  S.water.forEach((w,i)=>{if(n!=='barrier'){w.setAttribute('opacity',0);return}const per=1.4,ph=((o.T+i*0.33)%per)/per;const y=lerp(260,150,Math.sin(Math.PI*ph));set(w,{cx:100+i*115,cy:y.toFixed(1),opacity:(0.85*cerA).toFixed(2)})});
+  S.water.forEach((w,i)=>{if(n!=='barrier'&&!(CFG.cera&&(n==='seal'||n==='end'))){w.setAttribute('opacity',0);return}const per=1.4,ph=((o.T+i*0.33)%per)/per;const y=lerp(260,150,Math.sin(Math.PI*ph));set(w,{cx:100+i*115,cy:y.toFixed(1),opacity:(0.85*cerA).toFixed(2)})});
   const L=S.labels, la=(k,on)=>L[k].setAttribute('opacity',on.toFixed(3));
-  la('mel',n==='melanocyte'?ease((t-0.3)/0.4):0);la('pig',n==='transfer'?ease((t-0.4)/0.4):0);la('ni',n==='block'?ease((t-0.9)/0.4):0);la('cer',n==='barrier'?ease((t-0.8)/0.4):0);
+  la('mel',n==='melanocyte'?ease((t-0.3)/0.4):0);la('pig',n==='transfer'?ease((t-0.4)/0.4):0);la('ni',n==='block'?ease((t-0.9)/0.4):0);la('cer',(n==='barrier'||(CFG.cera&&n==='fill'))?ease((t-0.8)/0.4):0);
   la('spot',(n==='transfer'?ease((t-dur*0.55)/0.4):0));la('irr',CFG.red&&n==='inflame'?ease((t-0.5)/0.4):0);la('cica',CFG.red&&n==='calm'?ease((t-1.0)/0.4):0);
   // hydratation (CFG.hydra) : dry -> draw -> plump
   const hy=!!CFG.hydra, hn=hy?n:'';
@@ -170,6 +171,14 @@ function frame(o){
     S.cells.forEach(c=>c.setAttribute('ry',(33*(0.8+0.2*sq)).toFixed(1)));
     la('dry',hn==='dry'?ease((t-0.5)/0.4):0);la('ha',hn==='draw'?ease((t-0.8)/0.4):0);la('wat',hn==='plump'?ease((t-0.5)/0.4):0);
     if(hn==='hook')S.faceSpot.setAttribute('opacity',0);}
+  // céramides (CFG.cera) : gaps -> fill -> seal
+  if(CFG.cera){const cn=n;
+    S.drops.forEach((e,i)=>{if(cn!=='gaps'&&cn!=='hook'){e.setAttribute('opacity',0);return}
+      const per=1.6,ph=((o.T+i*0.29)%per)/per;const x=60+(i%9)*82+(i>8?40:0);const y=lerp(300,-40,ph);
+      set(e,{cx:(x+Math.sin(o.T*2+i)*5).toFixed(1),cy:y.toFixed(1),r:13,opacity:(cn==='gaps'?Math.min(1,1.6*Math.sin(Math.PI*ph)):0).toFixed(3)})});
+    S.bricks.forEach(b=>{const cy=+b.getAttribute('y')+13.5,sq=cn==='gaps'||cn==='hook'?0.62:cn==='fill'?lerp(0.62,1,ease((t-0.6)/1.2)):1;b.setAttribute('transform',`translate(0 ${cy}) scale(1 ${sq.toFixed(3)}) translate(0 ${-cy})`)});
+    la('gap',cn==='gaps'?ease((t-0.5)/0.4):0);la('wat2',cn==='seal'?ease((t-0.5)/0.4):0);
+    if(cn==='hook')S.faceSpot.setAttribute('opacity',0);}
   S.week.setAttribute('opacity',n==='fade'?ease((t-0.2)/0.3):0);S.weekT.textContent='Week '+week;
   S.end.setAttribute('opacity',endA.toFixed(3));S.end.setAttribute('transform',`translate(0 ${((1-endA)*30).toFixed(1)})`);
   S.chips.forEach((c,i)=>{const p=back((t-0.8-i*0.15)/0.4);c.setAttribute('transform',`translate(${[300,540,780][i]} 1202) scale(${Math.max(0,p).toFixed(3)}) translate(${-[300,540,780][i]} -1202)`)});
