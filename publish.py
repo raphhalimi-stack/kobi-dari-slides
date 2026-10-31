@@ -101,6 +101,21 @@ def publish_item(it):
     raise RuntimeError("media_publish : toujours pas prêt après plusieurs essais")
 
 
+MAX_POSTS_JOUR = int(os.environ.get("MAX_POSTS_JOUR", "4"))
+
+
+def posts_du_jour(st, acc, now):
+    kst = datetime.timezone(datetime.timedelta(hours=9))
+    jour = now.astimezone(kst).date()
+    n = 0
+    for k, v in st.get("posted", {}).items():
+        if not k.startswith(acc + ":") or ":s:" in k or not isinstance(v, dict) or not v.get("at"):
+            continue
+        if datetime.datetime.fromisoformat(v["at"]).astimezone(kst).date() == jour:
+            n += 1
+    return n
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
@@ -126,6 +141,11 @@ def main():
                    and datetime.datetime.fromisoformat(it["not_before"]) <= now
                    and st["errors"].get(it["key"], 0) < 3]
             if not due:
+                continue
+            # Charte d'autonomie (PDG, 31/10/2026) : au plus MAX_POSTS_JOUR publications (hors stories) par compte
+            # et par jour de Séoul. Défaut 4. Une rafale comme celle du 25/10 (15 en 5 h 30) n'est plus possible.
+            if posts_du_jour(st, acc, now) >= MAX_POSTS_JOUR and due[0]["kind"] != "story":
+                print(f"{acc} : plafond de la charte atteint ({MAX_POSTS_JOUR} par jour), reste en file")
                 continue
             first = due[0]
             if first["kind"] == "story":
