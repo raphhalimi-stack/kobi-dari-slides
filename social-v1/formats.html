@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Formats V1</title>
+<style>
+@font-face{font-family:Newsreader;src:url(../engine/fonts/NewsreaderItalic.ttf);font-style:italic}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:Inter,'Noto Sans CJK KR','Noto Sans CJK JP',sans-serif;-webkit-font-smoothing:antialiased}
+.stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+.emo{font-family:'Noto Color Emoji'}
+/* ===== KOBI : studio crème, rose poudré, encre cacao, serif éditorial ===== */
+.kobi{background:radial-gradient(1200px 900px at 70% 18%,#fff7f1 0,#f6ece3 45%,#efdfd3 100%);color:#2b1f1a}
+.kobi .brand{position:absolute;top:70px;left:70px;display:flex;gap:18px;align-items:center;font:700 30px Inter;letter-spacing:.18em;text-transform:uppercase;color:#7a5a4c}
+.kobi .brand i{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#f3c6bb,#e59f8f);display:block;position:relative}
+.kobi .brand i:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:#2b1f1a;right:9px;bottom:9px}
+.kobi .serie{position:absolute;top:66px;right:70px;font:italic 40px Newsreader;color:#b0705f}
+.kobi h1{font:800 104px/1.0 'Inter Display',Inter;letter-spacing:-.035em}
+.kobi h1 em{font:italic 112px/1 Newsreader;color:#c0624f;letter-spacing:-.01em}
+.kobi .sub{font:500 46px/1.3 Inter;color:#6b5247}
+.chip{display:inline-flex;align-items:center;gap:14px;padding:22px 34px;border-radius:999px;font:700 40px Inter;background:#fff;box-shadow:0 12px 40px rgba(90,50,30,.12)}
+.ok{color:#2f7d5b}.watch{color:#c0624f}
+/* produits */
+.bottle{position:absolute;border-radius:60px 60px 46px 46px;box-shadow:inset -30px 0 60px rgba(0,0,0,.08),inset 26px 0 40px rgba(255,255,255,.6),0 60px 90px rgba(90,50,30,.25)}
+.cap{position:absolute;border-radius:24px 24px 10px 10px}
+.label{position:absolute;left:12%;right:12%;border-radius:18px;background:rgba(255,255,255,.88);text-align:center;padding:26px 10px;font:800 44px Inter;letter-spacing:.06em;color:#2b1f1a}
+.label small{display:block;font:600 26px Inter;letter-spacing:.2em;color:#9a7b6d;margin-top:8px}
+.shine{position:absolute;top:6%;left:16%;width:12%;height:70%;border-radius:40px;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,0))}
+.laser{position:absolute;left:150px;right:150px;height:10px;border-radius:10px;background:#ff5a6e;box-shadow:0 0 30px 10px rgba(255,90,110,.55),0 0 90px 30px rgba(255,90,110,.25)}
+.ring{position:absolute;width:300px;height:300px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#2f7d5b var(--p),#eadbd0 0);box-shadow:0 20px 60px rgba(90,50,30,.2)}
+.ring b{width:236px;height:236px;border-radius:50%;background:#fff8f3;display:grid;place-items:center;font:900 96px 'Inter Display',Inter;color:#2b1f1a}
+.ring b small{font:600 26px Inter;color:#9a7b6d;display:block;margin-top:-30px}
+.price{position:absolute;padding:18px 30px;border-radius:20px;background:#2b1f1a;color:#fff7f1;font:800 50px Inter;transform:rotate(-6deg);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.cta{position:absolute;left:70px;right:70px;bottom:130px;padding:40px;border-radius:40px;background:#2b1f1a;color:#fff7f1;font:700 46px Inter;text-align:center}
+.cta em{font:italic 54px Newsreader;color:#f3c6bb}
+/* ===== DARI : nuit de Séoul, marine profond, corail, lignes de métro ===== */
+.dari{background:#081633;color:#fff}
+.dari:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 700px at 15% 10%,rgba(255,107,87,.35),transparent 60%),radial-gradient(900px 900px at 100% 85%,rgba(46,124,255,.35),transparent 60%)}
+.dari .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.04) 2px,transparent 2px);background-size:90px 90px}
+.dari .brand{position:absolute;top:70px;left:70px;font:900 36px 'Inter Display',Inter;letter-spacing:.06em;color:#ff6b57;display:flex;gap:14px;align-items:center;z-index:3}
+.dari .brand i{width:46px;height:28px;border:7px solid #ff6b57;border-bottom:none;border-radius:40px 40px 0 0;display:block}
+.dari .serie{position:absolute;top:66px;right:70px;padding:12px 24px;border-radius:999px;background:#ff6b57;color:#081633;font:900 30px Inter;letter-spacing:.08em;z-index:3}
+.dari h1{font:900 118px/.95 'Inter Display',Inter;letter-spacing:-.04em;text-transform:uppercase}
+.dari h1 span{color:#ff6b57}
+.dari .sub{font:600 46px/1.3 Inter;color:#b9c6e4}
+.receipt{position:absolute;left:150px;right:150px;background:#fbf7ef;color:#1b1b1b;border-radius:10px 10px 0 0;padding:50px 54px 40px;font:600 44px 'DejaVu Sans Mono',monospace;box-shadow:0 50px 100px rgba(0,0,0,.5)}
+.receipt:after{content:"";position:absolute;left:0;right:0;bottom:-30px;height:30px;background:linear-gradient(-45deg,transparent 15px,#fbf7ef 0) 0 0/30px 30px,linear-gradient(45deg,transparent 15px,#fbf7ef 0) 0 0/30px 30px}
+.receipt .row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:3px dashed #d8cfbf}
+.receipt .row .emo{font-size:64px;margin-right:18px}
+.receipt .tot{display:flex;justify-content:space-between;font:900 60px Inter;padding-top:26px}
+.counter{position:absolute;left:0;right:0;text-align:center;font:900 190px 'Inter Display',Inter;letter-spacing:-.05em;color:#ffd166;text-shadow:0 0 60px rgba(255,209,102,.45)}
+.stamp{position:absolute;width:520px;height:520px;border:34px solid #ff3b3b;border-radius:50%;display:grid;place-items:center;color:#ff3b3b;font:900 300px Inter;transform:rotate(-14deg);box-shadow:0 0 80px rgba(255,59,59,.5),inset 0 0 60px rgba(255,59,59,.4)}
+.line2{position:absolute;border:26px solid #00a84d;border-radius:50%;box-shadow:0 0 50px rgba(0,168,77,.5)}
+.st{position:absolute;display:flex;align-items:center;gap:22px;font:800 48px Inter;white-space:nowrap}
+.st i{width:56px;height:56px;border-radius:50%;background:#fff;border:12px solid #00a84d;display:block;box-shadow:0 0 0 10px rgba(255,107,87,.0)}
+.st.hot i{border-color:#ff6b57;box-shadow:0 0 0 16px rgba(255,107,87,.25),0 0 60px rgba(255,107,87,.8)}
+.st small{display:block;font:600 32px Inter;color:#b9c6e4}
+.pill{display:inline-block;padding:16px 30px;border-radius:999px;font:800 40px Inter}
+.dcta{position:absolute;left:70px;right:70px;bottom:130px;padding:40px;border-radius:36px;background:#ff6b57;color:#081633;font:900 50px Inter;text-align:center}
+.safe{position:absolute;left:0;right:0;bottom:0;height:300px;background:linear-gradient(transparent,rgba(0,0,0,.0))}
+</style></head>
+<body><div id="root"></div>
+<script>
+const P=new URLSearchParams(location.search), F=P.get('f')||'K1', S=+(P.get('s')||0), T=+(P.get('t')||1);
+const ease=x=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3), lerp=(a,b,x)=>a+(b-a)*ease(x);
+const K=(serie,body)=>`<div class="stage kobi"><div class="brand"><i></i>Kobi</div><div class="serie">${serie}</div>${body}</div>`;
+const D=(serie,body)=>`<div class="stage dari"><div class="grid"></div><div class="brand"><i></i>DARI</div><div class="serie">${serie}</div>${body}</div>`;
+function tube(x,y,w,h,col,cap,txt,sub){return `<div class="bottle" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:linear-gradient(90deg,${col[0]},${col[1]})"><div class="shine"></div><div class="label" style="top:${h*.42}px">${txt}<small>${sub}</small></div></div><div class="cap" style="left:${x+w*.28}px;top:${y-80}px;width:${w*.44}px;height:96px;background:${cap}"></div>`}
+const scenes={
+ K1:[ t=>K('Scan it · Ep.1',`
+   <div style="position:absolute;top:210px;left:70px;right:70px"><h1>I scanned a <em>viral</em> Korean sunscreen.</h1></div>
+   ${tube(330,700,420,860,['#fbe3d8','#f1c3b3'],'#2b1f1a','SUN<br>RELIEF','SPF 50+ · PA++++')}
+   <div class="laser" style="top:${lerp(760,1520,T)}px"></div>
+   <div class="price" style="right:90px;top:760px">₩19,800</div>
+   <div class="sub" style="position:absolute;bottom:170px;left:70px;right:70px;text-align:center;opacity:${lerp(0,1,T*2)}">Is it worth the hype? 👀</div>`),
+  t=>K('Scan it · Ep.1',`
+   <div style="position:absolute;top:210px;left:70px;right:70px"><h1>The <em>score</em></h1><p class="sub" style="margin-top:20px">What's actually inside</p></div>
+   <div class="ring" style="--p:${Math.round(lerp(0,92,T))*3.6}deg;left:390px;top:560px"><b>${Math.round(lerp(0,92,T))}<small>/100</small></b></div>
+   <div style="position:absolute;top:960px;left:70px;right:70px;display:flex;flex-direction:column;gap:30px;align-items:flex-start">
+     <span class="chip ok">✓ Rice extract · <span style="font-weight:500">hydrates</span></span>
+     <span class="chip ok">✓ Chemical + mineral filters</span>
+     <span class="chip ok">✓ No white cast</span>
+     <span class="chip watch">! Contains fragrance</span></div>`),
+  t=>K('Scan it · Ep.1',`
+   <div style="position:absolute;top:210px;left:70px;right:70px"><h1>Verdict: <em>buy it</em> if…</h1></div>
+   <div style="position:absolute;top:620px;left:70px;right:70px;display:flex;flex-direction:column;gap:34px">
+     <span class="chip ok" style="font-size:50px">✓ Oily or combination skin</span>
+     <span class="chip ok" style="font-size:50px">✓ You hate a white cast</span>
+     <span class="chip watch" style="font-size:50px">✕ Very dry skin: layer a cream</span></div>
+   <div class="cta">Scan any product at Olive Young<br><em>Kobi · 25 Nov</em></div>`)],
+ K2:[ t=>K('₩ vs ₩₩₩',`
+   <div style="position:absolute;top:200px;left:70px;right:70px;text-align:center"><h1>₩9,900 <em>vs</em> ₩210,000</h1><p class="sub" style="margin-top:24px">Same hero ingredient?</p></div>
+   ${tube(110,760,330,700,['#e8f1ec','#c9ddd2'],'#3d6b57','CICA<br>CREAM','₩9,900')}
+   <div style="position:absolute;left:640px;top:930px;width:400px;height:420px;border-radius:70px 70px 90px 90px;background:linear-gradient(135deg,#f7e7c8,#d9b77c);box-shadow:inset -20px 0 50px rgba(0,0,0,.12),0 60px 90px rgba(90,50,30,.3)"><div class="label" style="top:150px;font-size:38px">LUXE<br>CREAM<small>₩210,000</small></div></div>
+   <div style="position:absolute;left:640px;top:850px;width:400px;height:110px;border-radius:30px;background:linear-gradient(90deg,#3a2b23,#6b5247)"></div>
+   <div style="position:absolute;left:420px;top:1000px;width:240px;height:240px;border-radius:50%;background:#c0624f;color:#fff;display:grid;place-items:center;font:900 90px Inter;transform:scale(${lerp(.4,1,T)});box-shadow:0 0 0 18px rgba(192,98,79,.2)">VS</div>`),
+  t=>K('₩ vs ₩₩₩',`
+   <div style="position:absolute;top:210px;left:70px;right:70px"><h1>Ingredient <em>match</em></h1></div>
+   <div style="position:absolute;top:560px;left:70px;right:70px;display:flex;flex-direction:column;gap:46px">
+   ${[['Centella asiatica',100],['Panthenol',100],['Ceramide NP',70],['Fragrance',0]].map(([n,v],i)=>`<div><div style="display:flex;justify-content:space-between;font:700 46px Inter"><span>${n}</span><span>${v?'both':'luxe only'}</span></div><div style="height:34px;border-radius:20px;background:#eadbd0;margin-top:14px"><div style="height:100%;width:${lerp(0,v||100,T)}%;border-radius:20px;background:${v?'#2f7d5b':'#c0624f'}"></div></div></div>`).join('')}
+   </div><div class="ring" style="--p:${lerp(0,78,T)*3.6}deg;left:390px;top:1330px"><b>${Math.round(lerp(0,78,T))}%<small>match</small></b></div>`),
+  t=>K('₩ vs ₩₩₩',`
+   <div style="position:absolute;top:240px;left:70px;right:70px"><h1>You pay <em>₩200,100</em> for the jar.</h1><p class="sub" style="margin-top:30px">Same calming core. Different texture and scent.</p></div><div style="position:absolute;left:0;right:0;top:820px;text-align:center;font-size:260px" class="emo">💸</div>
+   <div class="cta">Find the dupe for anything<br><em>Kobi · 25 Nov</em></div>`)],
+ K3:[ t=>K('Label X-ray',`
+   <div style="position:absolute;top:200px;left:70px;right:70px"><h1>Your toner says <em>this</em>. Do you know what it means?</h1></div>
+   <div class="bottle" style="left:300px;top:760px;width:480px;height:900px;background:linear-gradient(90deg,#d9ecf2,#b5d3de)"><div class="shine"></div>
+     <div class="label" style="top:330px;font:900 120px 'Noto Sans CJK KR','Noto Sans CJK JP';letter-spacing:0">진정<small>토너 · 200ml</small></div></div>
+   <div style="position:absolute;left:${lerp(560,360,T)}px;top:1030px;width:360px;height:360px;border-radius:50%;border:16px solid #2b1f1a;background:rgba(255,248,243,.9);display:grid;place-items:center;box-shadow:0 30px 80px rgba(0,0,0,.25)"><span style="font:italic 80px Newsreader;color:#c0624f">soothing</span></div>
+   <div style="position:absolute;left:${lerp(560,360,T)+300}px;top:1350px;width:60px;height:220px;border-radius:30px;background:#2b1f1a;transform:rotate(-40deg)"></div>`),
+  t=>K('Label X-ray',`
+   <div style="position:absolute;top:210px;left:70px;right:70px"><h1>3 words on <em>every</em> Korean label</h1></div>
+   <div style="position:absolute;top:620px;left:70px;right:70px;display:flex;flex-direction:column;gap:40px">
+   ${[['진정','jin-jeong','soothing'],['보습','bo-seup','moisturising'],['저자극','jeo-ja-geuk','low irritation']].map(([k,r,e])=>`<div style="display:flex;align-items:center;gap:40px;background:#fff;border-radius:36px;padding:30px 40px;box-shadow:0 12px 40px rgba(90,50,30,.12)"><span style="font:900 96px 'Noto Sans CJK KR','Noto Sans CJK JP';color:#2b1f1a">${k}</span><span><b style="font:italic 64px Newsreader;color:#c0624f">${e}</b><br><span style="font:500 36px Inter;color:#9a7b6d">${r}</span></span></div>`).join('')}</div>`),
+  t=>K('Label X-ray',`
+   <div style="position:absolute;top:240px;left:70px;right:70px"><h1>Point. <em>Scan.</em> Understand.</h1><p class="sub" style="margin-top:30px">Save this for your next Olive Young run.</p></div><div style="position:absolute;left:330px;top:720px;width:420px;height:760px;border-radius:70px;background:#2b1f1a;padding:22px;box-shadow:0 60px 100px rgba(90,50,30,.35)"><div style="width:100%;height:100%;border-radius:52px;background:linear-gradient(180deg,#fff8f3,#f3e3d8);padding:60px 36px;font:700 34px Inter;color:#2b1f1a"><div style="font:italic 44px Newsreader;color:#c0624f">Kobi</div><div style="margin-top:30px;height:200px;border-radius:30px;background:#e8f1ec;display:grid;place-items:center;font:900 70px 'Noto Sans CJK KR','Noto Sans CJK JP'">진정</div><div style="margin-top:26px;font:italic 50px Newsreader;color:#2f7d5b">= soothing</div><div style="margin-top:26px;height:18px;border-radius:9px;background:#eadbd0"></div><div style="margin-top:14px;height:18px;width:70%;border-radius:9px;background:#eadbd0"></div></div></div>
+   <div class="cta">Every Korean label, translated<br><em>Kobi · 25 Nov</em></div>`)],
+ D1:[ t=>D('Seoul for ₩10,000',`
+   <div style="position:absolute;top:200px;left:70px;right:70px;z-index:2"><h1>What <span>₩10,000</span> gets you in Myeongdong</h1></div>
+   <div class="counter" style="top:720px">₩${Math.round(lerp(0,3500,T)).toLocaleString('en')}</div>
+   <div style="position:absolute;top:1000px;left:0;right:0;text-align:center;font-size:${lerp(120,300,T)}px" class="emo">🍢</div>
+   <div class="sub" style="position:absolute;bottom:260px;left:70px;right:70px;text-align:center">Street-food run · prices filmed on the day</div>`),
+  t=>D('Seoul for ₩10,000',`
+   <div class="counter" style="top:190px">₩${Math.round(lerp(3500,9500,T)).toLocaleString('en')}</div>
+   <div class="receipt" style="top:520px">
+     <div style="text-align:center;font:900 46px Inter;margin-bottom:20px">MYEONGDONG · STREET</div>
+     ${[['🍢','Eomuk ×2','2,000'],['🧇','Hotteok','1,500'],['🍓','Strawberry skewer','4,000'],['🥤','Banana milk','2,000']].map(([e,n,p],i)=>`<div class="row" style="opacity:${i<1+T*4?1:.15}"><span><span class="emo">${e}</span>${n}</span><span>${p}</span></div>`).join('')}
+     <div class="tot"><span>TOTAL</span><span>9,500</span></div></div>
+   <div class="sub" style="position:absolute;bottom:200px;left:70px;right:70px;text-align:center">Illustrative prices · checked before filming</div>`),
+  t=>D('Seoul for ₩10,000',`
+   <div style="position:absolute;top:260px;left:70px;right:70px"><h1>₩500 <span>left.</span><br>Worth it?</h1><p class="sub" style="margin-top:40px">Comment your ₩10,000 spot 👇</p></div>
+   <div style="position:absolute;top:1000px;left:0;right:0;text-align:center;font-size:240px" class="emo">🍢🧇🍓</div>
+   <div class="dcta">Every price, every street<br>DARI · 25 NOV</div>`)],
+ D2:[ t=>D("Don't do this",`
+   <div style="position:absolute;top:200px;left:70px;right:70px;z-index:2"><h1>Tourists do this on the subway <span>every day.</span></h1></div>
+   <div style="position:absolute;left:110px;right:110px;top:820px;height:640px;border-radius:50px;background:#d7dde8;overflow:hidden;box-shadow:0 50px 100px rgba(0,0,0,.5)">
+     <div style="position:absolute;left:0;right:0;top:0;height:200px;background:#9fb3cc"></div>
+     <div style="position:absolute;left:40px;top:250px;width:260px;height:300px;border-radius:30px;background:#7b8aa3"></div>
+     <div style="position:absolute;left:330px;top:250px;width:260px;height:300px;border-radius:30px;background:#ff8fb1"><div style="text-align:center;margin-top:90px;font-size:120px" class="emo">🤰</div></div>
+     <div style="position:absolute;left:620px;top:250px;width:200px;height:300px;border-radius:30px;background:#7b8aa3"></div></div>
+   <div class="stamp" style="left:280px;top:${lerp(600,880,T)}px;opacity:${T>0.4?1:0}">✕</div>`),
+  t=>D("Don't do this",`
+   <div style="position:absolute;top:220px;left:70px;right:70px"><h1>The <span>pink seat</span> is not a free seat.</h1></div>
+   <div style="position:absolute;top:820px;left:70px;right:70px;display:flex;flex-direction:column;gap:36px">
+     <span class="pill" style="background:#ff8fb1;color:#081633">Reserved for pregnant women</span>
+     <span class="pill" style="background:#1d2f57">Most locals leave it empty, even at rush hour</span>
+     <span class="pill" style="background:#1d2f57">Sitting there gets you looks</span></div>`),
+  t=>D("Don't do this",`
+   <div style="position:absolute;top:260px;left:70px;right:70px"><h1>Do <span>this</span> instead</h1><p class="sub" style="margin-top:40px">Stand by the doors, bag in front, phone on silent.<br><br>Send this to the friend who sits anywhere.</p></div><div style="position:absolute;left:0;right:0;top:980px;text-align:center;font-size:300px" class="emo">🚇</div>
+   <div class="dcta">Seoul rules for travellers<br>DARI · 25 NOV</div>`)],
+ D3:[ t=>D('Line 2 secrets',`
+   <div style="position:absolute;top:200px;left:70px;right:70px;z-index:2"><h1>Skip Hongdae. <span>Get off here</span> instead.</h1></div>
+   <div class="line2" style="left:140px;top:${lerp(900,760,T)}px;width:800px;height:800px"></div>
+   <div class="st hot" style="left:780px;top:880px"><i></i></div>
+   <div class="st" style="left:150px;top:1110px"><i></i></div>
+   <div class="st" style="left:470px;top:1520px"><i></i></div>
+   <div style="position:absolute;left:340px;top:1060px;font:900 220px 'Inter Display',Inter;color:#00a84d">2</div>`),
+  t=>D('Line 2 secrets',`
+   <div style="position:absolute;top:200px;left:70px;right:70px"><h1>3 stops <span>locals</span> love</h1></div>
+   <div class="line2" style="left:-300px;top:620px;width:900px;height:900px"></div>
+   <div class="st hot" style="left:480px;top:700px;opacity:${T>.1?1:.2}"><i></i><span>Seongsu<small>cafés in old factories</small></span></div>
+   <div class="st hot" style="left:560px;top:1040px;opacity:${T>.4?1:.2}"><i></i><span>Euljiro 3-ga<small>retro bars, neon alleys</small></span></div>
+   <div class="st hot" style="left:480px;top:1380px;opacity:${T>.7?1:.2}"><i></i><span>Hapjeong<small>Hongdae vibe, half the crowd</small></span></div>`),
+  t=>D('Line 2 secrets',`
+   <div style="position:absolute;top:260px;left:70px;right:70px"><h1>One <span>T-money</span> card. Three new Seouls.</h1><p class="sub" style="margin-top:40px">Save this for your trip.</p></div><div style="position:absolute;left:190px;top:980px;width:700px;height:440px;border-radius:40px;background:linear-gradient(135deg,#ff6b57,#ffb36b);transform:rotate(-8deg);box-shadow:0 50px 100px rgba(0,0,0,.5);padding:50px;color:#081633"><div style="font:900 70px 'Inter Display',Inter">T-money</div><div style="margin-top:150px;font:700 40px Inter;letter-spacing:.2em">•••• 2026</div></div>
+   <div class="dcta">Your Seoul, line by line<br>DARI · 25 NOV</div>`)]
+};
+document.getElementById('root').innerHTML=scenes[F][S](T);
+</script></body></html>

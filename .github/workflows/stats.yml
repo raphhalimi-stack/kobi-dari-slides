@@ -1,0 +1,44 @@
+name: Statistiques Instagram
+
+# Lecture seule : ne publie rien. Relevé quotidien à 20 h 47 (Séoul), après les publications du soir.
+on:
+  schedule:
+    - cron: "47 11 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check = vérifier les jetons et le droit insights ; vide = relevé complet"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Relever
+        env:
+          IG_TOKEN_KOBI: ${{ secrets.IG_TOKEN_KOBI }}
+          IG_TOKEN_DARI: ${{ secrets.IG_TOKEN_DARI }}
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "check" ]; then python stats.py --check; else python stats.py; fi
+      - name: Sauvegarder le relevé
+        if: always() && github.event.inputs.mode != 'check'
+        run: |
+          git config user.name "ig-stats"
+          git config user.email "ig-stats@users.noreply.github.com"
+          git add stats/ || true
+          git diff --cached --quiet && exit 0
+          git commit -m "stats: relevé Instagram"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
